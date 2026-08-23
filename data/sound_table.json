@@ -1,0 +1,87 @@
+{
+  "_schema": {
+    "key": "pinyin syllable, toneless, lowercase",
+    "note": "Exhaustive for Mandarin at ~400 rows. Every possible Chinese given name decomposes into these, so sound matching never misses.",
+    "fields": {
+      "syllable": "the pinyin key",
+      "ipa": "approximate IPA for reference",
+      "candidates": "English names bridging this sound",
+      "position": "which syllable position this match works best in: first, last, or any"
+    }
+  },
+  "rows": [
+    {
+      "syllable": "su",
+      "ipa": "su",
+      "candidates": [
+        { "name": "Susie", "strength": "strong", "position": "first" },
+        { "name": "Suzanne", "strength": "strong", "position": "first" },
+        { "name": "Sue", "strength": "strong", "position": "first" },
+        { "name": "Sullivan", "strength": "moderate", "position": "first" }
+      ]
+    },
+    {
+      "syllable": "xi",
+      "ipa": "ɕi",
+      "candidates": [
+        { "name": "Cynthia", "strength": "moderate", "position": "any" },
+        { "name": "Sheila", "strength": "moderate", "position": "any" },
+        { "name": "Sylvia", "strength": "weak", "position": "any" }
+      ]
+    },
+    {
+      "syllable": "fei",
+      "ipa": "feɪ",
+      "candidates": [
+        { "name": "Faye", "strength": "strong", "position": "any" },
+        { "name": "Fay", "strength": "strong", "position": "any" },
+        { "name": "Phoebe", "strength": "moderate", "position": "first" },
+        { "name": "Felicity", "strength": "weak", "position": "first" }
+      ]
+    },
+    {
+      "syllable": "zhen",
+      "ipa": "ʈʂən",
+      "candidates": [
+        { "name": "Jenson", "strength": "moderate", "position": "first" },
+        { "name": "Jen", "strength": "moderate", "position": "any" },
+        { "name": "Jensen", "strength": "moderate", "position": "first" }
+      ]
+    },
+    {
+      "syllable": "yu",
+      "ipa": "y",
+      "candidates": [
+        { "name": "Yuri", "strength": "moderate", "position": "any" },
+        { "name": "Eugene", "strength": "weak", "position": "first" }
+      ]
+    },
+    {
+      "syllable": "wei",
+      "ipa": "weɪ",
+      "candidates": [
+        { "name": "Wade", "strength": "moderate", "position": "any" },
+        { "name": "Wayne", "strength": "strong", "position": "any" },
+        { "name": "Vivian", "strength": "weak", "position": "first" }
+      ]
+    },
+    {
+      "syllable": "jing",
+      "ipa": "tɕiŋ",
+      "candidates": [
+        { "name": "Jean", "strength": "moderate", "position": "any" },
+        { "name": "Gene", "strength": "moderate", "position": "any" },
+        { "name": "Jing", "strength": "strong", "position": "any" }
+      ]
+    },
+    {
+      "syllable": "min",
+      "ipa": "min",
+      "candidates": [
+        { "name": "Mina", "strength": "strong", "position": "any" },
+        { "name": "Minnie", "strength": "strong", "position": "any" },
+        { "name": "Melinda", "strength": "weak", "position": "first" }
+      ]
+    }
+  ]
+}

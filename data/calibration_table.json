@@ -1,0 +1,178 @@
+{
+  "_schema": {
+    "key": "English given name",
+    "note": "This is the differentiator and it depends ONLY on the English name, never on the user. Compute once, serve forever. ~3,000 rows.",
+    "fields": {
+      "name": "English given name",
+      "gender_coding": "masculine | feminine | neutral",
+      "commonality": "very_common | common | uncommon | rare — grounded in SSA popularity data, not model intuition",
+      "peak_decade": "decade of peak US popularity, or 'current' or null if never charted meaningfully",
+      "generational_feel": "dated | classic | current | trendy_may_date",
+      "register": "casual | neutral | formal",
+      "intl_student_cliche": "boolean — disproportionately chosen by Chinese international students",
+      "risk_flags": "array of flag objects with a type and localized note",
+      "notes_hans": "one-line calibration summary, simplified",
+      "notes_hant": "one-line calibration summary, traditional"
+    },
+    "grounding_note": "commonality and peak_decade MUST be joined against US Social Security Administration name data (public domain, per-year counts back to 1880) rather than generated. Only the qualitative feel fields are model-authored."
+  },
+  "rows": [
+    {
+      "name": "Susie", "gender_coding": "feminine",
+      "commonality": "uncommon", "peak_decade": "1950s",
+      "generational_feel": "classic", "register": "casual",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "经典昵称型名字，亲切但偏随意，正式场合通常用 Susan 或 Suzanne。",
+      "notes_hant": "經典暱稱型名字，親切但偏隨意，正式場合通常用 Susan 或 Suzanne。"
+    },
+    {
+      "name": "Suzanne", "gender_coding": "feminine",
+      "commonality": "uncommon", "peak_decade": "1960s",
+      "generational_feel": "dated", "register": "formal",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "正式、稳重，但在英语母语者听来偏上一代人的感觉。",
+      "notes_hant": "正式、穩重，但在英語母語者聽來偏上一代人的感覺。"
+    },
+    {
+      "name": "Marina", "gender_coding": "feminine",
+      "commonality": "uncommon", "peak_decade": "current",
+      "generational_feel": "classic", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "跨语言通用，在多种语言中都好读，职场与日常都合适。",
+      "notes_hant": "跨語言通用，在多種語言中都好讀，職場與日常都合適。"
+    },
+    {
+      "name": "Vesper", "gender_coding": "feminine",
+      "commonality": "rare", "peak_decade": null,
+      "generational_feel": "current", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [
+        { "type": "fictional_association", "note_hans": "与 007 系列角色 Vesper Lynd 强关联。", "note_hant": "與 007 系列角色 Vesper Lynd 強關聯。" }
+      ],
+      "notes_hans": "非常少见，独特但会引人询问；略带戏剧感。",
+      "notes_hant": "非常少見，獨特但會引人詢問；略帶戲劇感。"
+    },
+    {
+      "name": "Kevin", "gender_coding": "masculine",
+      "commonality": "common", "peak_decade": "1990s",
+      "generational_feel": "dated", "register": "neutral",
+      "intl_student_cliche": true,
+      "risk_flags": [
+        { "type": "overused_in_cohort", "note_hans": "在中国留学生群体中极为常见，几乎每个班都有一个。", "note_hant": "在中國留學生群體中極為常見，幾乎每個班都有一個。" }
+      ],
+      "notes_hans": "安全但缺乏辨识度，且在同龄英语母语者中已明显减少。",
+      "notes_hant": "安全但缺乏辨識度，且在同齡英語母語者中已明顯減少。"
+    },
+    {
+      "name": "Tiffany", "gender_coding": "feminine",
+      "commonality": "uncommon", "peak_decade": "1980s",
+      "generational_feel": "dated", "register": "casual",
+      "intl_student_cliche": true,
+      "risk_flags": [
+        { "type": "overused_in_cohort", "note_hans": "在中国留学生群体中过度集中。", "note_hant": "在中國留學生群體中過度集中。" },
+        { "type": "brand_association", "note_hans": "与珠宝品牌 Tiffany & Co. 联系紧密。", "note_hant": "與珠寶品牌 Tiffany & Co. 聯繫緊密。" }
+      ],
+      "notes_hans": "带有明显的八十年代印记，在职场中偏轻。",
+      "notes_hant": "帶有明顯的八十年代印記，在職場中偏輕。"
+    },
+    {
+      "name": "Wren", "gender_coding": "neutral",
+      "commonality": "uncommon", "peak_decade": "current",
+      "generational_feel": "trendy_may_date", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "当下流行的自然系名字，清新但带有较强的时代标记。",
+      "notes_hant": "當下流行的自然系名字，清新但帶有較強的時代標記。"
+    },
+    {
+      "name": "Skylar", "gender_coding": "neutral",
+      "commonality": "common", "peak_decade": "current",
+      "generational_feel": "trendy_may_date", "register": "casual",
+      "intl_student_cliche": false,
+      "risk_flags": [
+        { "type": "popularity", "note_hans": "目前非常热门，辨识度较低。", "note_hant": "目前非常熱門，辨識度較低。" }
+      ],
+      "notes_hans": "很可能在十几年后带有明显的年代感。",
+      "notes_hant": "很可能在十幾年後帶有明顯的年代感。"
+    },
+    {
+      "name": "Faye", "gender_coding": "feminine",
+      "commonality": "uncommon", "peak_decade": "1920s",
+      "generational_feel": "classic", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "复古但近年有小幅回温，简短好念，职场适用。",
+      "notes_hant": "復古但近年有小幅回溫，簡短好唸，職場適用。"
+    },
+    {
+      "name": "Fifi", "gender_coding": "feminine",
+      "commonality": "rare", "peak_decade": null,
+      "generational_feel": "dated", "register": "casual",
+      "intl_student_cliche": false,
+      "risk_flags": [
+        { "type": "pet_name_association", "note_hans": "英语语境中强烈联想到贵宾犬等宠物名。", "note_hant": "英語語境中強烈聯想到貴賓犬等寵物名。" }
+      ],
+      "notes_hans": "过于可爱化，职场场合会明显减分。",
+      "notes_hant": "過於可愛化，職場場合會明顯減分。"
+    },
+    {
+      "name": "Marcus", "gender_coding": "masculine",
+      "commonality": "common", "peak_decade": "1980s",
+      "generational_feel": "classic", "register": "formal",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "稳重、专业，安全牌，但个性不强。",
+      "notes_hant": "穩重、專業，安全牌，但個性不強。"
+    },
+    {
+      "name": "Orion", "gender_coding": "masculine",
+      "commonality": "uncommon", "peak_decade": "current",
+      "generational_feel": "current", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "有个性且不俗气，创意行业加分，保守企业环境略显张扬。",
+      "notes_hant": "有個性且不俗氣，創意行業加分，保守企業環境略顯張揚。"
+    },
+    {
+      "name": "Atlas", "gender_coding": "masculine",
+      "commonality": "uncommon", "peak_decade": "current",
+      "generational_feel": "trendy_may_date", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [
+        { "type": "attention", "note_hans": "较为张扬，视场合可能显得刻意。", "note_hant": "較為張揚，視場合可能顯得刻意。" }
+      ],
+      "notes_hans": "近年在年轻父母中上升，成年人使用仍属少见。",
+      "notes_hant": "近年在年輕父母中上升，成年人使用仍屬少見。"
+    },
+    {
+      "name": "Serena", "gender_coding": "feminine",
+      "commonality": "uncommon", "peak_decade": "current",
+      "generational_feel": "classic", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "含义与发音都柔和，跨文化接受度高。",
+      "notes_hant": "含義與發音都柔和，跨文化接受度高。"
+    },
+    {
+      "name": "Irene", "gender_coding": "feminine",
+      "commonality": "uncommon", "peak_decade": "1920s",
+      "generational_feel": "classic", "register": "formal",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "希腊语原意为和平，端庄但略带年长感。",
+      "notes_hant": "希臘語原意為和平，端莊但略帶年長感。"
+    },
+    {
+      "name": "Jenson", "gender_coding": "masculine",
+      "commonality": "rare", "peak_decade": null,
+      "generational_feel": "current", "register": "neutral",
+      "intl_student_cliche": false,
+      "risk_flags": [],
+      "notes_hans": "少见但不古怪，读音对英语母语者没有障碍。",
+      "notes_hant": "少見但不古怪，讀音對英語母語者沒有障礙。"
+    }
+  ]
+}

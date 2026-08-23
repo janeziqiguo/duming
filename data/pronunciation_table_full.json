@@ -1,0 +1,7006 @@
+{
+  "_meta": {
+    "name": "pronunciation_table",
+    "version": 2,
+    "row_count": 407,
+    "trapped_count": 306,
+    "needs_audio_count": 4,
+    "scope": "Syllables occurring in Chinese personal names. Interjection-only syllables (yo, lo, ê, m, n, ng, hm, hng) are excluded by design.",
+    "tones": "Omitted by design. Recommend an optional tone-mark toggle at the product level rather than in this table.",
+    "caveats": [
+      "Respellings are approximations for English readers, not IPA.",
+      "needs_audio rows have no adequate English respelling and require an audio clip.",
+      "Collision overrides were verified against the CMU pronouncing dictionary.",
+      "Still requires blind first-read testing with native English speakers."
+    ]
+  },
+  "rows": [
+    {
+      "syllable": "a",
+      "ascii": "a",
+      "initial": null,
+      "final": "a",
+      "respell": "ah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "ai",
+      "ascii": "ai",
+      "initial": null,
+      "final": "ai",
+      "respell": "eye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "an",
+      "ascii": "an",
+      "initial": null,
+      "final": "an",
+      "respell": "ahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "ang",
+      "ascii": "ang",
+      "initial": null,
+      "final": "ang",
+      "respell": "ahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "ao",
+      "ascii": "ao",
+      "initial": null,
+      "final": "ao",
+      "respell": "ow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ba",
+      "ascii": "ba",
+      "initial": "b",
+      "final": "a",
+      "respell": "bah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "bai",
+      "ascii": "bai",
+      "initial": "b",
+      "final": "ai",
+      "respell": "beye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "ban",
+      "ascii": "ban",
+      "initial": "b",
+      "final": "an",
+      "respell": "bahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "bang",
+      "ascii": "bang",
+      "initial": "b",
+      "final": "ang",
+      "respell": "bahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "bao",
+      "ascii": "bao",
+      "initial": "b",
+      "final": "ao",
+      "respell": "baow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "bei",
+      "ascii": "bei",
+      "initial": "b",
+      "final": "ei",
+      "respell": "bay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "ben",
+      "ascii": "ben",
+      "initial": "b",
+      "final": "en",
+      "respell": "bun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "beng",
+      "ascii": "beng",
+      "initial": "b",
+      "final": "eng",
+      "respell": "bung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "bi",
+      "ascii": "bi",
+      "initial": "b",
+      "final": "i",
+      "respell": "bee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "bian",
+      "ascii": "bian",
+      "initial": "b",
+      "final": "ian",
+      "respell": "byen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "biao",
+      "ascii": "biao",
+      "initial": "b",
+      "final": "iao",
+      "respell": "byow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "bie",
+      "ascii": "bie",
+      "initial": "b",
+      "final": "ie",
+      "respell": "byeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "bin",
+      "ascii": "bin",
+      "initial": "b",
+      "final": "in",
+      "respell": "bean",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "bing",
+      "ascii": "bing",
+      "initial": "b",
+      "final": "ing",
+      "respell": "bing",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "bo",
+      "ascii": "bo",
+      "initial": "b",
+      "final": "o",
+      "respell": "baw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "o",
+          "severity": 2,
+          "note_en": "After b/p/m/f the o carries a hidden w glide — 'waw', not 'oh'.",
+          "note_hans": "b p m f 后的 o 带有隐含的 w 滑音，读作 waw 而非 oh。",
+          "note_hant": "b p m f 後的 o 帶有隱含的 w 滑音，讀作 waw 而非 oh。"
+        }
+      ]
+    },
+    {
+      "syllable": "bu",
+      "ascii": "bu",
+      "initial": "b",
+      "final": "u",
+      "respell": "boo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "ca",
+      "ascii": "ca",
+      "initial": "c",
+      "final": "a",
+      "respell": "tsah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        }
+      ]
+    },
+    {
+      "syllable": "cai",
+      "ascii": "cai",
+      "initial": "c",
+      "final": "ai",
+      "respell": "tseye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "can",
+      "ascii": "can",
+      "initial": "c",
+      "final": "an",
+      "respell": "tsahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        }
+      ]
+    },
+    {
+      "syllable": "cang",
+      "ascii": "cang",
+      "initial": "c",
+      "final": "ang",
+      "respell": "tsahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        }
+      ]
+    },
+    {
+      "syllable": "cao",
+      "ascii": "cao",
+      "initial": "c",
+      "final": "ao",
+      "respell": "tsow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ce",
+      "ascii": "ce",
+      "initial": "c",
+      "final": "e",
+      "respell": "tsuh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "cen",
+      "ascii": "cen",
+      "initial": "c",
+      "final": "en",
+      "respell": "tsun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "ceng",
+      "ascii": "ceng",
+      "initial": "c",
+      "final": "eng",
+      "respell": "tsung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "cha",
+      "ascii": "cha",
+      "initial": "ch",
+      "final": "a",
+      "respell": "chah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chai",
+      "ascii": "chai",
+      "initial": "ch",
+      "final": "ai",
+      "respell": "cheye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "chan",
+      "ascii": "chan",
+      "initial": "ch",
+      "final": "an",
+      "respell": "chahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chang",
+      "ascii": "chang",
+      "initial": "ch",
+      "final": "ang",
+      "respell": "chahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chao",
+      "ascii": "chao",
+      "initial": "ch",
+      "final": "ao",
+      "respell": "chaow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "che",
+      "ascii": "che",
+      "initial": "ch",
+      "final": "e",
+      "respell": "chuh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "chen",
+      "ascii": "chen",
+      "initial": "ch",
+      "final": "en",
+      "respell": "chun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "cheng",
+      "ascii": "cheng",
+      "initial": "ch",
+      "final": "eng",
+      "respell": "chung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "chi",
+      "ascii": "chi",
+      "initial": "ch",
+      "final": "i",
+      "respell": "chur",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "i",
+          "severity": 3,
+          "note_en": "This i is a held buzz on the tongue, not 'ee'.",
+          "note_hans": "这里的 i 不是 ee 的音，而是舌位保持的嗡音。",
+          "note_hant": "這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"
+        }
+      ]
+    },
+    {
+      "syllable": "chong",
+      "ascii": "chong",
+      "initial": "ch",
+      "final": "ong",
+      "respell": "choong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "chou",
+      "ascii": "chou",
+      "initial": "ch",
+      "final": "ou",
+      "respell": "choh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "chu",
+      "ascii": "chu",
+      "initial": "ch",
+      "final": "u",
+      "respell": "choo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "chua",
+      "ascii": "chua",
+      "initial": "ch",
+      "final": "ua",
+      "respell": "chwah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chuai",
+      "ascii": "chuai",
+      "initial": "ch",
+      "final": "uai",
+      "respell": "chwhy",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chuan",
+      "ascii": "chuan",
+      "initial": "ch",
+      "final": "uan",
+      "respell": "chwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chuang",
+      "ascii": "chuang",
+      "initial": "ch",
+      "final": "uang",
+      "respell": "chwahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chui",
+      "ascii": "chui",
+      "initial": "ch",
+      "final": "ui",
+      "respell": "chway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "chun",
+      "ascii": "chun",
+      "initial": "ch",
+      "final": "un",
+      "respell": "chwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "chuo",
+      "ascii": "chuo",
+      "initial": "ch",
+      "final": "uo",
+      "respell": "chwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "ci",
+      "ascii": "ci",
+      "initial": "c",
+      "final": "i",
+      "respell": "tsz",
+      "needs_audio": true,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "i",
+          "severity": 3,
+          "note_en": "This i is a held buzz on the tongue, not 'ee'.",
+          "note_hans": "这里的 i 不是 ee 的音，而是舌位保持的嗡音。",
+          "note_hant": "這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"
+        },
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        }
+      ]
+    },
+    {
+      "syllable": "cong",
+      "ascii": "cong",
+      "initial": "c",
+      "final": "ong",
+      "respell": "tsoong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "cou",
+      "ascii": "cou",
+      "initial": "c",
+      "final": "ou",
+      "respell": "tsoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "cu",
+      "ascii": "cu",
+      "initial": "c",
+      "final": "u",
+      "respell": "tsoo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "cuan",
+      "ascii": "cuan",
+      "initial": "c",
+      "final": "uan",
+      "respell": "tswahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        }
+      ]
+    },
+    {
+      "syllable": "cui",
+      "ascii": "cui",
+      "initial": "c",
+      "final": "ui",
+      "respell": "tsway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "cun",
+      "ascii": "cun",
+      "initial": "c",
+      "final": "un",
+      "respell": "tswun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        }
+      ]
+    },
+    {
+      "syllable": "cuo",
+      "ascii": "cuo",
+      "initial": "c",
+      "final": "uo",
+      "respell": "tswaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "c",
+          "severity": 3,
+          "note_en": "Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.",
+          "note_hans": "c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。",
+          "note_hant": "c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"
+        },
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "da",
+      "ascii": "da",
+      "initial": "d",
+      "final": "a",
+      "respell": "dah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "dai",
+      "ascii": "dai",
+      "initial": "d",
+      "final": "ai",
+      "respell": "deye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "dan",
+      "ascii": "dan",
+      "initial": "d",
+      "final": "an",
+      "respell": "dahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "dang",
+      "ascii": "dang",
+      "initial": "d",
+      "final": "ang",
+      "respell": "dahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "dao",
+      "ascii": "dao",
+      "initial": "d",
+      "final": "ao",
+      "respell": "dow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "de",
+      "ascii": "de",
+      "initial": "d",
+      "final": "e",
+      "respell": "duh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "dei",
+      "ascii": "dei",
+      "initial": "d",
+      "final": "ei",
+      "respell": "day",
+      "needs_audio": false,
+      "colloquial": true,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "den",
+      "ascii": "den",
+      "initial": "d",
+      "final": "en",
+      "respell": "dun",
+      "needs_audio": false,
+      "colloquial": true,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "deng",
+      "ascii": "deng",
+      "initial": "d",
+      "final": "eng",
+      "respell": "dung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "di",
+      "ascii": "di",
+      "initial": "d",
+      "final": "i",
+      "respell": "dee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "dian",
+      "ascii": "dian",
+      "initial": "d",
+      "final": "ian",
+      "respell": "dyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "diao",
+      "ascii": "diao",
+      "initial": "d",
+      "final": "iao",
+      "respell": "dyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "die",
+      "ascii": "die",
+      "initial": "d",
+      "final": "ie",
+      "respell": "dyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "ding",
+      "ascii": "ding",
+      "initial": "d",
+      "final": "ing",
+      "respell": "ding",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "diu",
+      "ascii": "diu",
+      "initial": "d",
+      "final": "iu",
+      "respell": "dyoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "iu",
+          "severity": 2,
+          "note_en": "iu is a single glide, 'yoh' — not 'ee-oo'.",
+          "note_hans": "iu 是一个滑音，读作 yoh。",
+          "note_hant": "iu 是一個滑音，讀作 yoh。"
+        }
+      ]
+    },
+    {
+      "syllable": "dong",
+      "ascii": "dong",
+      "initial": "d",
+      "final": "ong",
+      "respell": "doong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "dou",
+      "ascii": "dou",
+      "initial": "d",
+      "final": "ou",
+      "respell": "doh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "du",
+      "ascii": "du",
+      "initial": "d",
+      "final": "u",
+      "respell": "doo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "duan",
+      "ascii": "duan",
+      "initial": "d",
+      "final": "uan",
+      "respell": "dwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "dui",
+      "ascii": "dui",
+      "initial": "d",
+      "final": "ui",
+      "respell": "dway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "dun",
+      "ascii": "dun",
+      "initial": "d",
+      "final": "un",
+      "respell": "dwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "duo",
+      "ascii": "duo",
+      "initial": "d",
+      "final": "uo",
+      "respell": "dwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "e",
+      "ascii": "e",
+      "initial": null,
+      "final": "e",
+      "respell": "uh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "ei",
+      "ascii": "ei",
+      "initial": null,
+      "final": "ei",
+      "respell": "ay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "en",
+      "ascii": "en",
+      "initial": null,
+      "final": "en",
+      "respell": "un",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "eng",
+      "ascii": "eng",
+      "initial": null,
+      "final": "eng",
+      "respell": "ung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "er",
+      "ascii": "er",
+      "initial": null,
+      "final": "er",
+      "respell": "urr",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "er",
+          "severity": 2,
+          "note_en": "er is 'urr' with the tongue curled — not 'ar' as in car.",
+          "note_hans": "er 读作 urr，舌尖上卷，不是 car 的 ar。",
+          "note_hant": "er 讀作 urr，舌尖上捲，不是 car 的 ar。"
+        }
+      ]
+    },
+    {
+      "syllable": "fa",
+      "ascii": "fa",
+      "initial": "f",
+      "final": "a",
+      "respell": "fah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "fan",
+      "ascii": "fan",
+      "initial": "f",
+      "final": "an",
+      "respell": "fahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "fang",
+      "ascii": "fang",
+      "initial": "f",
+      "final": "ang",
+      "respell": "fahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "fei",
+      "ascii": "fei",
+      "initial": "f",
+      "final": "ei",
+      "respell": "fay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "fen",
+      "ascii": "fen",
+      "initial": "f",
+      "final": "en",
+      "respell": "fun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "feng",
+      "ascii": "feng",
+      "initial": "f",
+      "final": "eng",
+      "respell": "fung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "fo",
+      "ascii": "fo",
+      "initial": "f",
+      "final": "o",
+      "respell": "faw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "o",
+          "severity": 2,
+          "note_en": "After b/p/m/f the o carries a hidden w glide — 'waw', not 'oh'.",
+          "note_hans": "b p m f 后的 o 带有隐含的 w 滑音，读作 waw 而非 oh。",
+          "note_hant": "b p m f 後的 o 帶有隱含的 w 滑音，讀作 waw 而非 oh。"
+        }
+      ]
+    },
+    {
+      "syllable": "fou",
+      "ascii": "fou",
+      "initial": "f",
+      "final": "ou",
+      "respell": "foh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "fu",
+      "ascii": "fu",
+      "initial": "f",
+      "final": "u",
+      "respell": "foo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "ga",
+      "ascii": "ga",
+      "initial": "g",
+      "final": "a",
+      "respell": "gah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "gai",
+      "ascii": "gai",
+      "initial": "g",
+      "final": "ai",
+      "respell": "geye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "gan",
+      "ascii": "gan",
+      "initial": "g",
+      "final": "an",
+      "respell": "gahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "gang",
+      "ascii": "gang",
+      "initial": "g",
+      "final": "ang",
+      "respell": "gahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "gao",
+      "ascii": "gao",
+      "initial": "g",
+      "final": "ao",
+      "respell": "gow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ge",
+      "ascii": "ge",
+      "initial": "g",
+      "final": "e",
+      "respell": "guh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "gei",
+      "ascii": "gei",
+      "initial": "g",
+      "final": "ei",
+      "respell": "gay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "gen",
+      "ascii": "gen",
+      "initial": "g",
+      "final": "en",
+      "respell": "gun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "geng",
+      "ascii": "geng",
+      "initial": "g",
+      "final": "eng",
+      "respell": "gung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "gong",
+      "ascii": "gong",
+      "initial": "g",
+      "final": "ong",
+      "respell": "goong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "gou",
+      "ascii": "gou",
+      "initial": "g",
+      "final": "ou",
+      "respell": "goh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "gu",
+      "ascii": "gu",
+      "initial": "g",
+      "final": "u",
+      "respell": "goo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "gua",
+      "ascii": "gua",
+      "initial": "g",
+      "final": "ua",
+      "respell": "gwah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "guai",
+      "ascii": "guai",
+      "initial": "g",
+      "final": "uai",
+      "respell": "gwhy",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "guan",
+      "ascii": "guan",
+      "initial": "g",
+      "final": "uan",
+      "respell": "gwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "guang",
+      "ascii": "guang",
+      "initial": "g",
+      "final": "uang",
+      "respell": "gwahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "gui",
+      "ascii": "gui",
+      "initial": "g",
+      "final": "ui",
+      "respell": "gway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "gun",
+      "ascii": "gun",
+      "initial": "g",
+      "final": "un",
+      "respell": "gwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "guo",
+      "ascii": "guo",
+      "initial": "g",
+      "final": "uo",
+      "respell": "gwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "ha",
+      "ascii": "ha",
+      "initial": "h",
+      "final": "a",
+      "respell": "hah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "hai",
+      "ascii": "hai",
+      "initial": "h",
+      "final": "ai",
+      "respell": "heye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "han",
+      "ascii": "han",
+      "initial": "h",
+      "final": "an",
+      "respell": "hahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "hang",
+      "ascii": "hang",
+      "initial": "h",
+      "final": "ang",
+      "respell": "hahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "hao",
+      "ascii": "hao",
+      "initial": "h",
+      "final": "ao",
+      "respell": "how",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "he",
+      "ascii": "he",
+      "initial": "h",
+      "final": "e",
+      "respell": "huh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "hei",
+      "ascii": "hei",
+      "initial": "h",
+      "final": "ei",
+      "respell": "hay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "hen",
+      "ascii": "hen",
+      "initial": "h",
+      "final": "en",
+      "respell": "hun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "heng",
+      "ascii": "heng",
+      "initial": "h",
+      "final": "eng",
+      "respell": "hung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "hong",
+      "ascii": "hong",
+      "initial": "h",
+      "final": "ong",
+      "respell": "hoong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "hou",
+      "ascii": "hou",
+      "initial": "h",
+      "final": "ou",
+      "respell": "hoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "hu",
+      "ascii": "hu",
+      "initial": "h",
+      "final": "u",
+      "respell": "hoo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "hua",
+      "ascii": "hua",
+      "initial": "h",
+      "final": "ua",
+      "respell": "hwah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "huai",
+      "ascii": "huai",
+      "initial": "h",
+      "final": "uai",
+      "respell": "hwhy",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "huan",
+      "ascii": "huan",
+      "initial": "h",
+      "final": "uan",
+      "respell": "hwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "huang",
+      "ascii": "huang",
+      "initial": "h",
+      "final": "uang",
+      "respell": "hwahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "hui",
+      "ascii": "hui",
+      "initial": "h",
+      "final": "ui",
+      "respell": "hway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "hun",
+      "ascii": "hun",
+      "initial": "h",
+      "final": "un",
+      "respell": "hwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "huo",
+      "ascii": "huo",
+      "initial": "h",
+      "final": "uo",
+      "respell": "hwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "ji",
+      "ascii": "ji",
+      "initial": "j",
+      "final": "i",
+      "respell": "jee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "jia",
+      "ascii": "jia",
+      "initial": "j",
+      "final": "ia",
+      "respell": "jyah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "jian",
+      "ascii": "jian",
+      "initial": "j",
+      "final": "ian",
+      "respell": "jyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "jiang",
+      "ascii": "jiang",
+      "initial": "j",
+      "final": "iang",
+      "respell": "jyahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "jiao",
+      "ascii": "jiao",
+      "initial": "j",
+      "final": "iao",
+      "respell": "jyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "jie",
+      "ascii": "jie",
+      "initial": "j",
+      "final": "ie",
+      "respell": "jyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "jin",
+      "ascii": "jin",
+      "initial": "j",
+      "final": "in",
+      "respell": "jeen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "jing",
+      "ascii": "jing",
+      "initial": "j",
+      "final": "ing",
+      "respell": "jing",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "jiong",
+      "ascii": "jiong",
+      "initial": "j",
+      "final": "iong",
+      "respell": "jyoong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "jiu",
+      "ascii": "jiu",
+      "initial": "j",
+      "final": "iu",
+      "respell": "jyoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "iu",
+          "severity": 2,
+          "note_en": "iu is a single glide, 'yoh' — not 'ee-oo'.",
+          "note_hans": "iu 是一个滑音，读作 yoh。",
+          "note_hant": "iu 是一個滑音，讀作 yoh。"
+        }
+      ]
+    },
+    {
+      "syllable": "ju",
+      "ascii": "ju",
+      "initial": "j",
+      "final": "u",
+      "respell": "jyew",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ü",
+          "severity": 3,
+          "note_en": "Round your lips as if saying 'oo' but say 'ee'.",
+          "note_hans": "ü 在英语中没有对应音，yew 是最接近的近似。",
+          "note_hant": "ü 在英語中沒有對應音，yew 是最接近的近似。"
+        }
+      ]
+    },
+    {
+      "syllable": "juan",
+      "ascii": "juan",
+      "initial": "j",
+      "final": "uan",
+      "respell": "jywen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üan",
+          "severity": 3,
+          "note_en": "üan ends in 'yen', not 'wahn'.",
+          "note_hans": "üan 结尾是 yen，不是 wahn。",
+          "note_hant": "üan 結尾是 yen，不是 wahn。"
+        }
+      ]
+    },
+    {
+      "syllable": "jue",
+      "ascii": "jue",
+      "initial": "j",
+      "final": "ue",
+      "respell": "jyweh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üe",
+          "severity": 3,
+          "note_en": "Start with the ü lip-round, then glide to 'eh'.",
+          "note_hans": "üe 先摆出 ü 的口型再滑向 eh。",
+          "note_hant": "üe 先擺出 ü 的口型再滑向 eh。"
+        }
+      ]
+    },
+    {
+      "syllable": "jun",
+      "ascii": "jun",
+      "initial": "j",
+      "final": "un",
+      "respell": "jyewn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ün",
+          "severity": 3,
+          "note_en": "ün keeps the ü lip-round before the n.",
+          "note_hans": "ün 保持 ü 的口型再收 n。",
+          "note_hant": "ün 保持 ü 的口型再收 n。"
+        }
+      ]
+    },
+    {
+      "syllable": "ka",
+      "ascii": "ka",
+      "initial": "k",
+      "final": "a",
+      "respell": "kah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kai",
+      "ascii": "kai",
+      "initial": "k",
+      "final": "ai",
+      "respell": "keye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "kan",
+      "ascii": "kan",
+      "initial": "k",
+      "final": "an",
+      "respell": "kahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kang",
+      "ascii": "kang",
+      "initial": "k",
+      "final": "ang",
+      "respell": "kahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kao",
+      "ascii": "kao",
+      "initial": "k",
+      "final": "ao",
+      "respell": "kow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ke",
+      "ascii": "ke",
+      "initial": "k",
+      "final": "e",
+      "respell": "kuh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "kei",
+      "ascii": "kei",
+      "initial": "k",
+      "final": "ei",
+      "respell": "kay",
+      "needs_audio": false,
+      "colloquial": true,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "ken",
+      "ascii": "ken",
+      "initial": "k",
+      "final": "en",
+      "respell": "kun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "keng",
+      "ascii": "keng",
+      "initial": "k",
+      "final": "eng",
+      "respell": "kung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "kong",
+      "ascii": "kong",
+      "initial": "k",
+      "final": "ong",
+      "respell": "koong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "kou",
+      "ascii": "kou",
+      "initial": "k",
+      "final": "ou",
+      "respell": "koh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ku",
+      "ascii": "ku",
+      "initial": "k",
+      "final": "u",
+      "respell": "koo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "kua",
+      "ascii": "kua",
+      "initial": "k",
+      "final": "ua",
+      "respell": "kwah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kuai",
+      "ascii": "kuai",
+      "initial": "k",
+      "final": "uai",
+      "respell": "kwhy",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kuan",
+      "ascii": "kuan",
+      "initial": "k",
+      "final": "uan",
+      "respell": "kwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kuang",
+      "ascii": "kuang",
+      "initial": "k",
+      "final": "uang",
+      "respell": "kwahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kui",
+      "ascii": "kui",
+      "initial": "k",
+      "final": "ui",
+      "respell": "kway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "kun",
+      "ascii": "kun",
+      "initial": "k",
+      "final": "un",
+      "respell": "kwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "kuo",
+      "ascii": "kuo",
+      "initial": "k",
+      "final": "uo",
+      "respell": "kwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "la",
+      "ascii": "la",
+      "initial": "l",
+      "final": "a",
+      "respell": "lah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "lai",
+      "ascii": "lai",
+      "initial": "l",
+      "final": "ai",
+      "respell": "leye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "lan",
+      "ascii": "lan",
+      "initial": "l",
+      "final": "an",
+      "respell": "lahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "lang",
+      "ascii": "lang",
+      "initial": "l",
+      "final": "ang",
+      "respell": "lahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "lao",
+      "ascii": "lao",
+      "initial": "l",
+      "final": "ao",
+      "respell": "laow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "le",
+      "ascii": "le",
+      "initial": "l",
+      "final": "e",
+      "respell": "luh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "lei",
+      "ascii": "lei",
+      "initial": "l",
+      "final": "ei",
+      "respell": "lay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "leng",
+      "ascii": "leng",
+      "initial": "l",
+      "final": "eng",
+      "respell": "lung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "li",
+      "ascii": "li",
+      "initial": "l",
+      "final": "i",
+      "respell": "lee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "lia",
+      "ascii": "lia",
+      "initial": "l",
+      "final": "ia",
+      "respell": "lyah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "lian",
+      "ascii": "lian",
+      "initial": "l",
+      "final": "ian",
+      "respell": "lyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "liang",
+      "ascii": "liang",
+      "initial": "l",
+      "final": "iang",
+      "respell": "lyahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "liao",
+      "ascii": "liao",
+      "initial": "l",
+      "final": "iao",
+      "respell": "lyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "lie",
+      "ascii": "lie",
+      "initial": "l",
+      "final": "ie",
+      "respell": "lyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "lin",
+      "ascii": "lin",
+      "initial": "l",
+      "final": "in",
+      "respell": "leen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "ling",
+      "ascii": "ling",
+      "initial": "l",
+      "final": "ing",
+      "respell": "ling",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "liu",
+      "ascii": "liu",
+      "initial": "l",
+      "final": "iu",
+      "respell": "lyoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "iu",
+          "severity": 2,
+          "note_en": "iu is a single glide, 'yoh' — not 'ee-oo'.",
+          "note_hans": "iu 是一个滑音，读作 yoh。",
+          "note_hant": "iu 是一個滑音，讀作 yoh。"
+        }
+      ]
+    },
+    {
+      "syllable": "long",
+      "ascii": "long",
+      "initial": "l",
+      "final": "ong",
+      "respell": "loong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "lou",
+      "ascii": "lou",
+      "initial": "l",
+      "final": "ou",
+      "respell": "loh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "lu",
+      "ascii": "lu",
+      "initial": "l",
+      "final": "u",
+      "respell": "loo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "luan",
+      "ascii": "luan",
+      "initial": "l",
+      "final": "uan",
+      "respell": "lwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "lun",
+      "ascii": "lun",
+      "initial": "l",
+      "final": "un",
+      "respell": "lwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "luo",
+      "ascii": "luo",
+      "initial": "l",
+      "final": "uo",
+      "respell": "lwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "lü",
+      "ascii": "lv",
+      "initial": "l",
+      "final": "ü",
+      "respell": "lyew",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ü",
+          "severity": 3,
+          "note_en": "Round your lips as if saying 'oo' but say 'ee'.",
+          "note_hans": "ü 在英语中没有对应音，yew 是最接近的近似。",
+          "note_hant": "ü 在英語中沒有對應音，yew 是最接近的近似。"
+        }
+      ]
+    },
+    {
+      "syllable": "lüe",
+      "ascii": "lve",
+      "initial": "l",
+      "final": "üe",
+      "respell": "lyweh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üe",
+          "severity": 3,
+          "note_en": "Start with the ü lip-round, then glide to 'eh'.",
+          "note_hans": "üe 先摆出 ü 的口型再滑向 eh。",
+          "note_hant": "üe 先擺出 ü 的口型再滑向 eh。"
+        }
+      ]
+    },
+    {
+      "syllable": "ma",
+      "ascii": "ma",
+      "initial": "m",
+      "final": "a",
+      "respell": "mah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "mai",
+      "ascii": "mai",
+      "initial": "m",
+      "final": "ai",
+      "respell": "meye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "man",
+      "ascii": "man",
+      "initial": "m",
+      "final": "an",
+      "respell": "mahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "mang",
+      "ascii": "mang",
+      "initial": "m",
+      "final": "ang",
+      "respell": "mahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "mao",
+      "ascii": "mao",
+      "initial": "m",
+      "final": "ao",
+      "respell": "maow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "me",
+      "ascii": "me",
+      "initial": "m",
+      "final": "e",
+      "respell": "muh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "mei",
+      "ascii": "mei",
+      "initial": "m",
+      "final": "ei",
+      "respell": "may",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "men",
+      "ascii": "men",
+      "initial": "m",
+      "final": "en",
+      "respell": "mun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "meng",
+      "ascii": "meng",
+      "initial": "m",
+      "final": "eng",
+      "respell": "mung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "mi",
+      "ascii": "mi",
+      "initial": "m",
+      "final": "i",
+      "respell": "mee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "mian",
+      "ascii": "mian",
+      "initial": "m",
+      "final": "ian",
+      "respell": "myen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "miao",
+      "ascii": "miao",
+      "initial": "m",
+      "final": "iao",
+      "respell": "myow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "mie",
+      "ascii": "mie",
+      "initial": "m",
+      "final": "ie",
+      "respell": "myeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "min",
+      "ascii": "min",
+      "initial": "m",
+      "final": "in",
+      "respell": "meen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "ming",
+      "ascii": "ming",
+      "initial": "m",
+      "final": "ing",
+      "respell": "ming",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "miu",
+      "ascii": "miu",
+      "initial": "m",
+      "final": "iu",
+      "respell": "myoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "iu",
+          "severity": 2,
+          "note_en": "iu is a single glide, 'yoh' — not 'ee-oo'.",
+          "note_hans": "iu 是一个滑音，读作 yoh。",
+          "note_hant": "iu 是一個滑音，讀作 yoh。"
+        }
+      ]
+    },
+    {
+      "syllable": "mo",
+      "ascii": "mo",
+      "initial": "m",
+      "final": "o",
+      "respell": "maw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "o",
+          "severity": 2,
+          "note_en": "After b/p/m/f the o carries a hidden w glide — 'waw', not 'oh'.",
+          "note_hans": "b p m f 后的 o 带有隐含的 w 滑音，读作 waw 而非 oh。",
+          "note_hant": "b p m f 後的 o 帶有隱含的 w 滑音，讀作 waw 而非 oh。"
+        }
+      ]
+    },
+    {
+      "syllable": "mou",
+      "ascii": "mou",
+      "initial": "m",
+      "final": "ou",
+      "respell": "moh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "mu",
+      "ascii": "mu",
+      "initial": "m",
+      "final": "u",
+      "respell": "moo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "na",
+      "ascii": "na",
+      "initial": "n",
+      "final": "a",
+      "respell": "nah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "nai",
+      "ascii": "nai",
+      "initial": "n",
+      "final": "ai",
+      "respell": "neye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "nan",
+      "ascii": "nan",
+      "initial": "n",
+      "final": "an",
+      "respell": "nahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "nang",
+      "ascii": "nang",
+      "initial": "n",
+      "final": "ang",
+      "respell": "nahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "nao",
+      "ascii": "nao",
+      "initial": "n",
+      "final": "ao",
+      "respell": "now",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ne",
+      "ascii": "ne",
+      "initial": "n",
+      "final": "e",
+      "respell": "nuh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "nei",
+      "ascii": "nei",
+      "initial": "n",
+      "final": "ei",
+      "respell": "nay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "nen",
+      "ascii": "nen",
+      "initial": "n",
+      "final": "en",
+      "respell": "nun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "neng",
+      "ascii": "neng",
+      "initial": "n",
+      "final": "eng",
+      "respell": "nung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "ni",
+      "ascii": "ni",
+      "initial": "n",
+      "final": "i",
+      "respell": "nee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "nian",
+      "ascii": "nian",
+      "initial": "n",
+      "final": "ian",
+      "respell": "nyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "niang",
+      "ascii": "niang",
+      "initial": "n",
+      "final": "iang",
+      "respell": "nyahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "niao",
+      "ascii": "niao",
+      "initial": "n",
+      "final": "iao",
+      "respell": "nyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "nie",
+      "ascii": "nie",
+      "initial": "n",
+      "final": "ie",
+      "respell": "nyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "nin",
+      "ascii": "nin",
+      "initial": "n",
+      "final": "in",
+      "respell": "neen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "ning",
+      "ascii": "ning",
+      "initial": "n",
+      "final": "ing",
+      "respell": "ning",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "niu",
+      "ascii": "niu",
+      "initial": "n",
+      "final": "iu",
+      "respell": "nyoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "iu",
+          "severity": 2,
+          "note_en": "iu is a single glide, 'yoh' — not 'ee-oo'.",
+          "note_hans": "iu 是一个滑音，读作 yoh。",
+          "note_hant": "iu 是一個滑音，讀作 yoh。"
+        }
+      ]
+    },
+    {
+      "syllable": "nong",
+      "ascii": "nong",
+      "initial": "n",
+      "final": "ong",
+      "respell": "noong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "nou",
+      "ascii": "nou",
+      "initial": "n",
+      "final": "ou",
+      "respell": "noh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "nu",
+      "ascii": "nu",
+      "initial": "n",
+      "final": "u",
+      "respell": "noo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "nuan",
+      "ascii": "nuan",
+      "initial": "n",
+      "final": "uan",
+      "respell": "nwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "nuo",
+      "ascii": "nuo",
+      "initial": "n",
+      "final": "uo",
+      "respell": "nwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "nü",
+      "ascii": "nv",
+      "initial": "n",
+      "final": "ü",
+      "respell": "nyew",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ü",
+          "severity": 3,
+          "note_en": "Round your lips as if saying 'oo' but say 'ee'.",
+          "note_hans": "ü 在英语中没有对应音，yew 是最接近的近似。",
+          "note_hant": "ü 在英語中沒有對應音，yew 是最接近的近似。"
+        }
+      ]
+    },
+    {
+      "syllable": "nüe",
+      "ascii": "nve",
+      "initial": "n",
+      "final": "üe",
+      "respell": "nyweh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üe",
+          "severity": 3,
+          "note_en": "Start with the ü lip-round, then glide to 'eh'.",
+          "note_hans": "üe 先摆出 ü 的口型再滑向 eh。",
+          "note_hant": "üe 先擺出 ü 的口型再滑向 eh。"
+        }
+      ]
+    },
+    {
+      "syllable": "o",
+      "ascii": "o",
+      "initial": null,
+      "final": "o",
+      "respell": "aw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "o",
+          "severity": 2,
+          "note_en": "After b/p/m/f the o carries a hidden w glide — 'waw', not 'oh'.",
+          "note_hans": "b p m f 后的 o 带有隐含的 w 滑音，读作 waw 而非 oh。",
+          "note_hant": "b p m f 後的 o 帶有隱含的 w 滑音，讀作 waw 而非 oh。"
+        }
+      ]
+    },
+    {
+      "syllable": "ou",
+      "ascii": "ou",
+      "initial": null,
+      "final": "ou",
+      "respell": "oh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "pa",
+      "ascii": "pa",
+      "initial": "p",
+      "final": "a",
+      "respell": "pah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "pai",
+      "ascii": "pai",
+      "initial": "p",
+      "final": "ai",
+      "respell": "peye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "pan",
+      "ascii": "pan",
+      "initial": "p",
+      "final": "an",
+      "respell": "pahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "pang",
+      "ascii": "pang",
+      "initial": "p",
+      "final": "ang",
+      "respell": "pahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "pao",
+      "ascii": "pao",
+      "initial": "p",
+      "final": "ao",
+      "respell": "pow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "pei",
+      "ascii": "pei",
+      "initial": "p",
+      "final": "ei",
+      "respell": "pay",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "pen",
+      "ascii": "pen",
+      "initial": "p",
+      "final": "en",
+      "respell": "pun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "peng",
+      "ascii": "peng",
+      "initial": "p",
+      "final": "eng",
+      "respell": "pung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "pi",
+      "ascii": "pi",
+      "initial": "p",
+      "final": "i",
+      "respell": "pee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "pian",
+      "ascii": "pian",
+      "initial": "p",
+      "final": "ian",
+      "respell": "pyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "piao",
+      "ascii": "piao",
+      "initial": "p",
+      "final": "iao",
+      "respell": "pyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "pie",
+      "ascii": "pie",
+      "initial": "p",
+      "final": "ie",
+      "respell": "pyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "pin",
+      "ascii": "pin",
+      "initial": "p",
+      "final": "in",
+      "respell": "peen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "ping",
+      "ascii": "ping",
+      "initial": "p",
+      "final": "ing",
+      "respell": "ping",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "po",
+      "ascii": "po",
+      "initial": "p",
+      "final": "o",
+      "respell": "paw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "o",
+          "severity": 2,
+          "note_en": "After b/p/m/f the o carries a hidden w glide — 'waw', not 'oh'.",
+          "note_hans": "b p m f 后的 o 带有隐含的 w 滑音，读作 waw 而非 oh。",
+          "note_hant": "b p m f 後的 o 帶有隱含的 w 滑音，讀作 waw 而非 oh。"
+        }
+      ]
+    },
+    {
+      "syllable": "pou",
+      "ascii": "pou",
+      "initial": "p",
+      "final": "ou",
+      "respell": "poh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "pu",
+      "ascii": "pu",
+      "initial": "p",
+      "final": "u",
+      "respell": "poo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "qi",
+      "ascii": "qi",
+      "initial": "q",
+      "final": "i",
+      "respell": "chee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "qia",
+      "ascii": "qia",
+      "initial": "q",
+      "final": "ia",
+      "respell": "chyah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "qian",
+      "ascii": "qian",
+      "initial": "q",
+      "final": "ian",
+      "respell": "chyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        },
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "qiang",
+      "ascii": "qiang",
+      "initial": "q",
+      "final": "iang",
+      "respell": "chyahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "qiao",
+      "ascii": "qiao",
+      "initial": "q",
+      "final": "iao",
+      "respell": "chyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "qie",
+      "ascii": "qie",
+      "initial": "q",
+      "final": "ie",
+      "respell": "chyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        },
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "qin",
+      "ascii": "qin",
+      "initial": "q",
+      "final": "in",
+      "respell": "cheen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        },
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "qing",
+      "ascii": "qing",
+      "initial": "q",
+      "final": "ing",
+      "respell": "ching",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        },
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "qiong",
+      "ascii": "qiong",
+      "initial": "q",
+      "final": "iong",
+      "respell": "chyoong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "qiu",
+      "ascii": "qiu",
+      "initial": "q",
+      "final": "iu",
+      "respell": "chyoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        },
+        {
+          "label": "iu",
+          "severity": 2,
+          "note_en": "iu is a single glide, 'yoh' — not 'ee-oo'.",
+          "note_hans": "iu 是一个滑音，读作 yoh。",
+          "note_hant": "iu 是一個滑音，讀作 yoh。"
+        }
+      ]
+    },
+    {
+      "syllable": "qu",
+      "ascii": "qu",
+      "initial": "q",
+      "final": "u",
+      "respell": "chyew",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ü",
+          "severity": 3,
+          "note_en": "Round your lips as if saying 'oo' but say 'ee'.",
+          "note_hans": "ü 在英语中没有对应音，yew 是最接近的近似。",
+          "note_hant": "ü 在英語中沒有對應音，yew 是最接近的近似。"
+        },
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "quan",
+      "ascii": "quan",
+      "initial": "q",
+      "final": "uan",
+      "respell": "chywen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üan",
+          "severity": 3,
+          "note_en": "üan ends in 'yen', not 'wahn'.",
+          "note_hans": "üan 结尾是 yen，不是 wahn。",
+          "note_hant": "üan 結尾是 yen，不是 wahn。"
+        },
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "que",
+      "ascii": "que",
+      "initial": "q",
+      "final": "ue",
+      "respell": "chyweh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üe",
+          "severity": 3,
+          "note_en": "Start with the ü lip-round, then glide to 'eh'.",
+          "note_hans": "üe 先摆出 ü 的口型再滑向 eh。",
+          "note_hant": "üe 先擺出 ü 的口型再滑向 eh。"
+        },
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "qun",
+      "ascii": "qun",
+      "initial": "q",
+      "final": "un",
+      "respell": "chyewn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ün",
+          "severity": 3,
+          "note_en": "ün keeps the ü lip-round before the n.",
+          "note_hans": "ün 保持 ü 的口型再收 n。",
+          "note_hant": "ün 保持 ü 的口型再收 n。"
+        },
+        {
+          "label": "q",
+          "severity": 3,
+          "note_en": "Pinyin q is a 'ch' sound — never the 'kw' in queen.",
+          "note_hans": "英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。",
+          "note_hant": "英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "ran",
+      "ascii": "ran",
+      "initial": "r",
+      "final": "an",
+      "respell": "rahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        }
+      ]
+    },
+    {
+      "syllable": "rang",
+      "ascii": "rang",
+      "initial": "r",
+      "final": "ang",
+      "respell": "rahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        }
+      ]
+    },
+    {
+      "syllable": "rao",
+      "ascii": "rao",
+      "initial": "r",
+      "final": "ao",
+      "respell": "raow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "re",
+      "ascii": "re",
+      "initial": "r",
+      "final": "e",
+      "respell": "ruh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "ren",
+      "ascii": "ren",
+      "initial": "r",
+      "final": "en",
+      "respell": "run",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "reng",
+      "ascii": "reng",
+      "initial": "r",
+      "final": "eng",
+      "respell": "rung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "ri",
+      "ascii": "ri",
+      "initial": "r",
+      "final": "i",
+      "respell": "rr",
+      "needs_audio": true,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "i",
+          "severity": 3,
+          "note_en": "This i is a held buzz on the tongue, not 'ee'.",
+          "note_hans": "这里的 i 不是 ee 的音，而是舌位保持的嗡音。",
+          "note_hant": "這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"
+        },
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        }
+      ]
+    },
+    {
+      "syllable": "rong",
+      "ascii": "rong",
+      "initial": "r",
+      "final": "ong",
+      "respell": "roong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "rou",
+      "ascii": "rou",
+      "initial": "r",
+      "final": "ou",
+      "respell": "roh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ru",
+      "ascii": "ru",
+      "initial": "r",
+      "final": "u",
+      "respell": "roo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "rua",
+      "ascii": "rua",
+      "initial": "r",
+      "final": "ua",
+      "respell": "rwah",
+      "needs_audio": false,
+      "colloquial": true,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        }
+      ]
+    },
+    {
+      "syllable": "ruan",
+      "ascii": "ruan",
+      "initial": "r",
+      "final": "uan",
+      "respell": "rwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        }
+      ]
+    },
+    {
+      "syllable": "rui",
+      "ascii": "rui",
+      "initial": "r",
+      "final": "ui",
+      "respell": "rway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "run",
+      "ascii": "run",
+      "initial": "r",
+      "final": "un",
+      "respell": "rwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        }
+      ]
+    },
+    {
+      "syllable": "ruo",
+      "ascii": "ruo",
+      "initial": "r",
+      "final": "uo",
+      "respell": "rwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "r",
+          "severity": 3,
+          "note_en": "Between an English r and the s in measure — curl the tongue back.",
+          "note_hans": "r 介于英语 r 与 measure 的 s 之间，舌尖后卷。",
+          "note_hant": "r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"
+        },
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "sa",
+      "ascii": "sa",
+      "initial": "s",
+      "final": "a",
+      "respell": "sah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "sai",
+      "ascii": "sai",
+      "initial": "s",
+      "final": "ai",
+      "respell": "seye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "san",
+      "ascii": "san",
+      "initial": "s",
+      "final": "an",
+      "respell": "sahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "sang",
+      "ascii": "sang",
+      "initial": "s",
+      "final": "ang",
+      "respell": "sahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "sao",
+      "ascii": "sao",
+      "initial": "s",
+      "final": "ao",
+      "respell": "saow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "se",
+      "ascii": "se",
+      "initial": "s",
+      "final": "e",
+      "respell": "suh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "sen",
+      "ascii": "sen",
+      "initial": "s",
+      "final": "en",
+      "respell": "sun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "seng",
+      "ascii": "seng",
+      "initial": "s",
+      "final": "eng",
+      "respell": "sung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "sha",
+      "ascii": "sha",
+      "initial": "sh",
+      "final": "a",
+      "respell": "shah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shai",
+      "ascii": "shai",
+      "initial": "sh",
+      "final": "ai",
+      "respell": "sheye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "shan",
+      "ascii": "shan",
+      "initial": "sh",
+      "final": "an",
+      "respell": "shahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shang",
+      "ascii": "shang",
+      "initial": "sh",
+      "final": "ang",
+      "respell": "shahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shao",
+      "ascii": "shao",
+      "initial": "sh",
+      "final": "ao",
+      "respell": "shaow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "she",
+      "ascii": "she",
+      "initial": "sh",
+      "final": "e",
+      "respell": "shuh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "shei",
+      "ascii": "shei",
+      "initial": "sh",
+      "final": "ei",
+      "respell": "shay",
+      "needs_audio": false,
+      "colloquial": true,
+      "traps": [
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "shen",
+      "ascii": "shen",
+      "initial": "sh",
+      "final": "en",
+      "respell": "shun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "sheng",
+      "ascii": "sheng",
+      "initial": "sh",
+      "final": "eng",
+      "respell": "shung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "shi",
+      "ascii": "shi",
+      "initial": "sh",
+      "final": "i",
+      "respell": "shur",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "i",
+          "severity": 3,
+          "note_en": "This i is a held buzz on the tongue, not 'ee'.",
+          "note_hans": "这里的 i 不是 ee 的音，而是舌位保持的嗡音。",
+          "note_hant": "這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"
+        }
+      ]
+    },
+    {
+      "syllable": "shou",
+      "ascii": "shou",
+      "initial": "sh",
+      "final": "ou",
+      "respell": "shoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "shu",
+      "ascii": "shu",
+      "initial": "sh",
+      "final": "u",
+      "respell": "shoo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "shua",
+      "ascii": "shua",
+      "initial": "sh",
+      "final": "ua",
+      "respell": "shwah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shuai",
+      "ascii": "shuai",
+      "initial": "sh",
+      "final": "uai",
+      "respell": "shwhy",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shuan",
+      "ascii": "shuan",
+      "initial": "sh",
+      "final": "uan",
+      "respell": "shwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shuang",
+      "ascii": "shuang",
+      "initial": "sh",
+      "final": "uang",
+      "respell": "shwahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shui",
+      "ascii": "shui",
+      "initial": "sh",
+      "final": "ui",
+      "respell": "shway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "shun",
+      "ascii": "shun",
+      "initial": "sh",
+      "final": "un",
+      "respell": "shwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "shuo",
+      "ascii": "shuo",
+      "initial": "sh",
+      "final": "uo",
+      "respell": "shwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "si",
+      "ascii": "si",
+      "initial": "s",
+      "final": "i",
+      "respell": "sz",
+      "needs_audio": true,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "i",
+          "severity": 3,
+          "note_en": "This i is a held buzz on the tongue, not 'ee'.",
+          "note_hans": "这里的 i 不是 ee 的音，而是舌位保持的嗡音。",
+          "note_hant": "這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"
+        }
+      ]
+    },
+    {
+      "syllable": "song",
+      "ascii": "song",
+      "initial": "s",
+      "final": "ong",
+      "respell": "soong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "sou",
+      "ascii": "sou",
+      "initial": "s",
+      "final": "ou",
+      "respell": "soh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "su",
+      "ascii": "su",
+      "initial": "s",
+      "final": "u",
+      "respell": "soo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "suan",
+      "ascii": "suan",
+      "initial": "s",
+      "final": "uan",
+      "respell": "swahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "sui",
+      "ascii": "sui",
+      "initial": "s",
+      "final": "ui",
+      "respell": "sway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "sun",
+      "ascii": "sun",
+      "initial": "s",
+      "final": "un",
+      "respell": "swun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "suo",
+      "ascii": "suo",
+      "initial": "s",
+      "final": "uo",
+      "respell": "swaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "ta",
+      "ascii": "ta",
+      "initial": "t",
+      "final": "a",
+      "respell": "tah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "tai",
+      "ascii": "tai",
+      "initial": "t",
+      "final": "ai",
+      "respell": "teye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "tan",
+      "ascii": "tan",
+      "initial": "t",
+      "final": "an",
+      "respell": "tahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "tang",
+      "ascii": "tang",
+      "initial": "t",
+      "final": "ang",
+      "respell": "tahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "tao",
+      "ascii": "tao",
+      "initial": "t",
+      "final": "ao",
+      "respell": "taow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "te",
+      "ascii": "te",
+      "initial": "t",
+      "final": "e",
+      "respell": "tuh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "teng",
+      "ascii": "teng",
+      "initial": "t",
+      "final": "eng",
+      "respell": "tung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "ti",
+      "ascii": "ti",
+      "initial": "t",
+      "final": "i",
+      "respell": "tee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "tian",
+      "ascii": "tian",
+      "initial": "t",
+      "final": "ian",
+      "respell": "tyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "tiao",
+      "ascii": "tiao",
+      "initial": "t",
+      "final": "iao",
+      "respell": "tyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "tie",
+      "ascii": "tie",
+      "initial": "t",
+      "final": "ie",
+      "respell": "tyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "ting",
+      "ascii": "ting",
+      "initial": "t",
+      "final": "ing",
+      "respell": "ting",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "tong",
+      "ascii": "tong",
+      "initial": "t",
+      "final": "ong",
+      "respell": "toong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "tou",
+      "ascii": "tou",
+      "initial": "t",
+      "final": "ou",
+      "respell": "toh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "tu",
+      "ascii": "tu",
+      "initial": "t",
+      "final": "u",
+      "respell": "too",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "tuan",
+      "ascii": "tuan",
+      "initial": "t",
+      "final": "uan",
+      "respell": "twahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "tui",
+      "ascii": "tui",
+      "initial": "t",
+      "final": "ui",
+      "respell": "tway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "tun",
+      "ascii": "tun",
+      "initial": "t",
+      "final": "un",
+      "respell": "twun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": []
+    },
+    {
+      "syllable": "tuo",
+      "ascii": "tuo",
+      "initial": "t",
+      "final": "uo",
+      "respell": "twaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "wa",
+      "ascii": "wa",
+      "initial": null,
+      "final": "wa",
+      "respell": "wah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "wai",
+      "ascii": "wai",
+      "initial": null,
+      "final": "wai",
+      "respell": "why",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "wan",
+      "ascii": "wan",
+      "initial": null,
+      "final": "wan",
+      "respell": "wahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "wang",
+      "ascii": "wang",
+      "initial": null,
+      "final": "wang",
+      "respell": "wahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "wei",
+      "ascii": "wei",
+      "initial": null,
+      "final": "wei",
+      "respell": "way",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "wen",
+      "ascii": "wen",
+      "initial": null,
+      "final": "wen",
+      "respell": "wun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "weng",
+      "ascii": "weng",
+      "initial": null,
+      "final": "weng",
+      "respell": "wung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "wo",
+      "ascii": "wo",
+      "initial": null,
+      "final": "wo",
+      "respell": "waw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "wu",
+      "ascii": "wu",
+      "initial": null,
+      "final": "wu",
+      "respell": "oo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        },
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "xi",
+      "ascii": "xi",
+      "initial": "x",
+      "final": "i",
+      "respell": "shee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xia",
+      "ascii": "xia",
+      "initial": "x",
+      "final": "ia",
+      "respell": "shyah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xian",
+      "ascii": "xian",
+      "initial": "x",
+      "final": "ian",
+      "respell": "shyen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        },
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "xiang",
+      "ascii": "xiang",
+      "initial": "x",
+      "final": "iang",
+      "respell": "shyahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xiao",
+      "ascii": "xiao",
+      "initial": "x",
+      "final": "iao",
+      "respell": "shyow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xie",
+      "ascii": "xie",
+      "initial": "x",
+      "final": "ie",
+      "respell": "shyeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        },
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "xin",
+      "ascii": "xin",
+      "initial": "x",
+      "final": "in",
+      "respell": "sheen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        },
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        }
+      ]
+    },
+    {
+      "syllable": "xing",
+      "ascii": "xing",
+      "initial": "x",
+      "final": "ing",
+      "respell": "shing",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        },
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        }
+      ]
+    },
+    {
+      "syllable": "xiong",
+      "ascii": "xiong",
+      "initial": "x",
+      "final": "iong",
+      "respell": "shyoong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xiu",
+      "ascii": "xiu",
+      "initial": "x",
+      "final": "iu",
+      "respell": "shyoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        },
+        {
+          "label": "iu",
+          "severity": 2,
+          "note_en": "iu is a single glide, 'yoh' — not 'ee-oo'.",
+          "note_hans": "iu 是一个滑音，读作 yoh。",
+          "note_hant": "iu 是一個滑音，讀作 yoh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xu",
+      "ascii": "xu",
+      "initial": "x",
+      "final": "u",
+      "respell": "shyew",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ü",
+          "severity": 3,
+          "note_en": "Round your lips as if saying 'oo' but say 'ee'.",
+          "note_hans": "ü 在英语中没有对应音，yew 是最接近的近似。",
+          "note_hant": "ü 在英語中沒有對應音，yew 是最接近的近似。"
+        },
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xuan",
+      "ascii": "xuan",
+      "initial": "x",
+      "final": "uan",
+      "respell": "shywen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üan",
+          "severity": 3,
+          "note_en": "üan ends in 'yen', not 'wahn'.",
+          "note_hans": "üan 结尾是 yen，不是 wahn。",
+          "note_hant": "üan 結尾是 yen，不是 wahn。"
+        },
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xue",
+      "ascii": "xue",
+      "initial": "x",
+      "final": "ue",
+      "respell": "shyweh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üe",
+          "severity": 3,
+          "note_en": "Start with the ü lip-round, then glide to 'eh'.",
+          "note_hans": "üe 先摆出 ü 的口型再滑向 eh。",
+          "note_hant": "üe 先擺出 ü 的口型再滑向 eh。"
+        },
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "xun",
+      "ascii": "xun",
+      "initial": "x",
+      "final": "un",
+      "respell": "shyewn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ün",
+          "severity": 3,
+          "note_en": "ün keeps the ü lip-round before the n.",
+          "note_hans": "ün 保持 ü 的口型再收 n。",
+          "note_hant": "ün 保持 ü 的口型再收 n。"
+        },
+        {
+          "label": "x",
+          "severity": 3,
+          "note_en": "Pinyin x is close to 'sh' — not 'ks' or 'z'.",
+          "note_hans": "x 是最容易读错的字母，英语里没有对应，最接近 sh。",
+          "note_hant": "x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"
+        }
+      ]
+    },
+    {
+      "syllable": "ya",
+      "ascii": "ya",
+      "initial": null,
+      "final": "ya",
+      "respell": "yah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "yan",
+      "ascii": "yan",
+      "initial": null,
+      "final": "yan",
+      "respell": "yen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ian",
+          "severity": 3,
+          "note_en": "ian is 'yen', not 'ee-an'.",
+          "note_hans": "ian 读作 yen，这是极常见的误读。",
+          "note_hant": "ian 讀作 yen，這是極常見的誤讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "yang",
+      "ascii": "yang",
+      "initial": null,
+      "final": "yang",
+      "respell": "yahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "yao",
+      "ascii": "yao",
+      "initial": null,
+      "final": "yao",
+      "respell": "yow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ye",
+      "ascii": "ye",
+      "initial": null,
+      "final": "ye",
+      "respell": "yeh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ie",
+          "severity": 3,
+          "note_en": "ie is 'yeh' — resist the English 'eye' in die, tie, pie.",
+          "note_hans": "ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。",
+          "note_hant": "ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"
+        },
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "yi",
+      "ascii": "yi",
+      "initial": null,
+      "final": "yi",
+      "respell": "ee",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "yin",
+      "ascii": "yin",
+      "initial": null,
+      "final": "yin",
+      "respell": "een",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "in",
+          "severity": 1,
+          "note_en": "in is 'een' — a longer vowel than English 'in'.",
+          "note_hans": "in 的元音比英语 in 更长更前。",
+          "note_hant": "in 的元音比英語 in 更長更前。"
+        },
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "ying",
+      "ascii": "ying",
+      "initial": null,
+      "final": "ying",
+      "respell": "ing",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ing",
+          "severity": 1,
+          "note_en": "The i is longer than the English -ing ending.",
+          "note_hans": "ing 的 i 比英语 -ing 词尾更长更前，但差异较小。",
+          "note_hant": "ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"
+        },
+        {
+          "label": "y/w",
+          "severity": 1,
+          "note_en": "The y and w here are spelling rules, not extra consonants.",
+          "note_hans": "零声母的 y/w 只是拼写规则，不是额外的辅音。",
+          "note_hant": "零聲母的 y/w 只是拼寫規則，不是額外的輔音。"
+        }
+      ]
+    },
+    {
+      "syllable": "yong",
+      "ascii": "yong",
+      "initial": null,
+      "final": "yong",
+      "respell": "yoong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "you",
+      "ascii": "you",
+      "initial": null,
+      "final": "you",
+      "respell": "yoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "yu",
+      "ascii": "yu",
+      "initial": null,
+      "final": "yu",
+      "respell": "yew",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ü",
+          "severity": 3,
+          "note_en": "Round your lips as if saying 'oo' but say 'ee'.",
+          "note_hans": "ü 在英语中没有对应音，yew 是最接近的近似。",
+          "note_hant": "ü 在英語中沒有對應音，yew 是最接近的近似。"
+        }
+      ]
+    },
+    {
+      "syllable": "yuan",
+      "ascii": "yuan",
+      "initial": null,
+      "final": "yuan",
+      "respell": "ywen",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üan",
+          "severity": 3,
+          "note_en": "üan ends in 'yen', not 'wahn'.",
+          "note_hans": "üan 结尾是 yen，不是 wahn。",
+          "note_hant": "üan 結尾是 yen，不是 wahn。"
+        }
+      ]
+    },
+    {
+      "syllable": "yue",
+      "ascii": "yue",
+      "initial": null,
+      "final": "yue",
+      "respell": "yweh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "üe",
+          "severity": 3,
+          "note_en": "Start with the ü lip-round, then glide to 'eh'.",
+          "note_hans": "üe 先摆出 ü 的口型再滑向 eh。",
+          "note_hant": "üe 先擺出 ü 的口型再滑向 eh。"
+        }
+      ]
+    },
+    {
+      "syllable": "yun",
+      "ascii": "yun",
+      "initial": null,
+      "final": "yun",
+      "respell": "yewn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "ün",
+          "severity": 3,
+          "note_en": "ün keeps the ü lip-round before the n.",
+          "note_hans": "ün 保持 ü 的口型再收 n。",
+          "note_hant": "ün 保持 ü 的口型再收 n。"
+        }
+      ]
+    },
+    {
+      "syllable": "za",
+      "ascii": "za",
+      "initial": "z",
+      "final": "a",
+      "respell": "dzah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zai",
+      "ascii": "zai",
+      "initial": "z",
+      "final": "ai",
+      "respell": "dzeye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "zan",
+      "ascii": "zan",
+      "initial": "z",
+      "final": "an",
+      "respell": "dzahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zang",
+      "ascii": "zang",
+      "initial": "z",
+      "final": "ang",
+      "respell": "dzahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zao",
+      "ascii": "zao",
+      "initial": "z",
+      "final": "ao",
+      "respell": "dzow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "ze",
+      "ascii": "ze",
+      "initial": "z",
+      "final": "e",
+      "respell": "dzuh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zei",
+      "ascii": "zei",
+      "initial": "z",
+      "final": "ei",
+      "respell": "dzay",
+      "needs_audio": false,
+      "colloquial": true,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "zen",
+      "ascii": "zen",
+      "initial": "z",
+      "final": "en",
+      "respell": "dzun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "zeng",
+      "ascii": "zeng",
+      "initial": "z",
+      "final": "eng",
+      "respell": "dzung",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "zha",
+      "ascii": "zha",
+      "initial": "zh",
+      "final": "a",
+      "respell": "jah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhai",
+      "ascii": "zhai",
+      "initial": "zh",
+      "final": "ai",
+      "respell": "jeye",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "ai",
+          "severity": 2,
+          "note_en": "ai is 'eye', not 'ay'.",
+          "note_hans": "ai 读作 eye，不是 ay。",
+          "note_hant": "ai 讀作 eye，不是 ay。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhan",
+      "ascii": "zhan",
+      "initial": "zh",
+      "final": "an",
+      "respell": "jahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhang",
+      "ascii": "zhang",
+      "initial": "zh",
+      "final": "ang",
+      "respell": "jahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhao",
+      "ascii": "zhao",
+      "initial": "zh",
+      "final": "ao",
+      "respell": "jaow",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "ao",
+          "severity": 2,
+          "note_en": "ao is 'ow' as in cow.",
+          "note_hans": "ao 读作 ow，如 cow。",
+          "note_hant": "ao 讀作 ow，如 cow。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhe",
+      "ascii": "zhe",
+      "initial": "zh",
+      "final": "e",
+      "respell": "juh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "e",
+          "severity": 2,
+          "note_en": "This e is an 'uh' sound, like the u in run.",
+          "note_hans": "e 是 uh 的音，不是英语 e 的音。",
+          "note_hant": "e 是 uh 的音，不是英語 e 的音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhei",
+      "ascii": "zhei",
+      "initial": "zh",
+      "final": "ei",
+      "respell": "jay",
+      "needs_audio": false,
+      "colloquial": true,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "ei",
+          "severity": 1,
+          "note_en": "ei is 'ay' as in day — English ei is unreliable (either, height, vein).",
+          "note_hans": "ei 读作 ay；英语的 ei 拼写读音极不稳定。",
+          "note_hant": "ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhen",
+      "ascii": "zhen",
+      "initial": "zh",
+      "final": "en",
+      "respell": "jun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "en",
+          "severity": 2,
+          "note_en": "en rhymes with 'un', not 'en' in pen.",
+          "note_hans": "en 读作 un。",
+          "note_hant": "en 讀作 un。"
+        }
+      ]
+    },
+    {
+      "syllable": "zheng",
+      "ascii": "zheng",
+      "initial": "zh",
+      "final": "eng",
+      "respell": "juhng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "eng",
+          "severity": 2,
+          "note_en": "eng rhymes with 'ung', not 'eng' in length.",
+          "note_hans": "eng 读作 ung。",
+          "note_hant": "eng 讀作 ung。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhi",
+      "ascii": "zhi",
+      "initial": "zh",
+      "final": "i",
+      "respell": "jur",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "i",
+          "severity": 3,
+          "note_en": "This i is a held buzz on the tongue, not 'ee'.",
+          "note_hans": "这里的 i 不是 ee 的音，而是舌位保持的嗡音。",
+          "note_hant": "這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"
+        },
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhong",
+      "ascii": "zhong",
+      "initial": "zh",
+      "final": "ong",
+      "respell": "joong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhou",
+      "ascii": "zhou",
+      "initial": "zh",
+      "final": "ou",
+      "respell": "joh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhu",
+      "ascii": "zhu",
+      "initial": "zh",
+      "final": "u",
+      "respell": "joo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhua",
+      "ascii": "zhua",
+      "initial": "zh",
+      "final": "ua",
+      "respell": "jwah",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhuai",
+      "ascii": "zhuai",
+      "initial": "zh",
+      "final": "uai",
+      "respell": "jwhy",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhuan",
+      "ascii": "zhuan",
+      "initial": "zh",
+      "final": "uan",
+      "respell": "jwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhuang",
+      "ascii": "zhuang",
+      "initial": "zh",
+      "final": "uang",
+      "respell": "jwahng",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhui",
+      "ascii": "zhui",
+      "initial": "zh",
+      "final": "ui",
+      "respell": "jway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhun",
+      "ascii": "zhun",
+      "initial": "zh",
+      "final": "un",
+      "respell": "jwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zhuo",
+      "ascii": "zhuo",
+      "initial": "zh",
+      "final": "uo",
+      "respell": "jwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "zh",
+          "severity": 3,
+          "note_en": "zh is the 'j' in judge.",
+          "note_hans": "zh 读作 j，英语母语者常读成 z 的浊音。",
+          "note_hant": "zh 讀作 j，英語母語者常讀成 z 的濁音。"
+        },
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    },
+    {
+      "syllable": "zi",
+      "ascii": "zi",
+      "initial": "z",
+      "final": "i",
+      "respell": "dzz",
+      "needs_audio": true,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "i",
+          "severity": 3,
+          "note_en": "This i is a held buzz on the tongue, not 'ee'.",
+          "note_hans": "这里的 i 不是 ee 的音，而是舌位保持的嗡音。",
+          "note_hant": "這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"
+        },
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zong",
+      "ascii": "zong",
+      "initial": "z",
+      "final": "ong",
+      "respell": "dzoong",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "ong",
+          "severity": 2,
+          "note_en": "The oo is short, as in book — not the long oo in moon.",
+          "note_hans": "ong 的 oo 是 book 里的短音，不是 moon 的长音。",
+          "note_hant": "ong 的 oo 是 book 裡的短音，不是 moon 的長音。"
+        }
+      ]
+    },
+    {
+      "syllable": "zou",
+      "ascii": "zou",
+      "initial": "z",
+      "final": "ou",
+      "respell": "dzoh",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "ou",
+          "severity": 2,
+          "note_en": "ou is a long 'oh', not 'ow'.",
+          "note_hans": "ou 读作 oh，不是 ow。",
+          "note_hant": "ou 讀作 oh，不是 ow。"
+        }
+      ]
+    },
+    {
+      "syllable": "zu",
+      "ascii": "zu",
+      "initial": "z",
+      "final": "u",
+      "respell": "dzoo",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "u",
+          "severity": 1,
+          "note_en": "Pinyin u is always 'oo' as in moon — English u rarely reads that way.",
+          "note_hans": "拼音 u 恒为 oo 的音，英语的 u 很少这样读。",
+          "note_hant": "拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zuan",
+      "ascii": "zuan",
+      "initial": "z",
+      "final": "uan",
+      "respell": "dzwahn",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zui",
+      "ascii": "zui",
+      "initial": "z",
+      "final": "ui",
+      "respell": "dzway",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "ui",
+          "severity": 2,
+          "note_en": "ui sounds like 'way', not 'oo-ee'.",
+          "note_hans": "ui 读作 way，英语母语者常拆成 oo-ee。",
+          "note_hant": "ui 讀作 way，英語母語者常拆成 oo-ee。"
+        }
+      ]
+    },
+    {
+      "syllable": "zun",
+      "ascii": "zun",
+      "initial": "z",
+      "final": "un",
+      "respell": "dzwun",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        }
+      ]
+    },
+    {
+      "syllable": "zuo",
+      "ascii": "zuo",
+      "initial": "z",
+      "final": "uo",
+      "respell": "dzwaw",
+      "needs_audio": false,
+      "colloquial": false,
+      "traps": [
+        {
+          "label": "z",
+          "severity": 3,
+          "note_en": "Pinyin z is 'dz' — say the d and z together, as in kids.",
+          "note_hans": "z 读作 dz（如 kids 词尾），d 和 z 要连读。",
+          "note_hant": "z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"
+        },
+        {
+          "label": "uo",
+          "severity": 2,
+          "note_en": "uo is one gliding sound, 'waw' — don't split it.",
+          "note_hans": "uo 是一个滑音，不要拆成两个音节。",
+          "note_hant": "uo 是一個滑音，不要拆成兩個音節。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "_schema": {
+    "key": "single Chinese character used in given names",
+    "note": "~1,500 rows covers the large majority of real given names. Misses degrade gracefully to sound-only matching.",
+    "fields": {
+      "char_hans": "simplified form",
+      "char_hant": "traditional form (same as hans when unchanged)",
+      "pinyin": "toneless pinyin",
+      "gloss_hans": "plain-language meaning, simplified",
+      "gloss_hant": "plain-language meaning, traditional",
+      "semantic_tags": "abstract concept tags used for cross-matching English names",
+      "candidates": "English names carrying resonant meaning or etymology"
+    }
+  },
+  "rows": [
+    {
+      "char_hans": "素", "char_hant": "素", "pinyin": "su",
+      "gloss_hans": "朴素、纯净、本色",
+      "gloss_hant": "樸素、純淨、本色",
+      "semantic_tags": ["plain", "pure", "simple", "unadorned"],
+      "candidates": [
+        { "name": "Sage", "strength": "moderate", "why_tag": "simple" },
+        { "name": "Clara", "strength": "moderate", "why_tag": "pure" },
+        { "name": "Vera", "strength": "moderate", "why_tag": "pure" }
+      ]
+    },
+    {
+      "char_hans": "汐", "char_hant": "汐", "pinyin": "xi",
+      "gloss_hans": "傍晚的潮水",
+      "gloss_hant": "傍晚的潮水",
+      "semantic_tags": ["tide", "sea", "evening", "dusk"],
+      "candidates": [
+        { "name": "Marina", "strength": "strong", "why_tag": "sea" },
+        { "name": "Vesper", "strength": "strong", "why_tag": "evening" },
+        { "name": "Maren", "strength": "moderate", "why_tag": "sea" }
+      ]
+    },
+    {
+      "char_hans": "飞", "char_hant": "飛", "pinyin": "fei",
+      "gloss_hans": "飞翔、迅捷",
+      "gloss_hant": "飛翔、迅捷",
+      "semantic_tags": ["flight", "bird", "sky", "swift"],
+      "candidates": [
+        { "name": "Wren", "strength": "strong", "why_tag": "bird" },
+        { "name": "Skylar", "strength": "moderate", "why_tag": "sky" },
+        { "name": "Ava", "strength": "moderate", "why_tag": "bird" }
+      ]
+    },
+    {
+      "char_hans": "振", "char_hant": "振", "pinyin": "zhen",
+      "gloss_hans": "振奋、激励、使兴起",
+      "gloss_hant": "振奮、激勵、使興起",
+      "semantic_tags": ["uplift", "vigor", "rouse", "strength"],
+      "candidates": [
+        { "name": "Marcus", "strength": "moderate", "why_tag": "vigor" },
+        { "name": "Ethan", "strength": "moderate", "why_tag": "strength" }
+      ]
+    },
+    {
+      "char_hans": "宇", "char_hant": "宇", "pinyin": "yu",
+      "gloss_hans": "宇宙、天地、广阔的空间",
+      "gloss_hant": "宇宙、天地、廣闊的空間",
+      "semantic_tags": ["cosmos", "sky", "vastness", "universe"],
+      "candidates": [
+        { "name": "Orion", "strength": "strong", "why_tag": "cosmos" },
+        { "name": "Atlas", "strength": "strong", "why_tag": "sky" },
+        { "name": "Cosmo", "strength": "moderate", "why_tag": "cosmos" }
+      ]
+    },
+    {
+      "char_hans": "静", "char_hant": "靜", "pinyin": "jing",
+      "gloss_hans": "安静、沉静、平和",
+      "gloss_hant": "安靜、沉靜、平和",
+      "semantic_tags": ["calm", "quiet", "serenity", "peace"],
+      "candidates": [
+        { "name": "Serena", "strength": "strong", "why_tag": "serenity" },
+        { "name": "Irene", "strength": "strong", "why_tag": "peace" },
+        { "name": "Placid", "strength": "weak", "why_tag": "calm" }
+      ]
+    }
+  ]
+}

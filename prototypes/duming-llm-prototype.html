@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>渡名 · 英文名生成器</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Roboto+Slab:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EDEAE0;
+    --paper-raised: #F5F3EB;
+    --ink: #201D18;
+    --ink-soft: #55503f;
+    --muted: #8B8478;
+    --border: #D8D2C2;
+    --cinnabar: #B8402A;
+    --cinnabar-deep: #8f3020;
+    --azurite: #3D5A73;
+    --ochre: #A97C3F;
+    --font-zh: 'Noto Serif SC', serif;
+    --font-en: 'Roboto Slab', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-zh);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--azurite); }
+
+  ::selection { background: var(--cinnabar); color: var(--paper); }
+
+  :focus-visible {
+    outline: 2px solid var(--azurite);
+    outline-offset: 2px;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px 120px;
+  }
+
+  /* ---------- Header ---------- */
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-zh);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .brand-mark {
+    width: 30px; height: 30px;
+    background: var(--cinnabar);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    border-radius: 3px;
+    transform: rotate(-3deg);
+    flex-shrink: 0;
+  }
+
+  .variant-toggle {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+
+  .variant-toggle button {
+    padding: 7px 14px;
+    background: transparent;
+    border: none;
+    color: var(--ink-soft);
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .variant-toggle button.active {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    padding: 56px 0 40px;
+  }
+
+  .hero h1 {
+    font-family: var(--font-zh);
+    font-weight: 700;
+    font-size: clamp(28px, 4.2vw, 42px);
+    margin: 0 0 14px;
+    line-height: 1.35;
+  }
+
+  .hero h1 .accent { color: var(--cinnabar); }
+
+  .hero p.sub {
+    color: var(--ink-soft);
+    font-size: 16px;
+    max-width: 560px;
+    margin: 0;
+  }
+
+  /* ---------- Form ---------- */
+
+  .panel {
+    background: var(--paper-raised);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 32px;
+    margin-bottom: 48px;
+  }
+
+  .field {
+    margin-bottom: 22px;
+  }
+
+  .field:last-of-type { margin-bottom: 0; }
+
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .field .hint {
+    font-family: var(--font-zh);
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    font-family: var(--font-zh);
+    font-size: 16px;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  input::placeholder { color: var(--muted); }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .chip {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: var(--font-zh);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .chip:hover { border-color: var(--azurite); }
+
+  .chip.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+  }
+
+  .generate-btn {
+    margin-top: 28px;
+    width: 100%;
+    padding: 16px;
+    background: var(--cinnabar);
+    color: var(--paper);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-zh);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.15s ease;
+  }
+
+  .generate-btn:hover:not(:disabled) { background: var(--cinnabar-deep); }
+  .generate-btn:disabled { opacity: 0.6; cursor: default; }
+
+  /* ---------- Results ---------- */
+
+  .results-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .results-head h2 {
+    font-family: var(--font-zh);
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .results-head .count {
+    font-family: var(--font-mono);
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .error-box {
+    border: 1px solid var(--cinnabar);
+    background: #f7e9e5;
+    color: var(--cinnabar-deep);
+    padding: 16px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    background: var(--paper-raised);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .seal {
+    width: 42px; height: 42px;
+    flex-shrink: 0;
+    background: var(--cinnabar);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-zh);
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 4px;
+  }
+
+  .card-name-block h3 {
+    font-family: var(--font-en);
+    font-size: 26px;
+    margin: 0 0 2px;
+    color: var(--ink);
+  }
+
+  .card-name-block .match-type {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--azurite);
+    letter-spacing: 0.03em;
+  }
+
+  .bridge {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13.5px;
+    border-top: 1px dashed var(--border);
+    padding-top: 12px;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .meta-row .k {
+    font-family: var(--font-mono);
+    color: var(--muted);
+    flex-shrink: 0;
+    min-width: 60px;
+  }
+
+  .meta-row .v { color: var(--ink-soft); }
+
+  .risks {
+    background: #f3ece0;
+    border-left: 3px solid var(--ochre);
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #6b4e26;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .risks .risk-title {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--ochre);
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  .card-actions {
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  .save-btn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: var(--font-zh);
+    font-size: 14px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .save-btn:hover { border-color: var(--cinnabar); color: var(--cinnabar); }
+
+  .save-btn.saved {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+  }
+
+  /* ---------- Loading skeletons ---------- */
+
+  .skeleton-card {
+    background: var(--paper-raised);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skeleton-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: shimmer 1.4s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ---------- Shortlist bar ---------- */
+
+  .shortlist-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    z-index: 10;
+  }
+
+  .shortlist-bar.visible { transform: translateY(0); }
+
+  .shortlist-bar .label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #c9c4b3;
+    flex-shrink: 0;
+  }
+
+  .shortlist-items {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .shortlist-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 999px;
+    padding: 5px 6px 5px 12px;
+    font-family: var(--font-en);
+    font-size: 14px;
+  }
+
+  .shortlist-chip button {
+    background: none;
+    border: none;
+    color: #c9c4b3;
+    cursor: pointer;
+    font-size: 14px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .shortlist-chip button:hover { background: rgba(255,255,255,0.15); color: var(--paper); }
+
+  .copy-btn {
+    flex-shrink: 0;
+    background: var(--cinnabar);
+    color: var(--paper);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: var(--font-zh);
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+
+  @media (max-width: 560px) {
+    .row2 { grid-template-columns: 1fr; }
+    .panel { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="brand-mark">渡</div>
+      <span>渡名</span>
+    </div>
+    <div class="variant-toggle" role="group" aria-label="中文字体切换">
+      <button id="btn-hans" class="active">简体</button>
+      <button id="btn-hant">繁體</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 id="hero-title"></h1>
+    <p class="sub" id="hero-sub"></p>
+  </section>
+
+  <section class="panel">
+    <div class="field">
+      <label id="label-name" for="input-name"></label>
+      <input type="text" id="input-name" placeholder="任素汐">
+    </div>
+
+    <div class="row2">
+      <div class="field">
+        <label id="label-pinyin" for="input-pinyin"></label>
+        <input type="text" id="input-pinyin" placeholder="Ren Suxi">
+      </div>
+      <div class="field">
+        <label id="label-birth" for="input-birth"></label>
+        <input type="number" id="input-birth" placeholder="2000">
+      </div>
+    </div>
+
+    <div class="field">
+      <label id="label-gender"></label>
+      <div class="chips" id="chips-gender"></div>
+    </div>
+
+    <div class="field">
+      <label id="label-context"></label>
+      <div class="chips" id="chips-context"></div>
+    </div>
+
+    <div class="field">
+      <label id="label-match"></label>
+      <div class="chips" id="chips-match"></div>
+    </div>
+
+    <button class="generate-btn" id="generate-btn"></button>
+  </section>
+
+  <section id="results-section" style="display:none;">
+    <div class="results-head">
+      <h2 id="results-title"></h2>
+      <span class="count" id="results-count"></span>
+    </div>
+    <div id="results-body"></div>
+  </section>
+
+</div>
+
+<div class="shortlist-bar" id="shortlist-bar">
+  <span class="label" id="shortlist-label"></span>
+  <div class="shortlist-items" id="shortlist-items"></div>
+  <button class="copy-btn" id="copy-btn"></button>
+</div>
+
+<script>
+(function() {
+
+  // ---------------- Copy dictionary ----------------
+
+  const STRINGS = {
+    hans: {
+      heroTitle1: "把你的中文名，", heroTitleAccent: "安放", heroTitle2: "进英语世界。",
+      heroSub: "不只是找一个读音相近的名字，是找一个别人叫得顺、你也认得出自己的名字。",
+      labelName: "中文名（必填）",
+      labelPinyin: "拼音（选填，帮助更准确的音译）",
+      labelBirth: "出生年份（选填）",
+      labelGender: "性别",
+      genderOptions: ["男生", "女生", "不透露"],
+      labelContext: "使用场景",
+      contextOptions: ["在校学生", "职场 / 求职", "日常生活"],
+      labelMatch: "偏好",
+      matchOptions: [["balanced","兼顾音译与意译"], ["sound","更偏音译"], ["meaning","更偏意译"]],
+      generateBtn: "生成英文名",
+      generating: "生成中…",
+      resultsTitle: "为你挑选的名字",
+      emptyState: "填写左边的信息，开始生成属于你的英文名。",
+      errorGeneric: "生成失败，请检查网络后重试。",
+      errorParse: "结果解析出了点问题，请重新生成一次。",
+      matchTypeLabel: { sound: "音译", meaning: "意译", balanced: "音意兼顾" },
+      metaLabels: { commonality: "常见度", generational: "时代感", register: "语域" },
+      riskTitle: "留意",
+      saveBtn: "收藏",
+      savedBtn: "已收藏",
+      shortlistLabel: "已收藏",
+      copyBtn: "复制列表",
+      copied: "已复制",
+      footerNote: "名字建议由 AI 生成，包含主观判断，请结合自己的感受做最终决定。"
+    },
+    hant: {
+      heroTitle1: "把你的中文名，", heroTitleAccent: "安放", heroTitle2: "進英語世界。",
+      heroSub: "不只是找一個讀音相近的名字，是找一個別人叫得順、你也認得出自己的名字。",
+      labelName: "中文名（必填）",
+      labelPinyin: "拼音（選填，幫助更準確的音譯）",
+      labelBirth: "出生年份（選填）",
+      labelGender: "性別",
+      genderOptions: ["男生", "女生", "不透露"],
+      labelContext: "使用場景",
+      contextOptions: ["在校學生", "職場 / 求職", "日常生活"],
+      labelMatch: "偏好",
+      matchOptions: [["balanced","兼顧音譯與意譯"], ["sound","更偏音譯"], ["meaning","更偏意譯"]],
+      generateBtn: "生成英文名",
+      generating: "生成中…",
+      resultsTitle: "為你挑選的名字",
+      emptyState: "填寫左邊的資訊，開始生成屬於你的英文名。",
+      errorGeneric: "生成失敗，請檢查網路後重試。",
+      errorParse: "結果解析出了點問題，請重新生成一次。",
+      matchTypeLabel: { sound: "音譯", meaning: "意譯", balanced: "音意兼顧" },
+      metaLabels: { commonality: "常見度", generational: "世代感", register: "語域" },
+      riskTitle: "留意",
+      saveBtn: "收藏",
+      savedBtn: "已收藏",
+      shortlistLabel: "已收藏",
+      copyBtn: "複製清單",
+      copied: "已複製",
+      footerNote: "名字建議由 AI 生成，包含主觀判斷，請結合自己的感受做最終決定。"
+    }
+  };
+
+  // ---------------- State ----------------
+
+  const state = {
+    variant: "hans",
+    gender: 0,
+    context: 0,
+    match: 0,
+    results: [],
+    loading: false,
+    error: null,
+    shortlist: []
+  };
+
+  function t() { return STRINGS[state.variant]; }
+
+  // ---------------- System prompt ----------------
+
+  const SYSTEM_PROMPT = `You are helping someone choose an English name based on their existing name from another language and culture. Your job has two parts: generate good candidate names, and give the person an honest, specific sense of how each name would actually be perceived by native English speakers in the context they'll use it (school, work, everyday life) — not just whether it "matches" phonetically or semantically.
+
+You will receive: the person's native name (script + romanization if available), gender, a matching preference (sound, meaning, or balanced), a usage context, optional birth year, and a chinese_variant field ("simplified" or "traditional").
+
+PART 1 — Generate candidates: Produce 5 to 6 English first name candidates. For sound-matching, prioritize names whose pronunciation is genuinely close to the original name as spoken by a native speaker of that language, not just similar-looking romanization. For meaning-matching, translate the actual semantic content of the original name into names with resonant meaning or etymology in English; don't force weak connections. For "balanced," give a mix weighted toward names that do reasonably well on both axes. For each candidate, write a short plain-language bridge_explanation of why it was suggested.
+
+PART 2 — Calibrate each candidate. This is the most important part. For each name assess: (1) commonality — very common, moderately common, or rare, and if you know it's disproportionately common among international students specifically, say so; (2) generational_feel — dated, classic/timeless, current, or trendy-in-a-way-that-may-date-quickly, with a brief concrete reason; (3) register — casual, neutral, or formal/professional, and whether it matches the stated context; (4) risk_flags — an array of short notes on anything a native speaker would likely notice that the person might not expect (awkward homophones, strong fictional-character associations, gender-coding mismatches). Empty array if none — do not invent risks to fill it.
+
+HONESTY RULES: never invent precise statistics. Speak in qualitative, defensible terms and hedge when uncertain. If a phonetic or semantic match is weak, say so explicitly rather than presenting it with false confidence. Do not stereotype the person from their native name. Avoid false precision.
+
+You may write freely inside each field — quotation marks, punctuation, and line breaks are all fine and require no escaping.
+
+OUTPUT LANGUAGE: write bridge_explanation, commonality, generational_feel, register, and every string in risk_flags in Chinese, matching the script and phrasing/register conventions of the given chinese_variant ("simplified" for mainland conventions, "traditional" for Taiwan/Hong Kong conventions) — not just a character-set swap, but natural phrasing for that audience. The "name" field itself stays in English.
+
+OUTPUT FORMAT: return one block per candidate name, using exactly the delimiter markers shown below. No preamble, no markdown code fences, no commentary before or after. Use this structure verbatim for each candidate:
+
+===NAME===
+(the English name, in English)
+===TYPE===
+(exactly one of: sound / meaning / balanced)
+===BRIDGE===
+(the plain-language explanation of the connection, in Chinese)
+===COMMON===
+(the commonality assessment, in Chinese)
+===GEN===
+(the generational feel assessment, in Chinese)
+===REGISTER===
+(the register assessment, in Chinese)
+===RISKS===
+(one risk note per line, each line starting with a hyphen and a space. If there are no genuine risks, write exactly: NONE)
+===END===
+
+Repeat that whole block for each of the 5 to 6 candidates. Every marker must appear on its own line, exactly as written, with no extra characters.`;
+
+  // ---------------- Rendering: static copy ----------------
+
+  function renderStaticCopy() {
+    const s = t();
+    document.getElementById('hero-title').innerHTML =
+      s.heroTitle1 + '<span class="accent">' + s.heroTitleAccent + '</span>' + s.heroTitle2;
+    document.getElementById('hero-sub').textContent = s.heroSub;
+    document.getElementById('label-name').textContent = s.labelName;
+    document.getElementById('label-pinyin').textContent = s.labelPinyin;
+    document.getElementById('label-birth').textContent = s.labelBirth;
+    document.getElementById('label-gender').textContent = s.labelGender;
+    document.getElementById('label-context').textContent = s.labelContext;
+    document.getElementById('label-match').textContent = s.labelMatch;
+    document.getElementById('generate-btn').textContent = state.loading ? s.generating : s.generateBtn;
+    document.getElementById('generate-btn').disabled = state.loading;
+    document.getElementById('results-title').textContent = s.resultsTitle;
+    document.getElementById('shortlist-label').textContent = s.shortlistLabel + ' (' + state.shortlist.length + ')';
+    document.getElementById('copy-btn').textContent = s.copyBtn;
+
+    renderChips('chips-gender', s.genderOptions.map((label,i)=>({label, value:i})), state.gender, (v)=>{state.gender=v;});
+    renderChips('chips-context', s.contextOptions.map((label,i)=>({label, value:i})), state.context, (v)=>{state.context=v;});
+    renderChips('chips-match', s.matchOptions.map(([value,label])=>({label, value})), state.matchOptions ? state.match : state.match, (v)=>{state.match=v;});
+
+    let footerEl = document.getElementById('footer-note');
+    if (!footerEl) {
+      const f = document.createElement('footer');
+      f.id = 'footer-note';
+      document.querySelector('.wrap').appendChild(f);
+      footerEl = f;
+    }
+    footerEl.textContent = s.footerNote;
+  }
+
+  function renderChips(containerId, options, selected, onSelect) {
+    const el = document.getElementById(containerId);
+    el.innerHTML = '';
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'chip' + (opt.value === selected ? ' active' : '');
+      btn.textContent = opt.label;
+      btn.type = 'button';
+      btn.setAttribute('aria-pressed', opt.value === selected);
+      btn.addEventListener('click', () => {
+        onSelect(opt.value);
+        renderStaticCopy();
+      });
+      el.appendChild(btn);
+    });
+  }
+
+  // ---------------- Seal glyph ----------------
+
+  const SEAL_CHAR = { sound: '音', meaning: '意', balanced: '兼' };
+  const ROTATIONS = [-3, 2, -1.5, 2.5, -2, 1];
+
+  // ---------------- Results rendering ----------------
+
+  function renderResults() {
+    const s = t();
+    const section = document.getElementById('results-section');
+    const body = document.getElementById('results-body');
+    const countEl = document.getElementById('results-count');
+
+    if (!state.loading && state.results.length === 0 && !state.error) {
+      section.style.display = 'none';
+      return;
+    }
+    section.style.display = 'block';
+    body.innerHTML = '';
+    countEl.textContent = state.results.length ? state.results.length + ' 个' : '';
+
+    if (state.error) {
+      const box = document.createElement('div');
+      box.className = 'error-box';
+      box.textContent = state.error;
+      if (state.debugRaw) {
+        const details = document.createElement('details');
+        details.style.marginTop = '10px';
+        const summary = document.createElement('summary');
+        summary.style.cursor = 'pointer';
+        summary.style.fontFamily = 'var(--font-mono)';
+        summary.style.fontSize = '12px';
+        summary.textContent = 'debug: raw model output';
+        const pre = document.createElement('pre');
+        pre.style.whiteSpace = 'pre-wrap';
+        pre.style.fontSize = '11px';
+        pre.style.marginTop = '8px';
+        pre.textContent = state.debugRaw;
+        details.appendChild(summary);
+        details.appendChild(pre);
+        box.appendChild(details);
+      }
+      body.appendChild(box);
+      return;
+    }
+
+    if (state.loading) {
+      const grid = document.createElement('div');
+      grid.className = 'cards';
+      for (let i = 0; i < 5; i++) {
+        const sk = document.createElement('div');
+        sk.className = 'skeleton-card';
+        grid.appendChild(sk);
+      }
+      body.appendChild(grid);
+      return;
+    }
+
+    const grid = document.createElement('div');
+    grid.className = 'cards';
+
+    state.results.forEach((item, i) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const isSaved = state.shortlist.includes(item.name);
+      const rot = ROTATIONS[i % ROTATIONS.length];
+
+      card.innerHTML = `
+        <div class="card-top">
+          <div class="seal" style="transform: rotate(${rot}deg)">${SEAL_CHAR[item.match_type] || '兼'}</div>
+          <div class="card-name-block">
+            <h3>${escapeHtml(item.name)}</h3>
+            <div class="match-type">${s.matchTypeLabel[item.match_type] || s.matchTypeLabel.balanced}</div>
+          </div>
+        </div>
+        <p class="bridge">${escapeHtml(item.bridge_explanation || '')}</p>
+        <div class="meta">
+          <div class="meta-row"><span class="k">${s.metaLabels.commonality}</span><span class="v">${escapeHtml(item.commonality || '')}</span></div>
+          <div class="meta-row"><span class="k">${s.metaLabels.generational}</span><span class="v">${escapeHtml(item.generational_feel || '')}</span></div>
+          <div class="meta-row"><span class="k">${s.metaLabels.register}</span><span class="v">${escapeHtml(item.register || '')}</span></div>
+        </div>
+        ${ (item.risk_flags && item.risk_flags.length) ? `
+        <div class="risks">
+          <div class="risk-title">${s.riskTitle}</div>
+          ${item.risk_flags.map(r => `<div>${escapeHtml(r)}</div>`).join('')}
+        </div>` : '' }
+        <div class="card-actions">
+          <button class="save-btn ${isSaved ? 'saved' : ''}" data-name="${escapeHtml(item.name)}">
+            ${isSaved ? '✓ ' + s.savedBtn : '♡ ' + s.saveBtn}
+          </button>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    body.appendChild(grid);
+
+    body.querySelectorAll('.save-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.getAttribute('data-name');
+        toggleShortlist(name);
+      });
+    });
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str == null ? '' : String(str);
+    return div.innerHTML;
+  }
+
+  // ---------------- Shortlist ----------------
+
+  function toggleShortlist(name) {
+    const idx = state.shortlist.indexOf(name);
+    if (idx === -1) state.shortlist.push(name);
+    else state.shortlist.splice(idx, 1);
+    renderResults();
+    renderShortlistBar();
+  }
+
+  function renderShortlistBar() {
+    const s = t();
+    const bar = document.getElementById('shortlist-bar');
+    const itemsEl = document.getElementById('shortlist-items');
+    document.getElementById('shortlist-label').textContent = s.shortlistLabel + ' (' + state.shortlist.length + ')';
+
+    if (state.shortlist.length === 0) {
+      bar.classList.remove('visible');
+      return;
+    }
+    bar.classList.add('visible');
+    itemsEl.innerHTML = '';
+    state.shortlist.forEach(name => {
+      const chip = document.createElement('div');
+      chip.className = 'shortlist-chip';
+      chip.innerHTML = `<span>${escapeHtml(name)}</span>`;
+      const rm = document.createElement('button');
+      rm.textContent = '×';
+      rm.setAttribute('aria-label', 'remove ' + name);
+      rm.addEventListener('click', () => toggleShortlist(name));
+      chip.appendChild(rm);
+      itemsEl.appendChild(chip);
+    });
+  }
+
+  // ---------------- Response parsing ----------------
+  // The model returns delimiter-marked blocks rather than JSON. This avoids
+  // the whole class of escaping failures that come from asking a model to
+  // write free-form prose (with its own quotation marks and punctuation)
+  // inside JSON string values. There is nothing here for the model to
+  // escape, so there is nothing for it to get wrong.
+
+  const FIELD_MAP = {
+    'NAME': 'name',
+    'TYPE': 'match_type',
+    'BRIDGE': 'bridge_explanation',
+    'COMMON': 'commonality',
+    'GEN': 'generational_feel',
+    'REGISTER': 'register',
+    'RISKS': 'risk_flags'
+  };
+
+  function parseBlocks(text) {
+    const items = [];
+    let current = null;
+    let field = null;
+    let buffer = [];
+
+    const flushField = () => {
+      if (!current || !field) return;
+      const value = buffer.join('\n').trim();
+      if (field === 'risk_flags') {
+        current.risk_flags = (value && value.toUpperCase() !== 'NONE')
+          ? value.split('\n')
+              .map(l => l.replace(/^[-•*]\s*/, '').trim())
+              .filter(l => l && l.toUpperCase() !== 'NONE')
+          : [];
+      } else if (field === 'match_type') {
+        const v = value.toLowerCase();
+        current.match_type = (v === 'sound' || v === 'meaning') ? v : 'balanced';
+      } else {
+        current[field] = value;
+      }
+      buffer = [];
+    };
+
+    const lines = text.split(/\r?\n/);
+    for (const line of lines) {
+      const marker = line.trim().match(/^={2,}\s*([A-Z]+)\s*={2,}$/);
+      if (marker) {
+        const key = marker[1].toUpperCase();
+        flushField();
+        if (key === 'NAME') {
+          if (current && current.name) items.push(current);
+          current = { name: '', match_type: 'balanced', bridge_explanation: '',
+                      commonality: '', generational_feel: '', register: '', risk_flags: [] };
+          field = 'name';
+        } else if (key === 'END') {
+          if (current && current.name) items.push(current);
+          current = null;
+          field = null;
+        } else if (FIELD_MAP[key]) {
+          field = FIELD_MAP[key];
+        } else {
+          field = null;
+        }
+        continue;
+      }
+      if (field) buffer.push(line);
+    }
+    flushField();
+    if (current && current.name) items.push(current);
+
+    // Only keep entries that actually carry a name and some explanation —
+    // a truncated final block shouldn't render as an empty card.
+    return items.filter(it => it.name && it.bridge_explanation);
+  }
+
+  // ---------------- API call ----------------
+
+  async function generateNames() {
+    const s = t();
+    const chineseName = document.getElementById('input-name').value.trim();
+    if (!chineseName) {
+      document.getElementById('input-name').focus();
+      return;
+    }
+    const pinyin = document.getElementById('input-pinyin').value.trim();
+    const birthYear = document.getElementById('input-birth').value.trim();
+
+    state.loading = true;
+    state.error = null;
+    renderStaticCopy();
+    renderResults();
+
+    const userMessage = [
+      `中文名 / Native name: ${chineseName}`,
+      pinyin ? `拼音 / Romanization: ${pinyin}` : null,
+      `性别 / Gender: ${s.genderOptions[state.gender]}`,
+      `场景 / Context: ${s.contextOptions[state.context]}`,
+      `偏好 / Match preference: ${state.match}`,
+      birthYear ? `出生年份 / Birth year: ${birthYear}` : null,
+      `chinese_variant: ${state.variant === 'hans' ? 'simplified' : 'traditional'}`
+    ].filter(Boolean).join('\n');
+
+    // Raw text is captured into this outer variable the moment it arrives,
+    // BEFORE any parsing runs. The previous version assigned it only after a
+    // successful parse, which meant the debug output was always empty in
+    // exactly the case where it was needed.
+    let lastRawText = "";
+
+    async function callOnce() {
+      const response = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-6",
+          max_tokens: 2000,
+          system: SYSTEM_PROMPT,
+          messages: [{ role: "user", content: userMessage }]
+        })
+      });
+
+      if (!response.ok) {
+        const errText = await response.text().catch(() => "");
+        lastRawText = "HTTP " + response.status + "\n" + errText;
+        throw new Error("API returned " + response.status);
+      }
+
+      const data = await response.json();
+      const textBlocks = (data.content || [])
+        .filter(b => b.type === "text")
+        .map(b => b.text)
+        .join("\n");
+
+      lastRawText = textBlocks;
+
+      const cleaned = textBlocks.replace(/```[a-z]*|```/g, "");
+      return parseBlocks(cleaned);
+    }
+
+    try {
+      let results = await callOnce();
+
+      // A run that yields nothing usable is worth one retry — but the parser
+      // is tolerant enough that partial output still returns usable cards,
+      // so this should be rare now.
+      if (results.length === 0) {
+        console.warn("First attempt produced no usable candidates, retrying once. Raw:", lastRawText);
+        results = await callOnce();
+      }
+
+      state.results = results;
+      if (results.length === 0) {
+        state.error = s.errorParse;
+        state.debugRaw = lastRawText;
+      } else {
+        state.debugRaw = null;
+      }
+    } catch (err) {
+      console.error("Name generation error:", err, "Raw response:", lastRawText);
+      state.error = s.errorGeneric;
+      state.debugRaw = lastRawText;
+      state.results = [];
+    } finally {
+      state.loading = false;
+      renderStaticCopy();
+      renderResults();
+    }
+  }
+
+  // ---------------- Init ----------------
+
+  document.getElementById('btn-hans').addEventListener('click', () => {
+    state.variant = 'hans';
+    document.getElementById('btn-hans').classList.add('active');
+    document.getElementById('btn-hant').classList.remove('active');
+    renderStaticCopy();
+    renderResults();
+    renderShortlistBar();
+  });
+
+  document.getElementById('btn-hant').addEventListener('click', () => {
+    state.variant = 'hant';
+    document.getElementById('btn-hant').classList.add('active');
+    document.getElementById('btn-hans').classList.remove('active');
+    renderStaticCopy();
+    renderResults();
+    renderShortlistBar();
+  });
+
+  document.getElementById('generate-btn').addEventListener('click', generateNames);
+
+  document.getElementById('copy-btn').addEventListener('click', () => {
+    const text = state.shortlist.join(', ');
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copy-btn');
+      const original = btn.textContent;
+      btn.textContent = t().copied;
+      setTimeout(() => { btn.textContent = original; }, 1200);
+    }).catch(() => {});
+  });
+
+  renderStaticCopy();
+  renderResults();
+  renderShortlistBar();
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>念对我的名字 · 拼音发音卡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Roboto+Slab:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDEAE0; --raised:#F5F3EB; --ink:#201D18; --soft:#55503f;
+  --muted:#8B8478; --border:#D8D2C2; --cinnabar:#B8402A; --cinnabar-d:#8f3020;
+  --azurite:#3D5A73; --ochre:#A97C3F;
+  --zh:'Noto Serif SC',serif; --en:'Roboto Slab',serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--zh);line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:var(--cinnabar);color:var(--paper)}
+:focus-visible{outline:2px solid var(--azurite);outline-offset:2px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px 100px}
+
+header{display:flex;align-items:center;justify-content:space-between;padding:26px 0 18px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px}
+.mark{width:30px;height:30px;background:var(--cinnabar);color:var(--paper);display:flex;align-items:center;justify-content:center;border-radius:3px;transform:rotate(-3deg);font-size:15px;flex-shrink:0}
+.toggle{display:flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;font-family:var(--mono);font-size:13px}
+.toggle button{padding:7px 14px;background:none;border:none;color:var(--soft);cursor:pointer;font-family:inherit}
+.toggle button.on{background:var(--ink);color:var(--paper)}
+
+.hero{padding:48px 0 32px}
+.hero h1{font-size:clamp(26px,4vw,38px);margin:0 0 12px;line-height:1.35;font-weight:700}
+.hero h1 .ac{color:var(--cinnabar)}
+.hero p{color:var(--soft);max-width:540px;margin:0;font-size:15.5px}
+
+.panel{background:var(--raised);border:1px solid var(--border);border-radius:6px;padding:28px;margin-bottom:36px}
+label{display:block;font-family:var(--mono);font-size:12.5px;color:var(--soft);margin-bottom:8px;letter-spacing:.02em}
+input[type=text]{width:100%;font-family:var(--en);font-size:19px;padding:12px 14px;border:1px solid var(--border);border-radius:4px;background:var(--paper);color:var(--ink)}
+input::placeholder{color:var(--muted);font-family:var(--zh);font-size:16px}
+.hint{font-size:12.5px;color:var(--muted);margin-top:7px;font-family:var(--zh)}
+.err{color:var(--cinnabar);font-size:13px;margin-top:9px;min-height:19px}
+.examples{margin-top:14px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.examples span{font-size:12.5px;color:var(--muted);font-family:var(--mono)}
+.examples button{background:none;border:1px dashed var(--border);border-radius:999px;padding:4px 11px;font-family:var(--en);font-size:13px;color:var(--soft);cursor:pointer}
+.examples button:hover{border-color:var(--cinnabar);color:var(--cinnabar);border-style:solid}
+
+/* ---- card ---- */
+#out{display:none}
+.card{background:var(--raised);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:22px}
+.card-hd{background:var(--ink);color:var(--paper);padding:26px 28px}
+.card-hd .lbl{font-family:var(--mono);font-size:11.5px;color:#b8b2a2;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px}
+.card-hd .say{font-family:var(--en);font-size:clamp(27px,5.5vw,42px);font-weight:700;line-height:1.15;word-break:break-word}
+.card-hd .say .sep{color:var(--cinnabar);margin:0 2px}
+.card-hd .orig{margin-top:9px;font-size:15px;color:#c9c4b3}
+
+.syls{padding:6px 28px 22px}
+.syl{padding:17px 0;border-bottom:1px dashed var(--border)}
+.syl:last-child{border-bottom:none}
+.syl-top{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
+.syl-py{font-family:var(--mono);font-size:16px;color:var(--soft);min-width:62px}
+.syl-arrow{color:var(--muted)}
+.syl-re{font-family:var(--en);font-size:23px;font-weight:700}
+.audio-tag{font-family:var(--mono);font-size:11px;background:var(--ochre);color:var(--paper);padding:2px 8px;border-radius:3px;letter-spacing:.03em}
+.trap{margin-top:11px;background:#f3ece0;border-left:3px solid var(--ochre);padding:10px 13px;border-radius:0 3px 3px 0}
+.trap .tag{font-family:var(--mono);font-size:11px;color:var(--ochre);font-weight:500;letter-spacing:.04em;margin-bottom:3px}
+.trap .en{font-size:14px;color:#6b4e26;font-family:var(--en);line-height:1.5}
+.trap .zh{font-size:13.5px;color:var(--soft);margin-top:3px}
+.no-trap{margin-top:8px;font-size:13px;color:var(--muted)}
+
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:14px}
+.btn{padding:12px 20px;border-radius:4px;font-family:var(--zh);font-size:14.5px;cursor:pointer;border:1px solid var(--border);background:var(--raised);color:var(--soft)}
+.btn:hover{border-color:var(--cinnabar);color:var(--cinnabar)}
+.btn.primary{background:var(--cinnabar);border-color:var(--cinnabar);color:var(--paper)}
+.btn.primary:hover{background:var(--cinnabar-d);color:var(--paper)}
+
+.share{background:var(--raised);border:1px solid var(--border);border-radius:6px;padding:20px 22px;margin-bottom:22px;display:none}
+.share .t{font-family:var(--mono);font-size:12px;color:var(--soft);margin-bottom:11px}
+.share pre{margin:0;font-family:var(--en);font-size:14px;line-height:1.75;white-space:pre-wrap;color:var(--ink);background:var(--paper);padding:15px 17px;border-radius:4px;border:1px solid var(--border)}
+
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12.5px}
+footer a{color:var(--azurite)}
+@media(max-width:560px){.panel{padding:20px}.card-hd,.syls{padding-left:19px;padding-right:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand"><div class="mark">音</div><span id="brand-name"></span></div>
+  <div class="toggle"><button id="b-hans" class="on">简体</button><button id="b-hant">繁體</button></div>
+</header>
+
+<section class="hero">
+  <h1 id="h1"></h1>
+  <p id="sub"></p>
+</section>
+
+<section class="panel">
+  <label id="lb" for="in"></label>
+  <input type="text" id="in" autocomplete="off" spellcheck="false">
+  <div class="hint" id="hint"></div>
+  <div class="err" id="err"></div>
+  <div class="examples" id="ex"></div>
+</section>
+
+<section id="out">
+  <div class="card">
+    <div class="card-hd">
+      <div class="lbl" id="cl"></div>
+      <div class="say" id="say"></div>
+      <div class="orig" id="orig"></div>
+    </div>
+    <div class="syls" id="syls"></div>
+  </div>
+  <div class="actions">
+    <button class="btn primary" id="b-share"></button>
+    <button class="btn" id="b-copy"></button>
+  </div>
+  <div class="share" id="share">
+    <div class="t" id="share-t"></div>
+    <pre id="share-x"></pre>
+  </div>
+</section>
+
+<footer id="ft"></footer>
+</div>
+
+<script>
+const DATA = {"t":[["ai","ai is 'eye', not 'ay'.","ai 读作 eye，不是 ay。","ai 讀作 eye，不是 ay。"],["ao","ao is 'ow' as in cow.","ao 读作 ow，如 cow。","ao 讀作 ow，如 cow。"],["ei","ei is 'ay' as in day — English ei is unreliable (either, height, vein).","ei 读作 ay；英语的 ei 拼写读音极不稳定。","ei 讀作 ay；英語的 ei 拼寫讀音極不穩定。"],["en","en rhymes with 'un', not 'en' in pen.","en 读作 un。","en 讀作 un。"],["eng","eng rhymes with 'ung', not 'eng' in length.","eng 读作 ung。","eng 讀作 ung。"],["ian","ian is 'yen', not 'ee-an'.","ian 读作 yen，这是极常见的误读。","ian 讀作 yen，這是極常見的誤讀。"],["ie","ie is 'yeh' — resist the English 'eye' in die, tie, pie.","ie 读作 yeh；英语的 die/tie/pie 会强烈诱导读成 eye 的音。","ie 讀作 yeh；英語的 die/tie/pie 會強烈誘導讀成 eye 的音。"],["in","in is 'een' — a longer vowel than English 'in'.","in 的元音比英语 in 更长更前。","in 的元音比英語 in 更長更前。"],["ing","The i is longer than the English -ing ending.","ing 的 i 比英语 -ing 词尾更长更前，但差异较小。","ing 的 i 比英語 -ing 詞尾更長更前，但差異較小。"],["o","After b/p/m/f the o carries a hidden w glide — 'waw', not 'oh'.","b p m f 后的 o 带有隐含的 w 滑音，读作 waw 而非 oh。","b p m f 後的 o 帶有隱含的 w 滑音，讀作 waw 而非 oh。"],["u","Pinyin u is always 'oo' as in moon — English u rarely reads that way.","拼音 u 恒为 oo 的音，英语的 u 很少这样读。","拼音 u 恆為 oo 的音，英語的 u 很少這樣讀。"],["c","Pinyin c is 'ts' as in cats — say the t and s together, not a k or s.","c 读作 ts（如 cats 词尾），要把 t 和 s 连读，英语母语者几乎总会读成 k 或 s。","c 讀作 ts（如 cats 詞尾），要把 t 和 s 連讀，英語母語者幾乎總會讀成 k 或 s。"],["e","This e is an 'uh' sound, like the u in run.","e 是 uh 的音，不是英语 e 的音。","e 是 uh 的音，不是英語 e 的音。"],["i","This i is a held buzz on the tongue, not 'ee'.","这里的 i 不是 ee 的音，而是舌位保持的嗡音。","這裡的 i 不是 ee 的音，而是舌位保持的嗡音。"],["ong","The oo is short, as in book — not the long oo in moon.","ong 的 oo 是 book 里的短音，不是 moon 的长音。","ong 的 oo 是 book 裡的短音，不是 moon 的長音。"],["ou","ou is a long 'oh', not 'ow'.","ou 读作 oh，不是 ow。","ou 讀作 oh，不是 ow。"],["ui","ui sounds like 'way', not 'oo-ee'.","ui 读作 way，英语母语者常拆成 oo-ee。","ui 讀作 way，英語母語者常拆成 oo-ee。"],["uo","uo is one gliding sound, 'waw' — don't split it.","uo 是一个滑音，不要拆成两个音节。","uo 是一個滑音，不要拆成兩個音節。"],["iu","iu is a single glide, 'yoh' — not 'ee-oo'.","iu 是一个滑音，读作 yoh。","iu 是一個滑音，讀作 yoh。"],["er","er is 'urr' with the tongue curled — not 'ar' as in car.","er 读作 urr，舌尖上卷，不是 car 的 ar。","er 讀作 urr，舌尖上捲，不是 car 的 ar。"],["ü","Round your lips as if saying 'oo' but say 'ee'.","ü 在英语中没有对应音，yew 是最接近的近似。","ü 在英語中沒有對應音，yew 是最接近的近似。"],["üan","üan ends in 'yen', not 'wahn'.","üan 结尾是 yen，不是 wahn。","üan 結尾是 yen，不是 wahn。"],["üe","Start with the ü lip-round, then glide to 'eh'.","üe 先摆出 ü 的口型再滑向 eh。","üe 先擺出 ü 的口型再滑向 eh。"],["ün","ün keeps the ü lip-round before the n.","ün 保持 ü 的口型再收 n。","ün 保持 ü 的口型再收 n。"],["q","Pinyin q is a 'ch' sound — never the 'kw' in queen.","英语母语者看到 q 会读成 kw，需要说明这是 ch 的音。","英語母語者看到 q 會讀成 kw，需要說明這是 ch 的音。"],["r","Between an English r and the s in measure — curl the tongue back.","r 介于英语 r 与 measure 的 s 之间，舌尖后卷。","r 介於英語 r 與 measure 的 s 之間，舌尖後捲。"],["y/w","The y and w here are spelling rules, not extra consonants.","零声母的 y/w 只是拼写规则，不是额外的辅音。","零聲母的 y/w 只是拼寫規則，不是額外的輔音。"],["x","Pinyin x is close to 'sh' — not 'ks' or 'z'.","x 是最容易读错的字母，英语里没有对应，最接近 sh。","x 是最容易讀錯的字母，英語裡沒有對應，最接近 sh。"],["z","Pinyin z is 'dz' — say the d and z together, as in kids.","z 读作 dz（如 kids 词尾），d 和 z 要连读。","z 讀作 dz（如 kids 詞尾），d 和 z 要連讀。"],["zh","zh is the 'j' in judge.","zh 读作 j，英语母语者常读成 z 的浊音。","zh 讀作 j，英語母語者常讀成 z 的濁音。"]],"r":[["a","ah",0,[]],["ai","eye",0,[0]],["an","ahn",0,[]],["ang","ahng",0,[]],["ao","ow",0,[1]],["ba","bah",0,[]],["bai","beye",0,[0]],["ban","bahn",0,[]],["bang","bahng",0,[]],["bao","baow",0,[1]],["bei","bay",0,[2]],["ben","bun",0,[3]],["beng","bung",0,[4]],["bi","bee",0,[]],["bian","byen",0,[5]],["biao","byow",0,[]],["bie","byeh",0,[6]],["bin","bean",0,[7]],["bing","bing",0,[8]],["bo","baw",0,[9]],["bu","boo",0,[10]],["ca","tsah",0,[11]],["cai","tseye",0,[11,0]],["can","tsahn",0,[11]],["cang","tsahng",0,[11]],["cao","tsow",0,[11,1]],["ce","tsuh",0,[11,12]],["cen","tsun",0,[11,3]],["ceng","tsung",0,[11,4]],["cha","chah",0,[]],["chai","cheye",0,[0]],["chan","chahn",0,[]],["chang","chahng",0,[]],["chao","chaow",0,[1]],["che","chuh",0,[12]],["chen","chun",0,[3]],["cheng","chung",0,[4]],["chi","chur",0,[13]],["chong","choong",0,[14]],["chou","choh",0,[15]],["chu","choo",0,[10]],["chua","chwah",0,[]],["chuai","chwhy",0,[]],["chuan","chwahn",0,[]],["chuang","chwahng",0,[]],["chui","chway",0,[16]],["chun","chwun",0,[]],["chuo","chwaw",0,[17]],["ci","tsz",1,[13,11]],["cong","tsoong",0,[11,14]],["cou","tsoh",0,[11,15]],["cu","tsoo",0,[11,10]],["cuan","tswahn",0,[11]],["cui","tsway",0,[11,16]],["cun","tswun",0,[11]],["cuo","tswaw",0,[11,17]],["da","dah",0,[]],["dai","deye",0,[0]],["dan","dahn",0,[]],["dang","dahng",0,[]],["dao","dow",0,[1]],["de","duh",0,[12]],["dei","day",0,[2]],["den","dun",0,[3]],["deng","dung",0,[4]],["di","dee",0,[]],["dian","dyen",0,[5]],["diao","dyow",0,[]],["die","dyeh",0,[6]],["ding","ding",0,[8]],["diu","dyoh",0,[18]],["dong","doong",0,[14]],["dou","doh",0,[15]],["du","doo",0,[10]],["duan","dwahn",0,[]],["dui","dway",0,[16]],["dun","dwun",0,[]],["duo","dwaw",0,[17]],["e","uh",0,[12]],["ei","ay",0,[2]],["en","un",0,[3]],["eng","ung",0,[4]],["er","urr",0,[19]],["fa","fah",0,[]],["fan","fahn",0,[]],["fang","fahng",0,[]],["fei","fay",0,[2]],["fen","fun",0,[3]],["feng","fung",0,[4]],["fo","faw",0,[9]],["fou","foh",0,[15]],["fu","foo",0,[10]],["ga","gah",0,[]],["gai","geye",0,[0]],["gan","gahn",0,[]],["gang","gahng",0,[]],["gao","gow",0,[1]],["ge","guh",0,[12]],["gei","gay",0,[2]],["gen","gun",0,[3]],["geng","gung",0,[4]],["gong","goong",0,[14]],["gou","goh",0,[15]],["gu","goo",0,[10]],["gua","gwah",0,[]],["guai","gwhy",0,[]],["guan","gwahn",0,[]],["guang","gwahng",0,[]],["gui","gway",0,[16]],["gun","gwun",0,[]],["guo","gwaw",0,[17]],["ha","hah",0,[]],["hai","heye",0,[0]],["han","hahn",0,[]],["hang","hahng",0,[]],["hao","how",0,[1]],["he","huh",0,[12]],["hei","hay",0,[2]],["hen","hun",0,[3]],["heng","hung",0,[4]],["hong","hoong",0,[14]],["hou","hoh",0,[15]],["hu","hoo",0,[10]],["hua","hwah",0,[]],["huai","hwhy",0,[]],["huan","hwahn",0,[]],["huang","hwahng",0,[]],["hui","hway",0,[16]],["hun","hwun",0,[]],["huo","hwaw",0,[17]],["ji","jee",0,[]],["jia","jyah",0,[]],["jian","jyen",0,[5]],["jiang","jyahng",0,[]],["jiao","jyow",0,[]],["jie","jyeh",0,[6]],["jin","jeen",0,[7]],["jing","jing",0,[8]],["jiong","jyoong",0,[]],["jiu","jyoh",0,[18]],["ju","jyew",0,[20]],["juan","jywen",0,[21]],["jue","jyweh",0,[22]],["jun","jyewn",0,[23]],["ka","kah",0,[]],["kai","keye",0,[0]],["kan","kahn",0,[]],["kang","kahng",0,[]],["kao","kow",0,[1]],["ke","kuh",0,[12]],["kei","kay",0,[2]],["ken","kun",0,[3]],["keng","kung",0,[4]],["kong","koong",0,[14]],["kou","koh",0,[15]],["ku","koo",0,[10]],["kua","kwah",0,[]],["kuai","kwhy",0,[]],["kuan","kwahn",0,[]],["kuang","kwahng",0,[]],["kui","kway",0,[16]],["kun","kwun",0,[]],["kuo","kwaw",0,[17]],["la","lah",0,[]],["lai","leye",0,[0]],["lan","lahn",0,[]],["lang","lahng",0,[]],["lao","laow",0,[1]],["le","luh",0,[12]],["lei","lay",0,[2]],["leng","lung",0,[4]],["li","lee",0,[]],["lia","lyah",0,[]],["lian","lyen",0,[5]],["liang","lyahng",0,[]],["liao","lyow",0,[]],["lie","lyeh",0,[6]],["lin","leen",0,[7]],["ling","ling",0,[8]],["liu","lyoh",0,[18]],["long","loong",0,[14]],["lou","loh",0,[15]],["lu","loo",0,[10]],["luan","lwahn",0,[]],["lun","lwun",0,[]],["luo","lwaw",0,[17]],["lü","lyew",0,[20]],["lüe","lyweh",0,[22]],["ma","mah",0,[]],["mai","meye",0,[0]],["man","mahn",0,[]],["mang","mahng",0,[]],["mao","maow",0,[1]],["me","muh",0,[12]],["mei","may",0,[2]],["men","mun",0,[3]],["meng","mung",0,[4]],["mi","mee",0,[]],["mian","myen",0,[5]],["miao","myow",0,[]],["mie","myeh",0,[6]],["min","meen",0,[7]],["ming","ming",0,[8]],["miu","myoh",0,[18]],["mo","maw",0,[9]],["mou","moh",0,[15]],["mu","moo",0,[10]],["na","nah",0,[]],["nai","neye",0,[0]],["nan","nahn",0,[]],["nang","nahng",0,[]],["nao","now",0,[1]],["ne","nuh",0,[12]],["nei","nay",0,[2]],["nen","nun",0,[3]],["neng","nung",0,[4]],["ni","nee",0,[]],["nian","nyen",0,[5]],["niang","nyahng",0,[]],["niao","nyow",0,[]],["nie","nyeh",0,[6]],["nin","neen",0,[7]],["ning","ning",0,[8]],["niu","nyoh",0,[18]],["nong","noong",0,[14]],["nou","noh",0,[15]],["nu","noo",0,[10]],["nuan","nwahn",0,[]],["nuo","nwaw",0,[17]],["nü","nyew",0,[20]],["nüe","nyweh",0,[22]],["o","aw",0,[9]],["ou","oh",0,[15]],["pa","pah",0,[]],["pai","peye",0,[0]],["pan","pahn",0,[]],["pang","pahng",0,[]],["pao","pow",0,[1]],["pei","pay",0,[2]],["pen","pun",0,[3]],["peng","pung",0,[4]],["pi","pee",0,[]],["pian","pyen",0,[5]],["piao","pyow",0,[]],["pie","pyeh",0,[6]],["pin","peen",0,[7]],["ping","ping",0,[8]],["po","paw",0,[9]],["pou","poh",0,[15]],["pu","poo",0,[10]],["qi","chee",0,[24]],["qia","chyah",0,[24]],["qian","chyen",0,[24,5]],["qiang","chyahng",0,[24]],["qiao","chyow",0,[24]],["qie","chyeh",0,[24,6]],["qin","cheen",0,[24,7]],["qing","ching",0,[24,8]],["qiong","chyoong",0,[24]],["qiu","chyoh",0,[24,18]],["qu","chyew",0,[20,24]],["quan","chywen",0,[21,24]],["que","chyweh",0,[22,24]],["qun","chyewn",0,[23,24]],["ran","rahn",0,[25]],["rang","rahng",0,[25]],["rao","raow",0,[25,1]],["re","ruh",0,[25,12]],["ren","run",0,[25,3]],["reng","rung",0,[25,4]],["ri","rr",1,[13,25]],["rong","roong",0,[25,14]],["rou","roh",0,[25,15]],["ru","roo",0,[25,10]],["rua","rwah",0,[25]],["ruan","rwahn",0,[25]],["rui","rway",0,[25,16]],["run","rwun",0,[25]],["ruo","rwaw",0,[25,17]],["sa","sah",0,[]],["sai","seye",0,[0]],["san","sahn",0,[]],["sang","sahng",0,[]],["sao","saow",0,[1]],["se","suh",0,[12]],["sen","sun",0,[3]],["seng","sung",0,[4]],["sha","shah",0,[]],["shai","sheye",0,[0]],["shan","shahn",0,[]],["shang","shahng",0,[]],["shao","shaow",0,[1]],["she","shuh",0,[12]],["shei","shay",0,[2]],["shen","shun",0,[3]],["sheng","shung",0,[4]],["shi","shur",0,[13]],["shou","shoh",0,[15]],["shu","shoo",0,[10]],["shua","shwah",0,[]],["shuai","shwhy",0,[]],["shuan","shwahn",0,[]],["shuang","shwahng",0,[]],["shui","shway",0,[16]],["shun","shwun",0,[]],["shuo","shwaw",0,[17]],["si","sz",1,[13]],["song","soong",0,[14]],["sou","soh",0,[15]],["su","soo",0,[10]],["suan","swahn",0,[]],["sui","sway",0,[16]],["sun","swun",0,[]],["suo","swaw",0,[17]],["ta","tah",0,[]],["tai","teye",0,[0]],["tan","tahn",0,[]],["tang","tahng",0,[]],["tao","taow",0,[1]],["te","tuh",0,[12]],["teng","tung",0,[4]],["ti","tee",0,[]],["tian","tyen",0,[5]],["tiao","tyow",0,[]],["tie","tyeh",0,[6]],["ting","ting",0,[8]],["tong","toong",0,[14]],["tou","toh",0,[15]],["tu","too",0,[10]],["tuan","twahn",0,[]],["tui","tway",0,[16]],["tun","twun",0,[]],["tuo","twaw",0,[17]],["wa","wah",0,[26]],["wai","why",0,[26]],["wan","wahn",0,[26]],["wang","wahng",0,[26]],["wei","way",0,[16]],["wen","wun",0,[3]],["weng","wung",0,[4]],["wo","waw",0,[17]],["wu","oo",0,[10,26]],["xi","shee",0,[27]],["xia","shyah",0,[27]],["xian","shyen",0,[27,5]],["xiang","shyahng",0,[27]],["xiao","shyow",0,[27]],["xie","shyeh",0,[27,6]],["xin","sheen",0,[27,7]],["xing","shing",0,[27,8]],["xiong","shyoong",0,[27]],["xiu","shyoh",0,[27,18]],["xu","shyew",0,[20,27]],["xuan","shywen",0,[21,27]],["xue","shyweh",0,[22,27]],["xun","shyewn",0,[23,27]],["ya","yah",0,[26]],["yan","yen",0,[5]],["yang","yahng",0,[26]],["yao","yow",0,[1]],["ye","yeh",0,[6,26]],["yi","ee",0,[26]],["yin","een",0,[7,26]],["ying","ing",0,[8,26]],["yong","yoong",0,[14]],["you","yoh",0,[15]],["yu","yew",0,[20]],["yuan","ywen",0,[21]],["yue","yweh",0,[22]],["yun","yewn",0,[23]],["za","dzah",0,[28]],["zai","dzeye",0,[28,0]],["zan","dzahn",0,[28]],["zang","dzahng",0,[28]],["zao","dzow",0,[28,1]],["ze","dzuh",0,[28,12]],["zei","dzay",0,[28,2]],["zen","dzun",0,[28,3]],["zeng","dzung",0,[28,4]],["zha","jah",0,[29]],["zhai","jeye",0,[29,0]],["zhan","jahn",0,[29]],["zhang","jahng",0,[29]],["zhao","jaow",0,[29,1]],["zhe","juh",0,[29,12]],["zhei","jay",0,[29,2]],["zhen","jun",0,[29,3]],["zheng","juhng",0,[29,4]],["zhi","jur",0,[13,29]],["zhong","joong",0,[29,14]],["zhou","joh",0,[29,15]],["zhu","joo",0,[29,10]],["zhua","jwah",0,[29]],["zhuai","jwhy",0,[29]],["zhuan","jwahn",0,[29]],["zhuang","jwahng",0,[29]],["zhui","jway",0,[29,16]],["zhun","jwun",0,[29]],["zhuo","jwaw",0,[29,17]],["zi","dzz",1,[13,28]],["zong","dzoong",0,[28,14]],["zou","dzoh",0,[28,15]],["zu","dzoo",0,[28,10]],["zuan","dzwahn",0,[28]],["zui","dzway",0,[28,16]],["zun","dzwun",0,[28]],["zuo","dzwaw",0,[28,17]]]};
+const TRAPS = DATA.t.map(a=>({label:a[0],en:a[1],hans:a[2],hant:a[3]}));
+const ROWS = DATA.r.map(a=>({syl:a[0],re:a[1],audio:!!a[2],traps:a[3].map(i=>TRAPS[i])}));
+const BY = {};
+for (const r of ROWS) BY[r.syl.replace(/ü/g,'v')] = r;
+const KEYS = Object.keys(BY).sort((a,b)=>b.length-a.length);
+
+const S = {
+  hans:{
+    brand:"念对我的名字", h1a:"让他们", h1b:"念对", h1c:"你的名字。",
+    sub:"拼音不是为英语读者设计的。他们看到 Xiaoqing 会读成「siao-king」——不是不用心，是拼音在误导他们。输入你的拼音，生成一张可以直接发给同事的发音卡。",
+    lb:"你的名字拼音", ph:"例如 Xu Xiaoqing 或 xuxiaoqing",
+    hint:"空格、连字符或直接连写都可以；声调符号会自动忽略。",
+    cl:"念作", say_lbl:"发音卡",
+    share:"生成可分享的文字", hide:"收起", copy:"复制发音卡", copied:"已复制", copy_manual:"已选中，请按 Ctrl/Cmd+C",
+    share_t:"复制下面这段，直接发给同事或写进邮件签名 / Slack 简介：",
+    notrap:"这个音节对英语读者没有明显陷阱。",
+    audio:"文字写不准",
+    audio_note:"这个音在英语里没有完全对应的拼写。当面念一次，对方就懂啦！",
+    err_empty:"", err_bad:"无法识别这些拼音：",
+    err_hint:"请检查拼写，或改用空格分隔每个音节。",
+    ft:"发音转写是给英语读者的近似写法，不是国际音标。刻意不标声调——先让对方念对音节，比先教四声更实际。",
+    examples:"试试："
+  },
+  hant:{
+    brand:"念對我的名字", h1a:"讓他們", h1b:"念對", h1c:"你的名字。",
+    sub:"拼音不是為英語讀者設計的。他們看到 Xiaoqing 會讀成「siao-king」——不是不用心，是拼音在誤導他們。輸入你的拼音，生成一張可以直接傳給同事的發音卡。",
+    lb:"你的名字拼音", ph:"例如 Xu Xiaoqing 或 xuxiaoqing",
+    hint:"空格、連字號或直接連寫都可以；聲調符號會自動忽略。",
+    cl:"念作", say_lbl:"發音卡",
+    share:"產生可分享的文字", hide:"收起", copy:"複製發音卡", copied:"已複製", copy_manual:"已選取，請按 Ctrl/Cmd+C",
+    share_t:"複製下面這段，直接傳給同事或寫進郵件簽名 / Slack 簡介：",
+    notrap:"這個音節對英語讀者沒有明顯陷阱。",
+    audio:"文字寫不準",
+    audio_note:"這個音在英語裡沒有完全對應的拼寫。當面念一次，對方就懂啦！",
+    err_empty:"", err_bad:"無法識別這些拼音：",
+    err_hint:"請檢查拼寫，或改用空格分隔每個音節。",
+    ft:"發音轉寫是給英語讀者的近似寫法，不是國際音標。刻意不標聲調——先讓對方念對音節，比先教四聲更實際。",
+    examples:"試試："
+  }
+};
+let variant='hans', lastResult=null;
+const t=()=>S[variant];
+const $=id=>document.getElementById(id);
+
+// Strip tone marks and normalise ü spellings.
+function normalize(s){
+  return s.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u0304\u030C\u0307]/g,'')
+    .replace(/ü|ǖ|ǘ|ǚ|ǜ/g,'v').replace(/\bv\b/g,'v')
+    .replace(/[^a-z'v\s\-]/g,'');
+}
+
+// Longest-match segmentation with backtracking. "xian" is a real syllable, so
+// greedy alone would mis-split "xi'an"; backtracking recovers.
+function segment(chunk){
+  if(!chunk) return [];
+  const memo={};
+  function go(i){
+    if(i===chunk.length) return [];
+    if(i in memo) return memo[i];
+    for(const k of KEYS){
+      if(chunk.startsWith(k,i)){
+        const rest=go(i+k.length);
+        if(rest!==null){ memo[i]=[k,...rest]; return memo[i]; }
+      }
+    }
+    memo[i]=null; return null;
+  }
+  return go(0);
+}
+
+function parse(raw){
+  const chunks=normalize(raw).split(/[\s\-']+/).filter(Boolean);
+  const out=[], bad=[];
+  for(const c of chunks){
+    const seg=segment(c);
+    if(seg===null) bad.push(c); else out.push(...seg);
+  }
+  return {syls:out, bad};
+}
+
+function renderStatic(){
+  const s=t();
+  $('brand-name').textContent=s.brand;
+  $('h1').innerHTML=s.h1a+'<span class="ac">'+s.h1b+'</span>'+s.h1c;
+  $('sub').textContent=s.sub;
+  $('lb').textContent=s.lb;
+  $('in').placeholder=s.ph;
+  $('hint').textContent=s.hint;
+  $('cl').textContent=s.cl;
+  $('b-share').textContent=$('share').style.display==='block'?s.hide:s.share;
+  $('b-copy').textContent=s.copy;
+  $('share-t').textContent=s.share_t;
+  $('ft').textContent=s.ft;
+  const ex=$('ex'); ex.innerHTML='';
+  const sp=document.createElement('span'); sp.textContent=s.examples; ex.appendChild(sp);
+  for(const e of ['Xu Xiaoqing','Zheng Siyuan','Cai Rui','Li Wei']){
+    const b=document.createElement('button'); b.textContent=e;
+    b.onclick=()=>{ $('in').value=e; run(); };
+    ex.appendChild(b);
+  }
+}
+
+function run(){
+  const raw=$('in').value.trim();
+  const s=t();
+  if(!raw){ $('out').style.display='none'; $('err').textContent=''; lastResult=null; $('share-x').textContent=''; return; }
+  const {syls,bad}=parse(raw);
+  $('err').textContent = bad.length ? s.err_bad+' '+bad.join(', ')+'。'+s.err_hint : '';
+  if(!syls.length){ $('out').style.display='none'; lastResult=null; $('share-x').textContent=''; return; }
+
+  const rows=syls.map(k=>BY[k]).filter(Boolean);
+  lastResult={raw,rows};
+
+  $('say').innerHTML=rows.map(r=>r.re.toUpperCase()).join('<span class="sep">-</span>');
+  $('orig').textContent=raw;
+
+  const box=$('syls'); box.innerHTML='';
+  for(const r of rows){
+    const d=document.createElement('div'); d.className='syl';
+    let h='<div class="syl-top"><span class="syl-py">'+r.syl+'</span>'
+        +'<span class="syl-arrow">→</span><span class="syl-re">'+r.re+'</span>'
+        +(r.audio?'<span class="audio-tag">'+s.audio+'</span>':'')+'</div>';
+    if(r.traps.length){
+      for(const tr of r.traps){
+        h+='<div class="trap"><div class="tag">'+tr.label+'</div>'
+          +'<div class="en">'+tr.en+'</div>'
+          +'<div class="zh">'+(variant==='hant'?tr.hant:tr.hans)+'</div></div>';
+      }
+    } else {
+      h+='<div class="no-trap">'+s.notrap+'</div>';
+    }
+    if(r.audio) h+='<div class="no-trap">'+s.audio_note+'</div>';
+    d.innerHTML=h; box.appendChild(d);
+  }
+  if($('share').style.display==='block') $('share-x').textContent=shareText();
+  $('out').style.display='block';
+}
+
+// Conversational rewrites of the trap notes. The on-page card keeps the
+// instructional wording (it's a reference); the shared card should read like
+// a person explaining their own name over coffee.
+const CASUAL = {
+  'q':"the Q is a \u201cch\u201d \u2014 nothing to do with \u201cqueen\u201d",
+  'x':"the X is basically \u201csh\u201d. I know, it looks nothing like it",
+  'zh':"zh is just a \u201cj\u201d, like in judge",
+  'c':"the C is \u201cts\u201d \u2014 same sound that ends \u201ccats\u201d",
+  'z':"the Z is \u201cdz\u201d \u2014 like the end of \u201ckids\u201d",
+  'r':"the R sits somewhere between an English R and the s in \u201cmeasure\u201d. Curl your tongue back a little",
+  'ian':"\u201cian\u201d rhymes with \u201cyen\u201d, not \u201cee-an\u201d",
+  'ie':"\u201cie\u201d is \u201cyeh\u201d \u2014 ignore everything \u201cdie\u201d and \u201cpie\u201d taught you",
+  'ui':"\u201cui\u201d just sounds like \u201cway\u201d",
+  'iu':"\u201ciu\u201d is one sound, \u201cyoh\u201d \u2014 don\u2019t split it in two",
+  'e':"that E is an \u201cuh\u201d, like the u in \u201crun\u201d",
+  'en':"\u201cen\u201d rhymes with \u201cun\u201d, not \u201cpen\u201d",
+  'eng':"\u201ceng\u201d rhymes with \u201cung\u201d, not \u201clength\u201d",
+  'ao':"\u201cao\u201d is \u201cow\u201d, like \u201ccow\u201d",
+  'ai':"\u201cai\u201d is just \u201ceye\u201d",
+  'ou':"\u201cou\u201d is a long \u201coh\u201d, not \u201cow\u201d",
+  'uo':"\u201cuo\u201d glides into one sound, \u201cwaw\u201d",
+  'ong':"the \u201coo\u201d is short, like \u201cbook\u201d \u2014 not \u201cmoon\u201d",
+  'er':"\u201cer\u201d is \u201curr\u201d with your tongue curled, not \u201ccar\u201d",
+  '\u00fc':"round your lips like you\u2019re saying \u201coo\u201d, then say \u201cee\u201d. That\u2019s the whole trick",
+  '\u00fce':"start with that \u00fc lip-round, then slide into \u201ceh\u201d",
+  '\u00fcan':"it ends in \u201cyen\u201d, not \u201cwahn\u201d",
+  '\u00fcn':"keep the \u00fc lip-round right up to the n",
+  'o':"there\u2019s a hidden \u201cw\u201d in there \u2014 it\u2019s \u201cwaw\u201d, not \u201coh\u201d",
+  'u':"the U is always \u201coo\u201d, like \u201cmoon\u201d",
+  'in':"\u201cin\u201d is a longer \u201ceen\u201d than you\u2019d guess",
+  'ing':"the i runs a touch longer than an English \u201c-ing\u201d",
+  'ei':"\u201cei\u201d is \u201cay\u201d, like \u201cday\u201d",
+  'i':"that i isn\u2019t \u201cee\u201d \u2014 it\u2019s more of a buzz you hold on your tongue",
+  'y/w':"the y and w are just spelling rules, not extra sounds"
+};
+
+function shareText(){
+  if(!lastResult) return '';
+  const {raw,rows}=lastResult;
+  const say = rows.map(r=>r.re.toUpperCase()).join('-');
+  const L=[];
+
+  L.push('My name is '+raw+'. It sounds like '+say+'.');
+  L.push('');
+
+  // Syllable-by-syllable, spoken rather than tabulated.
+  L.push(rows.map(r=>r.syl+' = '+r.re).join('   \u00b7   '));
+  L.push('');
+
+  // Gather the notes worth mentioning, most misleading first, deduped.
+  const seen=new Set(); const notes=[];
+  for(const r of rows) for(const tr of r.traps){
+    if(seen.has(tr.label)) continue;
+    seen.add(tr.label);
+    notes.push(CASUAL[tr.label] || tr.en);
+  }
+
+  if(notes.length){
+    const top = notes.slice(0,3);
+    L.push('The parts that trip people up:');
+    for(const n of top) L.push('  \u2022 '+n);
+    L.push('');
+  }
+
+  const needsAudio = rows.some(r=>r.audio);
+  if(needsAudio){
+    L.push('One of those sounds genuinely has no English spelling \u2014 honestly, just ask me to say it once and you\u2019ll have it.');
+  } else if(notes.length){
+    L.push('If it helps: pinyin was built for Chinese readers, not English ones. It\u2019s actively misleading you. Getting it wrong doesn\u2019t mean you weren\u2019t paying attention.');
+  } else {
+    L.push('This one\u2019s easier than most \u2014 it reads pretty much how it looks.');
+  }
+  L.push('');
+  L.push('And thanks for bothering to ask. It genuinely means a lot.');
+
+  return L.join('\n');
+}
+
+$('b-hans').onclick=()=>{variant='hans';$('b-hans').classList.add('on');$('b-hant').classList.remove('on');renderStatic();run();if($('share').style.display==='block')$('share-x').textContent=shareText();};
+$('b-hant').onclick=()=>{variant='hant';$('b-hant').classList.add('on');$('b-hans').classList.remove('on');renderStatic();run();if($('share').style.display==='block')$('share-x').textContent=shareText();};
+$('in').addEventListener('input',run);
+$('b-share').onclick=()=>{
+  const sh=$('share'); const open=sh.style.display==='block';
+  sh.style.display=open?'none':'block';
+  if(!open) $('share-x').textContent=shareText();
+  $('b-share').textContent=open?t().share:t().hide;
+};
+// navigator.clipboard needs a secure context, which a file:// page is not.
+// Try it, fall back to execCommand, and if both fail reveal the panel and
+// select the text so the user can copy manually.
+function legacyCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text;
+  ta.setAttribute('readonly','');
+  ta.style.position='fixed'; ta.style.top='-9999px'; ta.style.opacity='0';
+  document.body.appendChild(ta);
+  ta.select(); ta.setSelectionRange(0,text.length);
+  let ok=false;
+  try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+  document.body.removeChild(ta);
+  return ok;
+}
+function flashCopied(){
+  const b=$('b-copy'); b.textContent=t().copied;
+  setTimeout(()=>{b.textContent=t().copy;},1300);
+}
+function revealForManualCopy(){
+  const sh=$('share');
+  sh.style.display='block';
+  $('share-x').textContent=shareText();
+  $('b-share').textContent=t().hide;
+  const rng=document.createRange();
+  rng.selectNodeContents($('share-x'));
+  const sel=window.getSelection();
+  sel.removeAllRanges(); sel.addRange(rng);
+  $('share-x').scrollIntoView({behavior:'smooth',block:'center'});
+  $('b-copy').textContent=t().copy_manual;
+  setTimeout(()=>{$('b-copy').textContent=t().copy;},2600);
+}
+$('b-copy').onclick=()=>{
+  const text=shareText();
+  if(!text) return;
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(flashCopied).catch(()=>{
+      if(legacyCopy(text)) flashCopied(); else revealForManualCopy();
+    });
+  } else {
+    if(legacyCopy(text)) flashCopied(); else revealForManualCopy();
+  }
+};
+
+renderStatic();
+</script>
+</body>
+</html>

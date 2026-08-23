@@ -11,7 +11,7 @@
 :root{
   --bg:#F7F7F4; --surface:#FFFFFF; --surface2:#F1F1ED; --line:#E3E3DD;
   --fg:#111114; --dim:#6A6A74; --dimmer:#9C9CA5;
-  --acid:#C8FF4D; --acid-deep:#4A6600; --coral:#F7DCD4;
+  --acid:#2DD4BF; --acid-deep:#0F766E; --acid-ink:#06302B; --coral:#F7DCD4;
   --coral-ink:#C43A18;
   --disp:'Space Grotesk',sans-serif;
   --body:'Inter','Noto Sans SC',sans-serif;
@@ -20,7 +20,7 @@
 *{box-sizing:border-box}
 html{background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
-::selection{background:var(--acid);color:#1A2400}
+::selection{background:var(--acid);color:var(--acid-ink)}
 :focus-visible{outline:2px solid var(--acid-deep);outline-offset:3px}
 .wrap{max-width:960px;margin:0 auto;padding:0 22px 120px}
 
@@ -37,7 +37,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0
 .kicker{font-family:var(--mono);font-size:12px;color:var(--acid-deep);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
 h1{font-family:var(--disp);font-weight:700;font-size:clamp(38px,7.5vw,72px);line-height:.98;letter-spacing:-.035em;margin:0 0 22px}
 h1 .zh{font-family:var(--body);font-weight:700;letter-spacing:-.02em}
-h1 .hl{font-family:var(--body);font-weight:700;letter-spacing:-.02em;color:var(--fg);background:linear-gradient(180deg,transparent 10%,var(--acid) 10%,var(--acid) 90%,transparent 90%);padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h1 .hl{font-family:var(--body);font-weight:700;letter-spacing:-.02em;color:var(--acid-ink);background:linear-gradient(180deg,transparent 10%,var(--acid) 10%,var(--acid) 90%,transparent 90%);padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .lede{color:var(--dim);font-size:16px;line-height:1.65;margin:0}
 .lede b{color:var(--fg);font-weight:500}
 
@@ -62,7 +62,7 @@ h1 .hl{font-family:var(--body);font-weight:700;letter-spacing:-.02em;color:var(-
 .saybox{border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden;box-shadow:0 1px 2px rgba(17,17,20,.04),0 10px 30px rgba(17,17,20,.06)}
 .saytop{padding:36px 34px 32px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .saytop::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
-  background:radial-gradient(circle,rgba(200,255,77,.45),transparent 70%);pointer-events:none}
+  background:radial-gradient(circle,rgba(45,212,191,.30),transparent 70%);pointer-events:none}
 .saylabel{font-family:var(--mono);font-size:11.5px;color:var(--dimmer);letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
 .sayline{font-family:var(--disp);font-weight:700;font-size:clamp(30px,7vw,62px);line-height:1.02;letter-spacing:-.035em;word-break:break-word}
 .sayline .s{color:var(--acid-deep)}
@@ -87,8 +87,8 @@ h1 .hl{font-family:var(--body);font-weight:700;letter-spacing:-.02em;color:var(-
 .bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 button.act{font-family:var(--body);font-weight:500;font-size:14.5px;padding:13px 24px;border-radius:100px;cursor:pointer;transition:.15s;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
 button.act:hover{border-color:var(--dim);background:var(--surface2)}
-button.act.key{background:var(--acid);border-color:var(--acid-deep);color:#1A2400;font-weight:600}
-button.act.key:hover{background:#d4ff6e;border-color:var(--acid-deep)}
+button.act.key{background:var(--acid);border-color:var(--acid-deep);color:var(--acid-ink);font-weight:600}
+button.act.key:hover{background:var(--acid);border-color:var(--acid-deep)}
 
 #share{display:none;margin-top:18px;border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:24px 26px}
 #share .t{font-family:var(--mono);font-size:11.5px;color:var(--dimmer);letter-spacing:.1em;text-transform:uppercase;margin-bottom:15px}

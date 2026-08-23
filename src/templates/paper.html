@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>念对我的名字 · 拼音发音卡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Roboto+Slab:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDEAE0; --raised:#F5F3EB; --ink:#201D18; --soft:#55503f;
+  --muted:#8B8478; --border:#D8D2C2; --cinnabar:#B8402A; --cinnabar-d:#8f3020;
+  --azurite:#3D5A73; --ochre:#A97C3F;
+  --zh:'Noto Serif SC',serif; --en:'Roboto Slab',serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--zh);line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:var(--cinnabar);color:var(--paper)}
+:focus-visible{outline:2px solid var(--azurite);outline-offset:2px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px 100px}
+
+header{display:flex;align-items:center;justify-content:space-between;padding:26px 0 18px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px}
+.mark{width:30px;height:30px;background:var(--cinnabar);color:var(--paper);display:flex;align-items:center;justify-content:center;border-radius:3px;transform:rotate(-3deg);font-size:15px;flex-shrink:0}
+.toggle{display:flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;font-family:var(--mono);font-size:13px}
+.toggle button{padding:7px 14px;background:none;border:none;color:var(--soft);cursor:pointer;font-family:inherit}
+.toggle button.on{background:var(--ink);color:var(--paper)}
+
+.hero{padding:48px 0 32px}
+.hero h1{font-size:clamp(26px,4vw,38px);margin:0 0 12px;line-height:1.35;font-weight:700}
+.hero h1 .ac{color:var(--cinnabar)}
+.hero p{color:var(--soft);max-width:540px;margin:0;font-size:15.5px}
+
+.panel{background:var(--raised);border:1px solid var(--border);border-radius:6px;padding:28px;margin-bottom:36px}
+label{display:block;font-family:var(--mono);font-size:12.5px;color:var(--soft);margin-bottom:8px;letter-spacing:.02em}
+input[type=text]{width:100%;font-family:var(--en);font-size:19px;padding:12px 14px;border:1px solid var(--border);border-radius:4px;background:var(--paper);color:var(--ink)}
+input::placeholder{color:var(--muted);font-family:var(--zh);font-size:16px}
+.hint{font-size:12.5px;color:var(--muted);margin-top:7px;font-family:var(--zh)}
+.err{color:var(--cinnabar);font-size:13px;margin-top:9px;min-height:19px}
+.examples{margin-top:14px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.examples span{font-size:12.5px;color:var(--muted);font-family:var(--mono)}
+.examples button{background:none;border:1px dashed var(--border);border-radius:999px;padding:4px 11px;font-family:var(--en);font-size:13px;color:var(--soft);cursor:pointer}
+.examples button:hover{border-color:var(--cinnabar);color:var(--cinnabar);border-style:solid}
+
+/* ---- card ---- */
+#out{display:none}
+.card{background:var(--raised);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:22px}
+.card-hd{background:var(--ink);color:var(--paper);padding:26px 28px}
+.card-hd .lbl{font-family:var(--mono);font-size:11.5px;color:#b8b2a2;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px}
+.card-hd .say{font-family:var(--en);font-size:clamp(27px,5.5vw,42px);font-weight:700;line-height:1.15;word-break:break-word}
+.card-hd .say .sep{color:var(--cinnabar);margin:0 2px}
+.card-hd .orig{margin-top:9px;font-size:15px;color:#c9c4b3}
+
+.syls{padding:6px 28px 22px}
+.syl{padding:17px 0;border-bottom:1px dashed var(--border)}
+.syl:last-child{border-bottom:none}
+.syl-top{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
+.syl-py{font-family:var(--mono);font-size:16px;color:var(--soft);min-width:62px}
+.syl-arrow{color:var(--muted)}
+.syl-re{font-family:var(--en);font-size:23px;font-weight:700}
+.audio-tag{font-family:var(--mono);font-size:11px;background:var(--ochre);color:var(--paper);padding:2px 8px;border-radius:3px;letter-spacing:.03em}
+.trap{margin-top:11px;background:#f3ece0;border-left:3px solid var(--ochre);padding:10px 13px;border-radius:0 3px 3px 0}
+.trap .tag{font-family:var(--mono);font-size:11px;color:var(--ochre);font-weight:500;letter-spacing:.04em;margin-bottom:3px}
+.trap .en{font-size:14px;color:#6b4e26;font-family:var(--en);line-height:1.5}
+.trap .zh{font-size:13.5px;color:var(--soft);margin-top:3px}
+.no-trap{margin-top:8px;font-size:13px;color:var(--muted)}
+
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:14px}
+.btn{padding:12px 20px;border-radius:4px;font-family:var(--zh);font-size:14.5px;cursor:pointer;border:1px solid var(--border);background:var(--raised);color:var(--soft)}
+.btn:hover{border-color:var(--cinnabar);color:var(--cinnabar)}
+.btn.primary{background:var(--cinnabar);border-color:var(--cinnabar);color:var(--paper)}
+.btn.primary:hover{background:var(--cinnabar-d);color:var(--paper)}
+
+.share{background:var(--raised);border:1px solid var(--border);border-radius:6px;padding:20px 22px;margin-bottom:22px;display:none}
+.share .t{font-family:var(--mono);font-size:12px;color:var(--soft);margin-bottom:11px}
+.share pre{margin:0;font-family:var(--en);font-size:14px;line-height:1.75;white-space:pre-wrap;color:var(--ink);background:var(--paper);padding:15px 17px;border-radius:4px;border:1px solid var(--border)}
+
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12.5px}
+footer a{color:var(--azurite)}
+@media(max-width:560px){.panel{padding:20px}.card-hd,.syls{padding-left:19px;padding-right:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand"><div class="mark">音</div><span id="brand-name"></span></div>
+  <div class="toggle"><button id="b-hans" class="on">简体</button><button id="b-hant">繁體</button></div>
+</header>
+
+<section class="hero">
+  <h1 id="h1"></h1>
+  <p id="sub"></p>
+</section>
+
+<section class="panel">
+  <label id="lb" for="in"></label>
+  <input type="text" id="in" autocomplete="off" spellcheck="false">
+  <div class="hint" id="hint"></div>
+  <div class="err" id="err"></div>
+  <div class="examples" id="ex"></div>
+</section>
+
+<section id="out">
+  <div class="card">
+    <div class="card-hd">
+      <div class="lbl" id="cl"></div>
+      <div class="say" id="say"></div>
+      <div class="orig" id="orig"></div>
+    </div>
+    <div class="syls" id="syls"></div>
+  </div>
+  <div class="actions">
+    <button class="btn primary" id="b-share"></button>
+    <button class="btn" id="b-copy"></button>
+  </div>
+  <div class="share" id="share">
+    <div class="t" id="share-t"></div>
+    <pre id="share-x"></pre>
+  </div>
+</section>
+
+<footer id="ft"></footer>
+</div>
+
+<script>
+const DATA = __DATA__;
+const TRAPS = DATA.t.map(a=>({label:a[0],en:a[1],hans:a[2],hant:a[3]}));
+const ROWS = DATA.r.map(a=>({syl:a[0],re:a[1],audio:!!a[2],traps:a[3].map(i=>TRAPS[i])}));
+const BY = {};
+for (const r of ROWS) BY[r.syl.replace(/ü/g,'v')] = r;
+const KEYS = Object.keys(BY).sort((a,b)=>b.length-a.length);
+
+const S = {
+  hans:{
+    brand:"念对我的名字", h1a:"让他们", h1b:"念对", h1c:"你的名字。",
+    sub:"拼音不是为英语读者设计的。他们看到 Xiaoqing 会读成「siao-king」——不是不用心，是拼音在误导他们。输入你的拼音，生成一张可以直接发给同事的发音卡。",
+    lb:"你的名字拼音", ph:"例如 Xu Xiaoqing 或 xuxiaoqing",
+    hint:"空格、连字符或直接连写都可以；声调符号会自动忽略。",
+    cl:"念作", say_lbl:"发音卡",
+    share:"生成可分享的文字", hide:"收起", copy:"复制发音卡", copied:"已复制", copy_manual:"已选中，请按 Ctrl/Cmd+C",
+    share_t:"复制下面这段，直接发给同事或写进邮件签名 / Slack 简介：",
+    notrap:"这个音节对英语读者没有明显陷阱。",
+    audio:"文字写不准",
+    audio_note:"这个音在英语里没有完全对应的拼写。当面念一次，对方就懂啦！",
+    err_empty:"", err_bad:"无法识别这些拼音：",
+    err_hint:"请检查拼写，或改用空格分隔每个音节。",
+    ft:"发音转写是给英语读者的近似写法，不是国际音标。刻意不标声调——先让对方念对音节，比先教四声更实际。",
+    examples:"试试："
+  },
+  hant:{
+    brand:"念對我的名字", h1a:"讓他們", h1b:"念對", h1c:"你的名字。",
+    sub:"拼音不是為英語讀者設計的。他們看到 Xiaoqing 會讀成「siao-king」——不是不用心，是拼音在誤導他們。輸入你的拼音，生成一張可以直接傳給同事的發音卡。",
+    lb:"你的名字拼音", ph:"例如 Xu Xiaoqing 或 xuxiaoqing",
+    hint:"空格、連字號或直接連寫都可以；聲調符號會自動忽略。",
+    cl:"念作", say_lbl:"發音卡",
+    share:"產生可分享的文字", hide:"收起", copy:"複製發音卡", copied:"已複製", copy_manual:"已選取，請按 Ctrl/Cmd+C",
+    share_t:"複製下面這段，直接傳給同事或寫進郵件簽名 / Slack 簡介：",
+    notrap:"這個音節對英語讀者沒有明顯陷阱。",
+    audio:"文字寫不準",
+    audio_note:"這個音在英語裡沒有完全對應的拼寫。當面念一次，對方就懂啦！",
+    err_empty:"", err_bad:"無法識別這些拼音：",
+    err_hint:"請檢查拼寫，或改用空格分隔每個音節。",
+    ft:"發音轉寫是給英語讀者的近似寫法，不是國際音標。刻意不標聲調——先讓對方念對音節，比先教四聲更實際。",
+    examples:"試試："
+  }
+};
+let variant='hans', lastResult=null;
+const t=()=>S[variant];
+const $=id=>document.getElementById(id);
+
+// Strip tone marks and normalise ü spellings.
+function normalize(s){
+  return s.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u0304\u030C\u0307]/g,'')
+    .replace(/ü|ǖ|ǘ|ǚ|ǜ/g,'v').replace(/\bv\b/g,'v')
+    .replace(/[^a-z'v\s\-]/g,'');
+}
+
+// Longest-match segmentation with backtracking. "xian" is a real syllable, so
+// greedy alone would mis-split "xi'an"; backtracking recovers.
+function segment(chunk){
+  if(!chunk) return [];
+  const memo={};
+  function go(i){
+    if(i===chunk.length) return [];
+    if(i in memo) return memo[i];
+    for(const k of KEYS){
+      if(chunk.startsWith(k,i)){
+        const rest=go(i+k.length);
+        if(rest!==null){ memo[i]=[k,...rest]; return memo[i]; }
+      }
+    }
+    memo[i]=null; return null;
+  }
+  return go(0);
+}
+
+function parse(raw){
+  const chunks=normalize(raw).split(/[\s\-']+/).filter(Boolean);
+  const out=[], bad=[];
+  for(const c of chunks){
+    const seg=segment(c);
+    if(seg===null) bad.push(c); else out.push(...seg);
+  }
+  return {syls:out, bad};
+}
+
+function renderStatic(){
+  const s=t();
+  $('brand-name').textContent=s.brand;
+  $('h1').innerHTML=s.h1a+'<span class="ac">'+s.h1b+'</span>'+s.h1c;
+  $('sub').textContent=s.sub;
+  $('lb').textContent=s.lb;
+  $('in').placeholder=s.ph;
+  $('hint').textContent=s.hint;
+  $('cl').textContent=s.cl;
+  $('b-share').textContent=$('share').style.display==='block'?s.hide:s.share;
+  $('b-copy').textContent=s.copy;
+  $('share-t').textContent=s.share_t;
+  $('ft').textContent=s.ft;
+  const ex=$('ex'); ex.innerHTML='';
+  const sp=document.createElement('span'); sp.textContent=s.examples; ex.appendChild(sp);
+  for(const e of ['Xu Xiaoqing','Zheng Siyuan','Cai Rui','Li Wei']){
+    const b=document.createElement('button'); b.textContent=e;
+    b.onclick=()=>{ $('in').value=e; run(); };
+    ex.appendChild(b);
+  }
+}
+
+function run(){
+  const raw=$('in').value.trim();
+  const s=t();
+  if(!raw){ $('out').style.display='none'; $('err').textContent=''; lastResult=null; $('share-x').textContent=''; return; }
+  const {syls,bad}=parse(raw);
+  $('err').textContent = bad.length ? s.err_bad+' '+bad.join(', ')+'。'+s.err_hint : '';
+  if(!syls.length){ $('out').style.display='none'; lastResult=null; $('share-x').textContent=''; return; }
+
+  const rows=syls.map(k=>BY[k]).filter(Boolean);
+  lastResult={raw,rows};
+
+  $('say').innerHTML=rows.map(r=>r.re.toUpperCase()).join('<span class="sep">-</span>');
+  $('orig').textContent=raw;
+
+  const box=$('syls'); box.innerHTML='';
+  for(const r of rows){
+    const d=document.createElement('div'); d.className='syl';
+    let h='<div class="syl-top"><span class="syl-py">'+r.syl+'</span>'
+        +'<span class="syl-arrow">→</span><span class="syl-re">'+r.re+'</span>'
+        +(r.audio?'<span class="audio-tag">'+s.audio+'</span>':'')+'</div>';
+    if(r.traps.length){
+      for(const tr of r.traps){
+        h+='<div class="trap"><div class="tag">'+tr.label+'</div>'
+          +'<div class="en">'+tr.en+'</div>'
+          +'<div class="zh">'+(variant==='hant'?tr.hant:tr.hans)+'</div></div>';
+      }
+    } else {
+      h+='<div class="no-trap">'+s.notrap+'</div>';
+    }
+    if(r.audio) h+='<div class="no-trap">'+s.audio_note+'</div>';
+    d.innerHTML=h; box.appendChild(d);
+  }
+  if($('share').style.display==='block') $('share-x').textContent=shareText();
+  $('out').style.display='block';
+}
+
+// Conversational rewrites of the trap notes. The on-page card keeps the
+// instructional wording (it's a reference); the shared card should read like
+// a person explaining their own name over coffee.
+const CASUAL = {
+  'q':"the Q is a \u201cch\u201d \u2014 nothing to do with \u201cqueen\u201d",
+  'x':"the X is basically \u201csh\u201d. I know, it looks nothing like it",
+  'zh':"zh is just a \u201cj\u201d, like in judge",
+  'c':"the C is \u201cts\u201d \u2014 same sound that ends \u201ccats\u201d",
+  'z':"the Z is \u201cdz\u201d \u2014 like the end of \u201ckids\u201d",
+  'r':"the R sits somewhere between an English R and the s in \u201cmeasure\u201d. Curl your tongue back a little",
+  'ian':"\u201cian\u201d rhymes with \u201cyen\u201d, not \u201cee-an\u201d",
+  'ie':"\u201cie\u201d is \u201cyeh\u201d \u2014 ignore everything \u201cdie\u201d and \u201cpie\u201d taught you",
+  'ui':"\u201cui\u201d just sounds like \u201cway\u201d",
+  'iu':"\u201ciu\u201d is one sound, \u201cyoh\u201d \u2014 don\u2019t split it in two",
+  'e':"that E is an \u201cuh\u201d, like the u in \u201crun\u201d",
+  'en':"\u201cen\u201d rhymes with \u201cun\u201d, not \u201cpen\u201d",
+  'eng':"\u201ceng\u201d rhymes with \u201cung\u201d, not \u201clength\u201d",
+  'ao':"\u201cao\u201d is \u201cow\u201d, like \u201ccow\u201d",
+  'ai':"\u201cai\u201d is just \u201ceye\u201d",
+  'ou':"\u201cou\u201d is a long \u201coh\u201d, not \u201cow\u201d",
+  'uo':"\u201cuo\u201d glides into one sound, \u201cwaw\u201d",
+  'ong':"the \u201coo\u201d is short, like \u201cbook\u201d \u2014 not \u201cmoon\u201d",
+  'er':"\u201cer\u201d is \u201curr\u201d with your tongue curled, not \u201ccar\u201d",
+  '\u00fc':"round your lips like you\u2019re saying \u201coo\u201d, then say \u201cee\u201d. That\u2019s the whole trick",
+  '\u00fce':"start with that \u00fc lip-round, then slide into \u201ceh\u201d",
+  '\u00fcan':"it ends in \u201cyen\u201d, not \u201cwahn\u201d",
+  '\u00fcn':"keep the \u00fc lip-round right up to the n",
+  'o':"there\u2019s a hidden \u201cw\u201d in there \u2014 it\u2019s \u201cwaw\u201d, not \u201coh\u201d",
+  'u':"the U is always \u201coo\u201d, like \u201cmoon\u201d",
+  'in':"\u201cin\u201d is a longer \u201ceen\u201d than you\u2019d guess",
+  'ing':"the i runs a touch longer than an English \u201c-ing\u201d",
+  'ei':"\u201cei\u201d is \u201cay\u201d, like \u201cday\u201d",
+  'i':"that i isn\u2019t \u201cee\u201d \u2014 it\u2019s more of a buzz you hold on your tongue",
+  'y/w':"the y and w are just spelling rules, not extra sounds"
+};
+
+function shareText(){
+  if(!lastResult) return '';
+  const {raw,rows}=lastResult;
+  const say = rows.map(r=>r.re.toUpperCase()).join('-');
+  const L=[];
+
+  L.push('My name is '+raw+'. It sounds like '+say+'.');
+  L.push('');
+
+  // Syllable-by-syllable, spoken rather than tabulated.
+  L.push(rows.map(r=>r.syl+' = '+r.re).join('   \u00b7   '));
+  L.push('');
+
+  // Gather the notes worth mentioning, most misleading first, deduped.
+  const seen=new Set(); const notes=[];
+  for(const r of rows) for(const tr of r.traps){
+    if(seen.has(tr.label)) continue;
+    seen.add(tr.label);
+    notes.push(CASUAL[tr.label] || tr.en);
+  }
+
+  if(notes.length){
+    const top = notes.slice(0,3);
+    L.push('The parts that trip people up:');
+    for(const n of top) L.push('  \u2022 '+n);
+    L.push('');
+  }
+
+  const needsAudio = rows.some(r=>r.audio);
+  if(needsAudio){
+    L.push('One of those sounds genuinely has no English spelling \u2014 honestly, just ask me to say it once and you\u2019ll have it.');
+  } else if(notes.length){
+    L.push('If it helps: pinyin was built for Chinese readers, not English ones. It\u2019s actively misleading you. Getting it wrong doesn\u2019t mean you weren\u2019t paying attention.');
+  } else {
+    L.push('This one\u2019s easier than most \u2014 it reads pretty much how it looks.');
+  }
+  L.push('');
+  L.push('And thanks for bothering to ask. It genuinely means a lot.');
+
+  return L.join('\n');
+}
+
+$('b-hans').onclick=()=>{variant='hans';$('b-hans').classList.add('on');$('b-hant').classList.remove('on');renderStatic();run();if($('share').style.display==='block')$('share-x').textContent=shareText();};
+$('b-hant').onclick=()=>{variant='hant';$('b-hant').classList.add('on');$('b-hans').classList.remove('on');renderStatic();run();if($('share').style.display==='block')$('share-x').textContent=shareText();};
+$('in').addEventListener('input',run);
+$('b-share').onclick=()=>{
+  const sh=$('share'); const open=sh.style.display==='block';
+  sh.style.display=open?'none':'block';
+  if(!open) $('share-x').textContent=shareText();
+  $('b-share').textContent=open?t().share:t().hide;
+};
+// navigator.clipboard needs a secure context, which a file:// page is not.
+// Try it, fall back to execCommand, and if both fail reveal the panel and
+// select the text so the user can copy manually.
+function legacyCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text;
+  ta.setAttribute('readonly','');
+  ta.style.position='fixed'; ta.style.top='-9999px'; ta.style.opacity='0';
+  document.body.appendChild(ta);
+  ta.select(); ta.setSelectionRange(0,text.length);
+  let ok=false;
+  try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+  document.body.removeChild(ta);
+  return ok;
+}
+function flashCopied(){
+  const b=$('b-copy'); b.textContent=t().copied;
+  setTimeout(()=>{b.textContent=t().copy;},1300);
+}
+function revealForManualCopy(){
+  const sh=$('share');
+  sh.style.display='block';
+  $('share-x').textContent=shareText();
+  $('b-share').textContent=t().hide;
+  const rng=document.createRange();
+  rng.selectNodeContents($('share-x'));
+  const sel=window.getSelection();
+  sel.removeAllRanges(); sel.addRange(rng);
+  $('share-x').scrollIntoView({behavior:'smooth',block:'center'});
+  $('b-copy').textContent=t().copy_manual;
+  setTimeout(()=>{$('b-copy').textContent=t().copy;},2600);
+}
+$('b-copy').onclick=()=>{
+  const text=shareText();
+  if(!text) return;
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(flashCopied).catch(()=>{
+      if(legacyCopy(text)) flashCopied(); else revealForManualCopy();
+    });
+  } else {
+    if(legacyCopy(text)) flashCopied(); else revealForManualCopy();
+  }
+};
+
+renderStatic();
+</script>
+</body>
+</html>

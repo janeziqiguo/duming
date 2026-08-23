@@ -1,0 +1,13 @@
+{
+  "name": "duming",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pronunciation cards and English-name tools for Chinese speakers. Static tables, no runtime LLM.",
+  "scripts": {
+    "build": "node src/build.js",
+    "card": "node tools/card.js",
+    "lookup": "node tools/lookup.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

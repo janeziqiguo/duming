@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAY IT RIGHT · 拼音发音卡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F7F4; --surface:#FFFFFF; --surface2:#F1F1ED; --line:#E3E3DD;
+  --fg:#111114; --dim:#6A6A74; --dimmer:#9C9CA5;
+  --acid:#C8FF4D; --acid-deep:#4A6600; --coral:#F7DCD4;
+  --coral-ink:#C43A18;
+  --disp:'Space Grotesk',sans-serif;
+  --body:'Inter','Noto Sans SC',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--acid);color:#1A2400}
+:focus-visible{outline:2px solid var(--acid-deep);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px 120px}
+
+/* ---------- nav ---------- */
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;position:sticky;top:0;background:linear-gradient(180deg,var(--bg) 72%,rgba(247,247,244,0));z-index:20}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:-.01em}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--acid);border:1px solid var(--acid-deep);flex-shrink:0}
+.seg{display:flex;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:2px}
+.seg button{border:none;background:none;color:var(--dim);font-family:var(--mono);font-size:12px;padding:5px 13px;border-radius:100px;cursor:pointer;transition:.15s}
+.seg button.on{background:var(--fg);color:var(--surface);font-weight:500}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 8px;max-width:660px}
+.kicker{font-family:var(--mono);font-size:12px;color:var(--acid-deep);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(38px,7.5vw,72px);line-height:.98;letter-spacing:-.035em;margin:0 0 22px}
+h1 .zh{font-family:var(--body);font-weight:700;letter-spacing:-.02em}
+h1 .hl{font-family:var(--body);font-weight:700;letter-spacing:-.02em;color:var(--fg);background:linear-gradient(180deg,transparent 10%,var(--acid) 10%,var(--acid) 90%,transparent 90%);padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lede{color:var(--dim);font-size:16px;line-height:1.65;margin:0}
+.lede b{color:var(--fg);font-weight:500}
+
+/* ---------- input ---------- */
+.inputzone{margin:52px 0 0;border-top:1px solid var(--line);padding-top:30px}
+.inputzone label{display:block;font-family:var(--mono);font-size:11.5px;color:var(--dimmer);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+#in{width:100%;background:none;border:none;border-bottom:2px solid var(--line);color:var(--fg);
+    font-family:var(--disp);font-weight:500;font-size:clamp(26px,5vw,42px);letter-spacing:-.02em;
+    padding:6px 0 14px;transition:border-color .2s}
+#in:focus{outline:none;border-bottom-color:var(--acid-deep)}
+#in::placeholder{color:var(--dimmer);font-weight:500}
+.meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:12px}
+.hint{font-size:13px;color:var(--dimmer)}
+.err{font-size:13px;color:var(--coral-ink);min-height:20px}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.chips button{background:var(--surface);border:1px solid var(--line);color:var(--dim);
+  font-family:var(--mono);font-size:12.5px;padding:6px 13px;border-radius:100px;cursor:pointer;transition:.15s}
+.chips button:hover{border-color:var(--acid-deep);color:var(--acid-deep);background:var(--surface2)}
+
+/* ---------- result ---------- */
+#out{display:none;margin-top:56px}
+.saybox{border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden;box-shadow:0 1px 2px rgba(17,17,20,.04),0 10px 30px rgba(17,17,20,.06)}
+.saytop{padding:36px 34px 32px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.saytop::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+  background:radial-gradient(circle,rgba(200,255,77,.45),transparent 70%);pointer-events:none}
+.saylabel{font-family:var(--mono);font-size:11.5px;color:var(--dimmer);letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.sayline{font-family:var(--disp);font-weight:700;font-size:clamp(30px,7vw,62px);line-height:1.02;letter-spacing:-.035em;word-break:break-word}
+.sayline .s{color:var(--acid-deep)}
+.sayorig{margin-top:14px;font-family:var(--mono);font-size:14px;color:var(--dim)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line)}
+.cell{background:var(--surface);padding:24px 22px}
+.cell-hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.cell-py{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.cell-re{font-family:var(--disp);font-weight:700;font-size:27px;letter-spacing:-.02em;color:var(--acid-deep)}
+.tag{font-family:var(--mono);font-size:10px;background:var(--coral);color:var(--coral-ink);
+  padding:3px 8px;border-radius:100px;letter-spacing:.05em;font-weight:500}
+.note{margin-top:14px;padding-left:13px;border-left:2px solid var(--line)}
+.note + .note{margin-top:11px}
+.note .lbl{font-family:var(--mono);font-size:10.5px;color:var(--acid-deep);letter-spacing:.08em;margin-bottom:4px}
+.note .en{font-size:13.5px;color:var(--fg);line-height:1.55}
+.note .zh{font-size:13px;color:var(--dim);margin-top:3px;line-height:1.6}
+.clean{margin-top:12px;font-size:13px;color:var(--dimmer)}
+.audionote{margin-top:12px;font-size:13px;color:var(--coral-ink);line-height:1.55}
+
+/* ---------- actions ---------- */
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+button.act{font-family:var(--body);font-weight:500;font-size:14.5px;padding:13px 24px;border-radius:100px;cursor:pointer;transition:.15s;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
+button.act:hover{border-color:var(--dim);background:var(--surface2)}
+button.act.key{background:var(--acid);border-color:var(--acid-deep);color:#1A2400;font-weight:600}
+button.act.key:hover{background:#d4ff6e;border-color:var(--acid-deep)}
+
+#share{display:none;margin-top:18px;border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:24px 26px}
+#share .t{font-family:var(--mono);font-size:11.5px;color:var(--dimmer);letter-spacing:.1em;text-transform:uppercase;margin-bottom:15px}
+#share pre{margin:0;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:20px 22px;
+  font-family:var(--body);font-size:14.5px;line-height:1.75;white-space:pre-wrap;color:var(--fg)}
+
+footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--dimmer);font-size:12.5px;line-height:1.7}
+@media(max-width:600px){.saytop{padding:26px 22px}.cell{padding:20px 18px}.hero{padding-top:40px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <div class="logo"><span class="dot"></span><span>SAY IT RIGHT</span></div>
+  <div class="seg"><button id="b-hans" class="on">简体</button><button id="b-hant">繁體</button></div>
+</nav>
+
+<header class="hero">
+  <div class="kicker" id="kicker"></div>
+  <h1 id="h1"></h1>
+  <p class="lede" id="lede"></p>
+</header>
+
+<section class="inputzone">
+  <label for="in" id="lb"></label>
+  <input id="in" type="text" autocomplete="off" spellcheck="false">
+  <div class="meta"><div class="hint" id="hint"></div><div class="err" id="err"></div></div>
+  <div class="chips" id="chips"></div>
+</section>
+
+<section id="out">
+  <div class="saybox">
+    <div class="saytop">
+      <div class="saylabel" id="saylabel"></div>
+      <div class="sayline" id="sayline"></div>
+      <div class="sayorig" id="sayorig"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div class="bar">
+    <button class="act key" id="b-copy"></button>
+    <button class="act" id="b-share"></button>
+  </div>
+  <div id="share"><div class="t" id="share-t"></div><pre id="share-x"></pre></div>
+</section>
+
+<footer id="ft"></footer>
+</div>
+
+<script>
+const DATA = __DATA__;
+const TRAPS = DATA.t.map(a=>({label:a[0],en:a[1],hans:a[2],hant:a[3]}));
+const ROWS = DATA.r.map(a=>({syl:a[0],re:a[1],audio:!!a[2],traps:a[3].map(i=>TRAPS[i])}));
+const BY={}; for(const r of ROWS) BY[r.syl.replace(/ü/g,'v')]=r;
+const KEYS=Object.keys(BY).sort((a,b)=>b.length-a.length);
+
+const CASUAL = {
+  'q':"the Q is a \u201cch\u201d \u2014 nothing to do with \u201cqueen\u201d",
+  'x':"the X is basically \u201csh\u201d. I know, it looks nothing like it",
+  'zh':"zh is just a \u201cj\u201d, like in judge",
+  'c':"the C is \u201cts\u201d \u2014 same sound that ends \u201ccats\u201d",
+  'z':"the Z is \u201cdz\u201d \u2014 like the end of \u201ckids\u201d",
+  'r':"the R sits somewhere between an English R and the s in \u201cmeasure\u201d. Curl your tongue back a little",
+  'ian':"\u201cian\u201d rhymes with \u201cyen\u201d, not \u201cee-an\u201d",
+  'ie':"\u201cie\u201d is \u201cyeh\u201d \u2014 ignore everything \u201cdie\u201d and \u201cpie\u201d taught you",
+  'ui':"\u201cui\u201d just sounds like \u201cway\u201d",
+  'iu':"\u201ciu\u201d is one sound, \u201cyoh\u201d \u2014 don\u2019t split it in two",
+  'e':"that E is an \u201cuh\u201d, like the u in \u201crun\u201d",
+  'en':"\u201cen\u201d rhymes with \u201cun\u201d, not \u201cpen\u201d",
+  'eng':"\u201ceng\u201d rhymes with \u201cung\u201d, not \u201clength\u201d",
+  'ao':"\u201cao\u201d is \u201cow\u201d, like \u201ccow\u201d",
+  'ai':"\u201cai\u201d is just \u201ceye\u201d",
+  'ou':"\u201cou\u201d is a long \u201coh\u201d, not \u201cow\u201d",
+  'uo':"\u201cuo\u201d glides into one sound, \u201cwaw\u201d",
+  'ong':"the \u201coo\u201d is short, like \u201cbook\u201d \u2014 not \u201cmoon\u201d",
+  'er':"\u201cer\u201d is \u201curr\u201d with your tongue curled, not \u201ccar\u201d",
+  '\u00fc':"round your lips like you\u2019re saying \u201coo\u201d, then say \u201cee\u201d. That\u2019s the whole trick",
+  '\u00fce':"start with that \u00fc lip-round, then slide into \u201ceh\u201d",
+  '\u00fcan':"it ends in \u201cyen\u201d, not \u201cwahn\u201d",
+  '\u00fcn':"keep the \u00fc lip-round right up to the n",
+  'o':"there\u2019s a hidden \u201cw\u201d in there \u2014 it\u2019s \u201cwaw\u201d, not \u201coh\u201d",
+  'u':"the U is always \u201coo\u201d, like \u201cmoon\u201d",
+  'in':"\u201cin\u201d is a longer \u201ceen\u201d than you\u2019d guess",
+  'ing':"the i runs a touch longer than an English \u201c-ing\u201d",
+  'ei':"\u201cei\u201d is \u201cay\u201d, like \u201cday\u201d",
+  'i':"that i isn\u2019t \u201cee\u201d \u2014 it\u2019s more of a buzz you hold on your tongue",
+  'y/w':"the y and w are just spelling rules, not extra sounds"
+};
+
+const S={
+ hans:{
+  kicker:"拼音在骗人",
+  h1a:"让他们", h1b:"念对", h1c:"你的名字",
+  lede:"英语母语者看到 <b>Xiaoqing</b>，会读成「siao-king」。不是他们不用心——拼音本来就不是为英语读者设计的。输入拼音，拿到一张可以直接发出去的发音卡。",
+  lb:"输入你的名字拼音", ph:"Xu Xiaoqing",
+  hint:"空格、连字符、连写都行，声调自动忽略",
+  saylabel:"念作", clean:"这个音节没有明显陷阱",
+  audio:"文字写不准", audionote:"这个音在英语里没有完全对应的拼写。当面念一次，对方就懂啦！",
+  copy:"复制发音卡", copied:"已复制 ✓", copy_manual:"已选中，按 Ctrl/Cmd+C",
+  share:"预览分享文字", hide:"收起预览",
+  share_t:"复制给同事 / 邮件签名 / Slack 简介",
+  err_bad:"无法识别：", err_hint:"试试用空格分开每个音节",
+  ft:"转写是给英语读者的近似写法，不是国际音标。刻意不标声调——先让对方念对音节，比先教四声更实际。"
+ },
+ hant:{
+  kicker:"拼音在騙人",
+  h1a:"讓他們", h1b:"念對", h1c:"你的名字",
+  lede:"英語母語者看到 <b>Xiaoqing</b>，會讀成「siao-king」。不是他們不用心——拼音本來就不是為英語讀者設計的。輸入拼音，拿到一張可以直接傳出去的發音卡。",
+  lb:"輸入你的名字拼音", ph:"Xu Xiaoqing",
+  hint:"空格、連字號、連寫都行，聲調自動忽略",
+  saylabel:"念作", clean:"這個音節沒有明顯陷阱",
+  audio:"文字寫不準", audionote:"這個音在英語裡沒有完全對應的拼寫。當面念一次，對方就懂啦！",
+  copy:"複製發音卡", copied:"已複製 ✓", copy_manual:"已選取，按 Ctrl/Cmd+C",
+  share:"預覽分享文字", hide:"收起預覽",
+  share_t:"傳給同事 / 郵件簽名 / Slack 簡介",
+  err_bad:"無法識別：", err_hint:"試試用空格分開每個音節",
+  ft:"轉寫是給英語讀者的近似寫法，不是國際音標。刻意不標聲調——先讓對方念對音節，比先教四聲更實際。"
+ }
+};
+let variant='hans', last=null;
+const t=()=>S[variant], $=id=>document.getElementById(id);
+
+function normalize(s){
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u0304\u030C\u0307]/g,'')
+    .replace(/ü|ǖ|ǘ|ǚ|ǜ/g,'v').replace(/[^a-z'v\s\-]/g,'');
+}
+function segment(c){
+  if(!c) return [];
+  const m={};
+  function go(i){ if(i===c.length) return [];
+    if(i in m) return m[i];
+    for(const k of KEYS){ if(c.startsWith(k,i)){ const r=go(i+k.length); if(r!==null){ m[i]=[k,...r]; return m[i]; } } }
+    m[i]=null; return null; }
+  return go(0);
+}
+function parse(raw){
+  const cs=normalize(raw).split(/[\s\-']+/).filter(Boolean), out=[], bad=[];
+  for(const c of cs){ const s=segment(c); if(s===null) bad.push(c); else out.push(...s); }
+  return {syls:out,bad};
+}
+
+function renderStatic(){
+  const s=t();
+  $('kicker').textContent=s.kicker;
+  $('h1').innerHTML='<span class="zh">'+s.h1a+'</span><br><span class="hl">'+s.h1b+'</span><span class="zh">'+s.h1c+'</span>';
+  $('lede').innerHTML=s.lede;
+  $('lb').textContent=s.lb;
+  $('in').placeholder=s.ph;
+  $('hint').textContent=s.hint;
+  $('saylabel').textContent=s.saylabel;
+  $('b-copy').textContent=s.copy;
+  $('b-share').textContent=$('share').style.display==='block'?s.hide:s.share;
+  $('share-t').textContent=s.share_t;
+  $('ft').textContent=s.ft;
+  const c=$('chips'); c.innerHTML='';
+  for(const e of ['Xu Xiaoqing','Zheng Siyuan','Cai Rui','Li Wei','Ouyang Fei']){
+    const b=document.createElement('button'); b.textContent=e;
+    b.onclick=()=>{ $('in').value=e; run(); };
+    c.appendChild(b);
+  }
+}
+
+function run(){
+  const raw=$('in').value.trim(), s=t();
+  if(!raw){ $('out').style.display='none'; $('err').textContent=''; last=null; $('share-x').textContent=''; return; }
+  const {syls,bad}=parse(raw);
+  $('err').textContent = bad.length ? s.err_bad+bad.join(', ')+' · '+s.err_hint : '';
+  if(!syls.length){ $('out').style.display='none'; last=null; $('share-x').textContent=''; return; }
+  const rows=syls.map(k=>BY[k]).filter(Boolean);
+  last={raw,rows};
+
+  $('sayline').innerHTML=rows.map(r=>r.re.toUpperCase()).join('<span class="s">·</span>');
+  $('sayorig').textContent=raw;
+
+  const g=$('grid'); g.innerHTML='';
+  for(const r of rows){
+    const d=document.createElement('div'); d.className='cell';
+    let h='<div class="cell-hd"><span class="cell-py">'+r.syl+'</span><span class="cell-re">'+r.re+'</span>'
+      +(r.audio?'<span class="tag">'+s.audio+'</span>':'')+'</div>';
+    if(r.traps.length){
+      for(const tr of r.traps)
+        h+='<div class="note"><div class="lbl">'+tr.label+'</div><div class="en">'+tr.en+'</div>'
+          +'<div class="zh">'+(variant==='hant'?tr.hant:tr.hans)+'</div></div>';
+    } else h+='<div class="clean">'+s.clean+'</div>';
+    if(r.audio) h+='<div class="audionote">'+s.audionote+'</div>';
+    d.innerHTML=h; g.appendChild(d);
+  }
+  if($('share').style.display==='block') $('share-x').textContent=shareText();
+  $('out').style.display='block';
+}
+
+function shareText(){
+  if(!last) return '';
+  const {raw,rows}=last, L=[];
+  L.push('My name is '+raw+'. It sounds like '+rows.map(r=>r.re.toUpperCase()).join('-')+'.');
+  L.push('');
+  L.push(rows.map(r=>r.syl+' = '+r.re).join('   \u00b7   '));
+  L.push('');
+  const seen=new Set(), notes=[];
+  for(const r of rows) for(const tr of r.traps){
+    if(seen.has(tr.label)) continue; seen.add(tr.label);
+    notes.push(CASUAL[tr.label]||tr.en);
+  }
+  if(notes.length){
+    L.push('The parts that trip people up:');
+    notes.slice(0,3).forEach(n=>L.push('  \u2022 '+n));
+    L.push('');
+  }
+  const na=rows.some(r=>r.audio);
+  L.push(na?'One of those sounds genuinely has no English spelling \u2014 honestly, just ask me to say it once and you\u2019ll have it.'
+    :(notes.length?'If it helps: pinyin was built for Chinese readers, not English ones. It\u2019s actively misleading you. Getting it wrong doesn\u2019t mean you weren\u2019t paying attention.'
+      :'This one\u2019s easier than most \u2014 it reads pretty much how it looks.'));
+  L.push('');
+  L.push('And thanks for bothering to ask. It genuinely means a lot.');
+  return L.join('\n');
+}
+
+function legacyCopy(x){
+  const ta=document.createElement('textarea');
+  ta.value=x; ta.setAttribute('readonly','');
+  ta.style.position='fixed'; ta.style.top='-9999px'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0,x.length);
+  let ok=false; try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+  document.body.removeChild(ta); return ok;
+}
+function flash(){ const b=$('b-copy'); b.textContent=t().copied; setTimeout(()=>{b.textContent=t().copy;},1300); }
+function manual(){
+  const sh=$('share'); sh.style.display='block';
+  $('share-x').textContent=shareText(); $('b-share').textContent=t().hide;
+  const rg=document.createRange(); rg.selectNodeContents($('share-x'));
+  const sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(rg);
+  $('share-x').scrollIntoView({behavior:'smooth',block:'center'});
+  $('b-copy').textContent=t().copy_manual;
+  setTimeout(()=>{$('b-copy').textContent=t().copy;},2600);
+}
+
+$('b-hans').onclick=()=>{variant='hans';$('b-hans').classList.add('on');$('b-hant').classList.remove('on');renderStatic();run();if($('share').style.display==='block')$('share-x').textContent=shareText();};
+$('b-hant').onclick=()=>{variant='hant';$('b-hant').classList.add('on');$('b-hans').classList.remove('on');renderStatic();run();if($('share').style.display==='block')$('share-x').textContent=shareText();};
+$('in').addEventListener('input',run);
+$('b-share').onclick=()=>{
+  const sh=$('share'), open=sh.style.display==='block';
+  sh.style.display=open?'none':'block';
+  if(!open) $('share-x').textContent=shareText();
+  $('b-share').textContent=open?t().share:t().hide;
+};
+$('b-copy').onclick=()=>{
+  const x=shareText(); if(!x) return;
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(x).then(flash).catch(()=>{ legacyCopy(x)?flash():manual(); });
+  } else { legacyCopy(x)?flash():manual(); }
+};
+
+renderStatic();
+</script>
+</body>
+</html>

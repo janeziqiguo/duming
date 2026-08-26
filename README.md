@@ -22,9 +22,9 @@ Everything ships as static lookup tables generated ahead of time. Marginal cost 
 | Table | Key | Rows | Can it miss? |
 |---|---|---|---|
 | Pronunciation | pinyin syllable | 407 | **Never** — exhaustive for Mandarin |
-| Sound | pinyin syllable | ~400 (sample) | Never |
-| Meaning | given-name character | ~1,500 (sample) | Rarely; degrades to sound-only |
-| Calibration | English name | ~3,000 (sample) | Only for names not yet in the table |
+| Sound | pinyin syllable | 8 (schema demo, not the full ~400-syllable set) | Never, once fully populated |
+| Meaning | given-name character | 6 (schema demo, not the full ~1,500-character set) | Rarely once populated; degrades to sound-only |
+| Calibration | English name | 16 (schema demo, not the full ~3,000-name set) | Only for names not yet in the table |
 
 The key insight behind the calibration table: *"is Kevin overused among international students?"* has one answer regardless of who asks. The expensive, differentiating judgment doesn't depend on the user, so it can be precomputed once and reviewed by hand — which is better for quality than generating it live.
 
@@ -63,6 +63,12 @@ No dependencies. Node 18+.
 
 Both apps are single self-contained files with the data inlined (~30 KB). Any static host works — GitHub Pages, Netlify, Cloudflare Pages. No build step required on the host.
 
+**GitHub Pages** (`.github/workflows/pages.yml`) builds from source on every push to `main`: it runs `npm run build` on Node 18+, fails the deploy if the freshly generated `apps/*.html` differs from what's committed (drift guard), then publishes:
+
+- `/` — the modern card (`apps/pronunciation-card-modern.html`), the primary/intended artifact
+- `/paper/` — the paper card (`apps/pronunciation-card-paper.html`), kept live at a stable secondary path rather than dropped, since both are finished, working variants and removing one is a product decision, not a hardening one
+- A post-deploy smoke check requests both paths and fails the run if either doesn't return HTTP 200
+
 ---
 
 ## Known limitations
@@ -73,7 +79,7 @@ Recorded honestly rather than papered over:
 - **Tones are omitted by design.** `Wáng` and `Wǎng` produce identical cards. The tradeoff: teaching four tones to a colleague loses them before they start. An optional tone-mark toggle is the likely middle ground.
 - **The respellings are unvalidated by real listeners.** They're systematic and internally consistent, and have survived one independent linguistic review (see `docs/04-cross-check-prompt.md`), but nobody has yet watched five native English speakers read a card cold. That test matters more than another expert opinion.
 - **The Chinese copy is machine-drafted.** Both 简体 and 繁體 strings need a pass from someone who writes naturally in each — especially 繁體, where register conventions differ beyond character conversion.
-- **`sound`/`meaning`/`calibration` tables are samples, not complete.** They demonstrate the schema. `commonality` and `peak_decade` must be joined against US Social Security name data before being shown to users — those fields are currently model-authored placeholders and are exactly what people will fact-check.
+- **`sound`/`meaning`/`calibration` tables are tiny schema-demonstration fixtures, not partial samples.** They currently hold 8 / 6 / 16 rows respectively — enough to show the intended shape of the data, not meaningful coverage of it. `commonality` and `peak_decade` must be joined against US Social Security name data before being shown to users — those fields are currently model-authored placeholders and are exactly what people will fact-check.
 
 ## Next steps
 

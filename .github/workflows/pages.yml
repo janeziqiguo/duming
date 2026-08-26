@@ -5,7 +5,10 @@ on:
     branches:
       - main
     paths:
-      - pronunciation-card-modern.html
+      - data/**
+      - src/**
+      - apps/**
+      - package.json
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -19,29 +22,74 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Build apps from source
+        run: npm run build
+
+      - name: Verify generated apps have no drift
+        run: |
+          if ! git diff --quiet -- apps/; then
+            echo "::error::apps/*.html is out of sync with src/templates + data. Run 'npm run build' locally and commit the result." >&2
+            git --no-pager diff --stat -- apps/
+            exit 1
+          fi
 
       - name: Prepare site
         run: |
-          mkdir _site
-          cp pronunciation-card-modern.html _site/index.html
+          mkdir -p _site/paper
+          cp apps/pronunciation-card-modern.html _site/index.html
+          cp apps/pronunciation-card-paper.html _site/paper/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
+
+  smoke-test:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the modern card and the paper card both come up
+        run: |
+          base="${{ needs.deploy.outputs.page_url }}"
+          for rel_path in "" "paper/"; do
+            url="${base%/}/${rel_path}"
+            ok=""
+            for attempt in 1 2 3 4 5; do
+              status=$(curl -s -o /dev/null -w '%{http_code}' "$url" || echo "000")
+              if [ "$status" = "200" ]; then ok=1; break; fi
+              echo "attempt $attempt: GET $url -> $status, retrying in 10s"
+              sleep 10
+            done
+            if [ -z "$ok" ]; then
+              echo "::error::Smoke check failed for $url (last status: $status)"
+              exit 1
+            fi
+            echo "OK: $url"
+          done

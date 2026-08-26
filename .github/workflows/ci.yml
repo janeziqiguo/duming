@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+    paths:
+      - src/**
+      - data/**
+      - apps/**
+      - test/**
+      - tools/**
+      - package.json
+      - .github/workflows/**
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build apps from source
+        run: npm run build
+
+      - name: Verify generated apps have no drift
+        run: |
+          if ! git diff --quiet -- apps/; then
+            echo "::error::apps/*.html is out of sync with src/templates + data. Run 'npm run build' locally and commit the result." >&2
+            git --no-pager diff --stat -- apps/
+            exit 1
+          fi

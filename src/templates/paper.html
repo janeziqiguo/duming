@@ -10,7 +10,7 @@
 <style>
 :root{
   --paper:#EDEAE0; --raised:#F5F3EB; --ink:#201D18; --soft:#55503f;
-  --muted:#8B8478; --border:#D8D2C2; --cinnabar:#B8402A; --cinnabar-d:#8f3020;
+  --muted:#68635A; --border:#D8D2C2; --cinnabar:#A63A26; --cinnabar-d:#8f3020;
   --azurite:#3D5A73; --ochre:#A97C3F;
   --zh:'Noto Serif SC',serif; --en:'Roboto Slab',serif; --mono:'IBM Plex Mono',monospace;
 }
@@ -86,7 +86,7 @@ footer a{color:var(--azurite)}
 
 <header>
   <div class="brand"><div class="mark">音</div><span id="brand-name"></span></div>
-  <div class="toggle"><button id="b-hans" class="on">简体</button><button id="b-hant">繁體</button></div>
+  <div class="toggle" role="group" aria-label="script"><button id="b-hans" class="on" aria-pressed="true">简体</button><button id="b-hant" aria-pressed="false">繁體</button></div>
 </header>
 
 <section class="hero">
@@ -98,11 +98,11 @@ footer a{color:var(--azurite)}
   <label id="lb" for="in"></label>
   <input type="text" id="in" autocomplete="off" spellcheck="false">
   <div class="hint" id="hint"></div>
-  <div class="err" id="err"></div>
+  <div class="err" id="err" role="alert" aria-live="assertive"></div>
   <div class="examples" id="ex"></div>
 </section>
 
-<section id="out">
+<section id="out" aria-live="polite" aria-atomic="true">
   <div class="card">
     <div class="card-hd">
       <div class="lbl" id="cl"></div>
@@ -130,6 +130,14 @@ const TRAPS = DATA.t.map(a=>({label:a[0],en:a[1],hans:a[2],hant:a[3]}));
 const ROWS = DATA.r.map(a=>({syl:a[0],re:a[1],audio:!!a[2],traps:a[3].map(i=>TRAPS[i])}));
 const BY = {};
 for (const r of ROWS) BY[r.syl.replace(/ü/g,'v')] = r;
+// ASCII input dropping the ü diacritic (no accent key, no "v" substitute) is
+// ambiguous with the *also-valid* lu/nu syllables when written as one token
+// ("lue"/"nue"). Nobody writes a genuine two-syllable lu+e / nu+e pair as one
+// unbroken word without a separator — the app already supports that via an
+// explicit divider ("lu'e") — so within a single token "lue"/"nue" should
+// resolve to lüe/nüe rather than being silently mis-split into lu + e.
+const UE_ALIAS = { lue:'lve', nue:'nve' };
+for (const k in UE_ALIAS) if (BY[UE_ALIAS[k]]) BY[k] = BY[UE_ALIAS[k]];
 const KEYS = Object.keys(BY).sort((a,b)=>b.length-a.length);
 
 const S = {
@@ -146,6 +154,7 @@ const S = {
     audio_note:"这个音在英语里没有完全对应的拼写。当面念一次，对方就懂啦！",
     err_empty:"", err_bad:"无法识别这些拼音：",
     err_hint:"请检查拼写，或改用空格分隔每个音节。",
+    err_hanzi:"暂不支持汉字（简体或繁体）输入，请改用拼音，例如 Xu Xiaoqing：",
     ft:"发音转写是给英语读者的近似写法，不是国际音标。刻意不标声调——先让对方念对音节，比先教四声更实际。",
     examples:"试试："
   },
@@ -162,6 +171,7 @@ const S = {
     audio_note:"這個音在英語裡沒有完全對應的拼寫。當面念一次，對方就懂啦！",
     err_empty:"", err_bad:"無法識別這些拼音：",
     err_hint:"請檢查拼寫，或改用空格分隔每個音節。",
+    err_hanzi:"暫不支援漢字（簡體或繁體）輸入，請改用拼音，例如 Xu Xiaoqing：",
     ft:"發音轉寫是給英語讀者的近似寫法，不是國際音標。刻意不標聲調——先讓對方念對音節，比先教四聲更實際。",
     examples:"試試："
   }
@@ -170,12 +180,14 @@ let variant='hans', lastResult=null;
 const t=()=>S[variant];
 const $=id=>document.getElementById(id);
 
-// Strip tone marks and normalise ü spellings.
-function normalize(s){
-  return s.toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u0304\u030C\u0307]/g,'')
-    .replace(/ü|ǖ|ǘ|ǚ|ǜ/g,'v').replace(/\bv\b/g,'v')
-    .replace(/[^a-z'v\s\-]/g,'');
+const RE_HANZI = /[\u3400-\u9fff\uf900-\ufaff]/;
+function normalizeToken(s){
+  // Replace precomposed ü (and its toned forms) with 'v' *before* NFD, since
+  // NFD decomposes ü into u + a combining diaeresis that the tone-mark strip
+  // below would otherwise delete, silently turning "nü" into "nu".
+  return s.toLowerCase().replace(/[üǖǘǚǜ]/g,'v')
+    .normalize('NFD').replace(/[\u0300-\u0304\u030C\u0307\u0308]/g,'')
+    .replace(/[^a-z'v]/g,'');
 }
 
 // Longest-match segmentation with backtracking. "xian" is a real syllable, so
@@ -197,18 +209,29 @@ function segment(chunk){
   return go(0);
 }
 
+// Tokens are split on the *raw* input first so Hanzi characters (unsupported —
+// this tool reads pinyin, not Chinese script) can be reported explicitly
+// instead of being silently stripped out by normalization and producing a
+// success-shaped empty result. Mixed input (pinyin + Hanzi in the same
+// string) still parses whatever pinyin is present while flagging the Hanzi.
 function parse(raw){
-  const chunks=normalize(raw).split(/[\s\-']+/).filter(Boolean);
-  const out=[], bad=[];
-  for(const c of chunks){
+  const tokens=raw.split(/[\s\-']+/).filter(Boolean);
+  const out=[], bad=[], hanzi=[];
+  for(const rt of tokens){
+    if(RE_HANZI.test(rt)){ hanzi.push(rt); continue; }
+    const c=normalizeToken(rt);
+    if(!c){ bad.push(rt); continue; }
     const seg=segment(c);
-    if(seg===null) bad.push(c); else out.push(...seg);
+    if(seg===null) bad.push(rt); else out.push(...seg);
   }
-  return {syls:out, bad};
+  return {syls:out, bad, hanzi};
 }
 
 function renderStatic(){
   const s=t();
+  document.documentElement.lang=variant==='hant'?'zh-Hant':'zh-Hans';
+  $('b-hans').setAttribute('aria-pressed',String(variant==='hans'));
+  $('b-hant').setAttribute('aria-pressed',String(variant==='hant'));
   $('brand-name').textContent=s.brand;
   $('h1').innerHTML=s.h1a+'<span class="ac">'+s.h1b+'</span>'+s.h1c;
   $('sub').textContent=s.sub;
@@ -233,8 +256,11 @@ function run(){
   const raw=$('in').value.trim();
   const s=t();
   if(!raw){ $('out').style.display='none'; $('err').textContent=''; lastResult=null; $('share-x').textContent=''; return; }
-  const {syls,bad}=parse(raw);
-  $('err').textContent = bad.length ? s.err_bad+' '+bad.join(', ')+'。'+s.err_hint : '';
+  const {syls,bad,hanzi}=parse(raw);
+  const msgs=[];
+  if(hanzi.length) msgs.push(s.err_hanzi+hanzi.join(', '));
+  if(bad.length) msgs.push(s.err_bad+' '+bad.join(', ')+'。'+s.err_hint);
+  $('err').textContent = msgs.join(' ');
   if(!syls.length){ $('out').style.display='none'; lastResult=null; $('share-x').textContent=''; return; }
 
   const rows=syls.map(k=>BY[k]).filter(Boolean);

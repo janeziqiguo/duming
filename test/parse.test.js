@@ -51,6 +51,29 @@ for (const [name, htmlPath] of Object.entries(APPS)) {
     assert.ok(r.syls.length > 0, 'pinyin token should still segment');
   });
 
+  test(`${name}: unseparated Hanzi+pinyin in a single token still parses the pinyin`, () => {
+    // e.g. "许Xiaoqing" typed as one word with no space/hyphen/apostrophe
+    // between the Hanzi and the Latin pinyin.
+    const r = parse('\u8bb8Xiaoqing');
+    assert.deepEqual(r.hanzi, ['\u8bb8']);
+    assert.equal(r.bad.length, 0, 'the pinyin run should not be marked bad');
+    assert.ok(r.syls.length > 0, 'the pinyin run should still segment');
+    assert.deepEqual(
+      r.syls.map((k) => BY[k].syl),
+      ['xiao', 'qing']
+    );
+  });
+
+  test(`${name}: Hanzi interleaved between two pinyin runs in one token flags Hanzi once and keeps both pinyin runs`, () => {
+    const r = parse('Xiao\u8bb8qing'); // Xiao 许 qing, no separators
+    assert.deepEqual(r.hanzi, ['\u8bb8']);
+    assert.equal(r.bad.length, 0);
+    assert.deepEqual(
+      r.syls.map((k) => BY[k].syl),
+      ['xiao', 'qing']
+    );
+  });
+
   test(`${name}: unrecognizable ASCII tokens are reported as bad, not silently dropped`, () => {
     const r = parse('zzz');
     assert.deepEqual(r.syls, []);

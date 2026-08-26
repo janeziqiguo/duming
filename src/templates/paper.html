@@ -181,6 +181,7 @@ const t=()=>S[variant];
 const $=id=>document.getElementById(id);
 
 const RE_HANZI = /[\u3400-\u9fff\uf900-\ufaff]/;
+const RE_HANZI_RUN = /[\u3400-\u9fff\uf900-\ufaff]+|[^\u3400-\u9fff\uf900-\ufaff]+/g;
 function normalizeToken(s){
   // Replace precomposed ü (and its toned forms) with 'v' *before* NFD, since
   // NFD decomposes ü into u + a combining diaeresis that the tone-mark strip
@@ -217,12 +218,21 @@ function segment(chunk){
 function parse(raw){
   const tokens=raw.split(/[\s\-']+/).filter(Boolean);
   const out=[], bad=[], hanzi=[];
-  for(const rt of tokens){
-    if(RE_HANZI.test(rt)){ hanzi.push(rt); continue; }
-    const c=normalizeToken(rt);
-    if(!c){ bad.push(rt); continue; }
+  function addLatin(str){
+    const c=normalizeToken(str);
+    if(!c){ bad.push(str); return; }
     const seg=segment(c);
-    if(seg===null) bad.push(rt); else out.push(...seg);
+    if(seg===null) bad.push(str); else out.push(...seg);
+  }
+  for(const rt of tokens){
+    if(!RE_HANZI.test(rt)){ addLatin(rt); continue; }
+    // Token mixes Hanzi with Latin pinyin without a separator (e.g.
+    // "许Xiaoqing") -- split into alternating Hanzi/non-Hanzi runs so the
+    // Hanzi is still reported while any adjoining pinyin is still parsed,
+    // instead of dropping the whole token into `hanzi`.
+    for(const run of rt.match(RE_HANZI_RUN)||[]){
+      if(RE_HANZI.test(run)) hanzi.push(run); else addLatin(run);
+    }
   }
   return {syls:out, bad, hanzi};
 }

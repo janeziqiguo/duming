@@ -6,6 +6,7 @@
  *                      ->  data/embed.json                      (compact payload)
  *                      ->  data/pronunciation_table_compact.tsv (review copy)
  *   src/templates/*    ->  apps/*.html                          (shippable, no backend)
+ *                      ->  index.html                          (root mirror, for static hosts)
  *
  * Run with: npm run build
  */
@@ -59,5 +60,12 @@ for (const [src, out] of APPS) {
   fs.writeFileSync(p('apps', out), tpl.replace('__DATA__', embedJson));
   console.log(`built apps/${out}`);
 }
+
+// 5. Mirror the modern card to a root index.html. Static hosts that default
+//    to serving the repo root (e.g. Netlify without a custom build/publish
+//    config) need an index.html to find; GitHub Pages instead gets this via
+//    the explicit copy step in .github/workflows/pages.yml.
+fs.copyFileSync(p('apps', 'pronunciation-card-modern.html'), p('index.html'));
+console.log('built index.html (mirror of apps/pronunciation-card-modern.html)');
 
 console.log(`\ndone — ${table.rows.length} syllables, ${traps.length} distinct trap notes, ${embedJson.length} bytes embedded`);

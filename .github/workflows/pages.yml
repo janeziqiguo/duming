@@ -8,6 +8,7 @@ on:
       - data/**
       - src/**
       - apps/**
+      - index.html
       - package.json
       - .github/workflows/pages.yml
   workflow_dispatch:
@@ -38,9 +39,9 @@ jobs:
 
       - name: Verify generated apps have no drift
         run: |
-          if ! git diff --quiet -- apps/; then
-            echo "::error::apps/*.html is out of sync with src/templates + data. Run 'npm run build' locally and commit the result." >&2
-            git --no-pager diff --stat -- apps/
+          if ! git diff --quiet -- apps/ index.html; then
+            echo "::error::apps/*.html or index.html is out of sync with src/templates + data. Run 'npm run build' locally and commit the result." >&2
+            git --no-pager diff --stat -- apps/ index.html
             exit 1
           fi
 
